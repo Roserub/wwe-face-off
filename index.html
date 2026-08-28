@@ -402,6 +402,44 @@ img{-webkit-user-drag:none;user-select:none}
 @keyframes pcUp{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
 @keyframes pcRule{from{opacity:0;transform:scaleX(.2)}to{opacity:1;transform:scaleX(1)}}
 
+/* ============ SACRE DU VAINQUEUR (plein écran, ~3 s) ============ */
+#champCine{position:fixed;inset:0;z-index:57;display:none;align-items:center;justify-content:center;
+  flex-direction:column;gap:.6rem;text-align:center;overflow:hidden;
+  background:radial-gradient(ellipse at 50% 42%,rgba(64,44,6,.92) 0%,rgba(6,5,10,.97) 62%)}
+#champCine.on{display:flex;animation:ccIn .5s ease both}
+#champCine.out{animation:ccOut .45s ease both}
+@keyframes ccIn{from{opacity:0}to{opacity:1}}
+@keyframes ccOut{from{opacity:1}to{opacity:0}}
+#champCine .ccRays{position:absolute;left:50%;top:44%;width:240vmax;height:240vmax;transform:translate(-50%,-50%);
+  background:repeating-conic-gradient(from 0deg,rgba(245,197,66,.13) 0 6deg,transparent 6deg 18deg);
+  animation:ccSpin 28s linear infinite;pointer-events:none}
+@keyframes ccSpin{to{transform:translate(-50%,-50%) rotate(360deg)}}
+#champCine .ccGlow{position:absolute;left:50%;top:44%;width:70vmin;height:70vmin;transform:translate(-50%,-50%);
+  border-radius:50%;background:radial-gradient(circle,rgba(245,197,66,.42),rgba(245,197,66,0) 66%);
+  animation:ccPulse 1.6s ease-in-out infinite alternate;pointer-events:none}
+@keyframes ccPulse{from{transform:translate(-50%,-50%) scale(.9)}to{transform:translate(-50%,-50%) scale(1.12)}}
+#champCine .ccKicker{position:relative;font-family:var(--fC);font-weight:700;letter-spacing:.55em;
+  font-size:clamp(1rem,2.2vw,1.6rem);color:#e9d9a8;animation:pcUp .6s ease .15s both}
+#champCine .ccCard{position:relative;width:min(46vh,78vw);aspect-ratio:.74;border-radius:20px;overflow:hidden;
+  border:3px solid var(--gold);background:#101018;
+  box-shadow:0 0 0 2px rgba(245,197,66,.35),0 30px 90px rgba(0,0,0,.75),0 0 80px rgba(245,197,66,.45);
+  animation:ccPop .8s cubic-bezier(.16,1.35,.3,1) .05s both}
+@keyframes ccPop{from{opacity:0;transform:scale(1.7) rotate(-4deg);filter:blur(16px)}to{opacity:1;transform:none;filter:blur(0)}}
+#champCine .ccCard img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+#champCine .ccCard::after{content:'';position:absolute;inset:0;
+  background:linear-gradient(to top,rgba(0,0,0,.88) 0,rgba(0,0,0,.2) 34%,transparent 55%)}
+#champCine .ccCrown{position:absolute;top:-.4rem;right:.6rem;font-size:clamp(2.4rem,6vw,4.4rem);z-index:2;
+  filter:drop-shadow(0 6px 12px rgba(0,0,0,.7));animation:crownBob 2.4s ease-in-out infinite}
+#champCine .ccName{position:relative;font-family:var(--fD);font-size:clamp(2.8rem,7.5vw,6.4rem);line-height:.95;
+  letter-spacing:.03em;margin-top:.4rem;
+  background:linear-gradient(178deg,#fff8e1 6%,var(--gold) 38%,#8a6410 54%,var(--gold) 68%,#fff7dd 94%);
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+  filter:drop-shadow(0 8px 30px rgba(245,197,66,.45));animation:pcUp .6s ease .35s both}
+#champCine .ccNick{position:relative;font-family:var(--fC);font-style:italic;font-size:clamp(1.1rem,2.2vw,1.7rem);
+  color:#f0e2b6;letter-spacing:.08em;animation:pcUp .6s ease .5s both}
+#champCine .ccDiv{position:relative;font-family:var(--fC);font-weight:700;letter-spacing:.32em;
+  font-size:clamp(.8rem,1.6vw,1.1rem);color:var(--dim);margin-top:.4rem;animation:pcUp .6s ease .62s both}
+
 /* ============ AFFICHE ============ */
 #posterOv{position:fixed;inset:0;z-index:80;display:none;flex-direction:column;align-items:center;
   background:rgba(4,4,8,.93);backdrop-filter:blur(6px);padding:1rem;overflow:auto}
@@ -490,9 +528,9 @@ img{-webkit-user-drag:none;user-select:none}
       <span class="d">Nouveau classement — un duel hommes, un duel femmes en alternance</span>
     </button>
   </div>
-  <button id="fastToggle" title="1 seul gardé par écran de barrage, 1 vie pour tous">
+  <button id="fastToggle" title="1 seul gardé par écran, 1 vie pour tous, ni « les deux » ni sauvetage de groupe">
     <span class="sw"></span>⚡ MODE VERY FAST
-    <span class="fd">1 GARDÉ PAR ÉCRAN · 1 VIE POUR TOUS</span>
+    <span class="fd">1 GARDÉ PAR ÉCRAN · 1 VIE · AUCUN JOKER</span>
   </button>
   <div id="loadState"></div>
   <p class="splashHint">CLIQUE SUR TON FAVORI · «&nbsp;LES DEUX&nbsp;» S'ILS MÉRITENT TOUS LES DEUX TON TOP 30</p>
@@ -601,6 +639,15 @@ img{-webkit-user-drag:none;user-select:none}
   <canvas id="posterCv"></canvas>
 </div>
 
+<div id="champCine">
+  <div class="ccRays"></div><div class="ccGlow"></div>
+  <div class="ccKicker">TON NUMÉRO 1</div>
+  <div class="ccCard"><img alt=""><span class="ccCrown">👑</span></div>
+  <div class="ccName"></div>
+  <div class="ccNick"></div>
+  <div class="ccDiv"></div>
+</div>
+
 <div id="phaseCine"><div class="pcInner">
   <div class="pcKicker">CLASSEMENT ÉTABLI</div>
   <div class="pcTop">TOP 30</div>
@@ -680,7 +727,7 @@ function freshStats(){
 function defaultState(){
   return { mode:'alt', duels:0, culls:0, stats:freshStats(), muted:false, music:true, lastPool:'f',
     phase:{m:0,f:0}, prompted:{}, mix:null, skips:{m:4,f:4,x:4}, skipsV:4,
-    sched:{m:0,f:0}, upset:null, both:0, outSeq:0,
+    sched:{m:0,f:0}, upset:null, both:0, outSeq:0, pf:{}, champ:{},
     bothLeft:{m:0,f:0,x:0}, bothPhase:{m:-1,f:-1,x:-1}, prot:{}, cool:{},
     dv:{ m:{d:0,c:0,b:0}, f:{d:0,c:0,b:0}, x:{d:0,c:0,b:0} } };   // compteurs par division
 }
@@ -881,6 +928,24 @@ function resolve(kind){        // 'L' | 'R' | 'both'
   stopTheme(true);
   const g = cur.g;
   const A = cur.L, B = cur.R;
+  if (cur.pf){
+    if (kind === 'both'){ locked = false; toast('PETITE FINALE : IL FAUT DÉSIGNER LE 2E'); return; }
+    const W = kind === 'L' ? A : B, L = kind === 'L' ? B : A;
+    const winEl = kind === 'L' ? els.fL : els.fR, loseEl = kind === 'L' ? els.fR : els.fL;
+    const sw = statsFor(g,W), sl = statsFor(g,L);
+    const Ea = 1 / (1 + Math.pow(10, (sl.r - sw.r) / 400));
+    sw.r += kOf(sw.n) * (1 - Ea); sl.r -= kOf(sl.n) * (1 - Ea);
+    sw.n++; sl.n++; sw.w++; sl.l++;
+    sw.outAt = ++S.outSeq;                 // sorti « en dernier » → 2e place
+    S.pf[g] = 1; cur.pf = false;
+    winEl.classList.add('win'); loseEl.classList.add('lose');
+    winEl.querySelector('.stamp').textContent = '2E PLACE';
+    sound('hit'); flashGo();
+    sparks(kind==='L' ? window.innerWidth*.28 : window.innerWidth*.72, window.innerHeight*.42, 'gold');
+    tpush('PF:' + W.slug + '>' + L.slug);
+    afterDuel();
+    return;
+  }
   if (kind === 'both' && !(S.bothLeft[g] > 0)){ locked = false; toast('PLUS DE « LES DEUX » POUR CETTE PHASE'); return; }
   facedSet.add(pairKey(A,B));
   if (kind === 'both'){
@@ -954,7 +1019,7 @@ function syncBoth(g){
   const ph = bothPhaseOf(g);
   if (S.bothPhase[g] !== ph){
     S.bothPhase[g] = ph;
-    S.bothLeft[g] = g === 'x' ? (ph === 0 ? 3 : 1) : (BOTH_Q[ph] || 0);
+    S.bothLeft[g] = fastMode ? 0 : g === 'x' ? (ph === 0 ? 3 : 1) : (BOTH_Q[ph] || 0);
   }
   const btn = $('#btnBoth');
   const left = S.bothLeft[g] || 0;
@@ -1004,12 +1069,12 @@ function showIntroCine(){
 function showPhaseCine(a){
   const el = $('#phaseCine');
   el.classList.remove('intro');
-  el.querySelector('.pcKicker').textContent = 'CLASSEMENT ÉTABLI';
-  el.querySelector('.pcTop').textContent = a.top === 1 ? 'VAINQUEUR' : 'TOP ' + a.top;
+  el.querySelector('.pcKicker').textContent = a.kicker || 'CLASSEMENT ÉTABLI';
+  el.querySelector('.pcTop').textContent = a.custom || (a.top === 1 ? 'VAINQUEUR' : 'TOP ' + a.top);
   el.querySelector('.pcDiv').textContent = a.div;
-  el.querySelector('.pcNext').textContent = !a.next ? 'CLASSEMENT FINAL'
+  el.querySelector('.pcNext').textContent = a.custom ? a.next : !a.next ? 'CLASSEMENT FINAL'
     : a.next === 1 ? 'DERNIER DUEL : ON DÉSIGNE LE VAINQUEUR' : 'ON CONTINUE VERS LE TOP ' + a.next;
-  el.querySelector('.pcLives').textContent = !a.next ? ''
+  el.querySelector('.pcLives').textContent = (a.custom || !a.next) ? ''
     : fastMode ? '⚡ MORT SUBITE · 1 VIE'
     : a.reset ? '❤ 2 VIES PAR PERSONNE' : '❤ VIES CONSERVÉES';
   el.classList.remove('on'); void el.offsetWidth; el.classList.add('on');
@@ -1029,8 +1094,72 @@ function nextRound(){
   }
   startRound();
 }
+/* Petite finale : une fois le vainqueur connu, un dernier duel entre le 2e et le 3e
+   du classement départage la deuxième place. Dans tous les modes. */
+function needsPF(g){
+  if (S.pf[g] || phaseTargetOf(g) !== 1 || aliveOf(g).length > 1) return false;
+  return ranking(g).length >= 3;
+}
+function startPetiteFinale(g){
+  const r = ranking(g), A = r[1], B = r[2];
+  duelToken++; stopTheme(true);
+  cur.g = g; cur.L = A; cur.R = B; cur.pf = true;
+  showStage('duel');
+  els.fL.classList.remove('win','lose','elim'); els.fR.classList.remove('win','lose','elim');
+  setFighter(els.fL, A); setFighter(els.fR, B);
+  const bb = $('#btnBoth'); bb.disabled = true;
+  bb.innerHTML = '★ LES DEUX (0)<small>PETITE FINALE : IL FAUT TRANCHER</small>';
+  els.duelNum.textContent = S.duels + 1;
+  els.divTag.textContent = 'PETITE FINALE';   // court : la colonne centrale est étroite
+  els.divTag.style.color = 'var(--gold)';
+  replay(els.fL, 'enterL'); replay(els.fR, 'enterR'); replay(els.vsMark, 'vsPop');
+  updateHud();
+  playTheme(); preloadTheme(A); preloadTheme(B);
+  const cine = !AUTOTEST && !AUTOSHOT;
+  if (cine) showPhaseCine({ custom:'PETITE FINALE', kicker:'VAINQUEUR DÉSIGNÉ', div: poolLabel(g),
+                            next:'UN DERNIER DUEL POUR LA 2E PLACE' });
+  locked = true;
+  setTimeout(() => { locked = false; }, cine ? 2600 : 30);
+}
+/* Sacre : après la petite finale, le n°1 en grand, confettis et son thème (~3 s), puis la suite. */
+function needsChamp(g){
+  return phaseTargetOf(g) === 1 && aliveOf(g).length <= 1 && !S.champ[g] && !needsPF(g) && ranking(g).length > 0;
+}
+function showChampCine(g){
+  const w = ranking(g)[0];
+  S.champ[g] = 1;
+  stopTheme(true); showStage('duel');
+  const el = $('#champCine');
+  const img = el.querySelector('img');
+  img.src = imgSrc(w); img.style.objectPosition = w.focus || 'center 12%';
+  el.querySelector('.ccKicker').textContent = g === 'x' ? (S.mix && S.mix.phase === 1 ? 'TON GOAT' : 'TON NUMÉRO 1') : 'TON NUMÉRO 1';
+  el.querySelector('.ccCrown').textContent = (g === 'x' && S.mix && S.mix.phase === 1) ? '🐐' : '👑';
+  el.querySelector('.ccName').textContent = w.name;
+  el.querySelector('.ccNick').textContent = w.nickname ? '« ' + w.nickname + ' »' : (w.era || '');
+  el.querySelector('.ccDiv').textContent = g === 'x' ? 'HOMMES & FEMMES CONFONDUS' : poolLabel(g);
+  el.classList.remove('out'); el.classList.add('on');
+  tpush('CHAMP:' + w.slug);
+  const quick = AUTOTEST;
+  if (!quick){
+    sound('mile'); confettiBurst();
+    setTimeout(confettiBurst, 1200);
+    setTimeout(() => { sparks(innerWidth*.35, innerHeight*.4, 'gold'); sparks(innerWidth*.65, innerHeight*.4, 'gold'); }, 300);
+    themeCands = themeOf(w) ? [[w, null]] : [];
+    if (themeCands.length) startThemeAt(0);
+  }
+  clearTimeout(pendingNext);
+  pendingNext = setTimeout(() => {
+    el.classList.add('out');
+    setTimeout(() => { el.classList.remove('on','out'); stopTheme(true); startRound(); }, quick ? 10 : 450);
+  }, quick ? 30 : 3000);
+}
 function startRound(){
   clearTimeout(pendingNext); pendingNext = null;
+  cur.pf = false;
+  const pfG = scopeOf().find(needsPF);
+  if (pfG){ startPetiteFinale(pfG); return; }
+  const cg = scopeOf().find(needsChamp);
+  if (cg){ showChampCine(cg); return; }
   if (!scopeOf().some(poolPlayable)){ stopTheme(true); finish(); return; }
   plannedG = pickDivision();          // décidé une seule fois par manche
   const g = plannedG;
@@ -1877,7 +2006,7 @@ function freshRun(mode){
   S = defaultState();
   S.muted = muted; S.music = music; S.mode = mode;
   if (fastMode){
-    S.skips = { m:1, f:1, x:1 };
+    S.skips = { m:0, f:0, x:0 };
     Object.keys(S.stats).forEach(k => S.stats[k].lives = 1);
   }
   facedSet = new Set();
@@ -1927,7 +2056,7 @@ document.addEventListener('click', e => {
 $('#fastToggle').addEventListener('click', () => {
   fastMode = !fastMode;
   $('#fastToggle').classList.toggle('on', fastMode);
-  toast(fastMode ? '⚡ VERY FAST — 1 GARDÉ PAR ÉCRAN · 1 VIE' : 'MODE NORMAL RÉTABLI');
+  toast(fastMode ? '⚡ VERY FAST — 1 GARDÉ · 1 VIE · AUCUN JOKER' : 'MODE NORMAL RÉTABLI');
 });
 els.fL.addEventListener('click', () => resolve('L'));
 els.fR.addEventListener('click', () => resolve('R'));
@@ -2036,7 +2165,7 @@ $('#loadState').textContent = 'CHARGEMENT DU ROSTER…';
       if (n++ > 3000){ tpush('PHLOOP:' + aliveOf('m').length + '/' + S.phase.m); return; }
       if (seen !== 'p' + S.phase.m){ seen = 'p' + S.phase.m; tpush('PH' + S.phase.m + ':' + aliveOf('m').length); }
       if (els.results.classList.contains('on')){
-        tpush('FIN:phase' + S.phase.m + '|alive' + aliveOf('m').length + '|duels' + S.duels);
+        tpush('FIN:phase' + S.phase.m + '|alive' + aliveOf('m').length + '|duels' + S.duels + '|R3:' + ranking('m').slice(0,3).map(w=>w.slug).join(','));
         document.title = 'TDONE|' + TLOG.join(';').slice(-980);
         return;
       }
@@ -2104,6 +2233,21 @@ $('#loadState').textContent = 'CHARGEMENT DU ROSTER…';
       $('#stage').style.display = 'none';
       $('#cullWrap').classList.remove('on');
       showIntroCine();
+      return;
+    }
+    if (location.hash.includes('champ')){         // capture du sacre
+      startMode('m');
+      pools.m().slice(1).forEach((w,i) => { const st = S.stats[w.slug]; st.lives = 0; st.out = 4; st.outAt = i + 1; });
+      S.phase.m = 4; S.pf.m = 1;
+      nextRound();
+      return;
+    }
+    if (location.hash.includes('pf')){            // capture de la petite finale
+      startMode('m');
+      const pool = pools.m();
+      pool.slice(1).forEach((w,i) => { const st = S.stats[w.slug]; st.lives = 0; st.out = 4; st.outAt = i + 1; });
+      S.phase.m = 4;
+      nextRound();
       return;
     }
     if (location.hash.includes('cine')){          // capture de la séquence de passage de tranche
