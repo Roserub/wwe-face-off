@@ -1,0 +1,153 @@
+﻿=== AUDIT THEMES (294 entrees) ===
+OK (nom + artiste officiel) : 158
+AMBIANCE (fallback assume)  : 77
+A REVOIR                    : 59
+MORTS / ABSENTS             : 0
+DOUBLONS D'URL              : 3
+
+--- MORTS / ABSENTS ---
+
+--- DOUBLONS ---
+r-truth + the-miz -> WWE: The Awesome Truth (The Miz & R-Truth)
+angelo-dawkins + montez-ford -> WWE: Bring the Swag (Street Profits) [feat. J-Frost]
+ivar + erik -> WWE: War (Viking Raiders)
+
+--- A REVOIR ---
+john-cena              | WWE: The Time Is Now (John Cena)               | John Cena & Tha Trademarc    | ARTISTE?
+randy-orton            | Voices (Randy Orton)                           | Rev Theory                   | ARTISTE?
+triple-h               | The Game (Triple H)                            | Motörhead                    | ARTISTE?
+shawn-michaels         | WWE: Sexy Boy (feat. Shawn Michaels)           | Jimmy Hart & JJ Maguire      | ARTISTE?
+kane                   | Slow Chemical (Kane)                           | Finger Eleven                | ARTISTE?
+batista                | I Walk Alone (Batista)                         | Saliva                       | ARTISTE?
+edge                   | Metalingus                                     | Alter Bridge                 | NOM?,ARTISTE?
+cm-punk                | Cult of Personality (CM Punk Theme Song) [Re-Recorded] | Living Colour                | ARTISTE?
+jeff-hardy             | No More Words (Jeff Hardy)                     | Endeverafter                 | ARTISTE?
+matt-hardy             | The Diamond Mine                               | Monster Magnet               | NOM?,ARTISTE?
+big-show               | Crank It Up (Big Show)                         | Brand New Sin                | ARTISTE?
+rob-van-dam            | WWE: One of a Kind (Rob Van Dam)               | Breaking Point               | ARTISTE?
+mark-henry             | Some Bodies Gonna Get It (Mark Henry)          | Three 6 Mafia                | ARTISTE?
+chavo-guerrero         | Uhhh Chavo (Chavo Guerrero WWE)                | LawBeatz                     | ARTISTE?
+kofi-kingston          | SOS (Kofi Kingston)                            | Collie Buddz                 | ARTISTE?
+dolph-ziggler          | Here To Show the World (Dolph Ziggler) [Andre the Giant Memorial Battle Royal] | Downstait                    | ARTISTE?
+the-miz                | WWE: The Awesome Truth (The Miz & R-Truth)     | R-Truth & The Miz            | ARTISTE?
+r-truth                | WWE: The Awesome Truth (The Miz & R-Truth)     | R-Truth & The Miz            | ARTISTE?
+christian              | Just Close Your Eyes (Christian)               | Story of the Year            | ARTISTE?
+wade-barrett           | Just Don't Care Anymore (Wade Barrett)         | American Fangs               | ARTISTE?
+daniel-bryan           | Flight of the Valkyries                        | Daniel Bryan                 | ARTISTE?
+bray-wyatt             | Live in Fear (Bray Wyatt's WWE Theme) [Live]   | Suplex Sound                 | ARTISTE?
+luke-harper            | Miserere Mei Deus and Number Station (feat. Luke Harper & Chris Code) | Nathaniel Levisay            | ARTISTE?
+aj-styles              | WWE AJ Styles Orchestral Theme (Phenomenal)    | Ansoland Studio              | ARTISTE?,COVER
+sami-zayn              | Worlds Apart (Sami Zayn's WWE Theme)           | It Lives, It Breathes        | ARTISTE?,COVER
+finn-balor             | WWE: Finn Balor Entrance Theme (Breathe in Silence) | Ansoland Studio              | ARTISTE?,COVER
+apollo-crews           | Cruise Control (Apollo Crews) [Metal Version]  | Florian Haack                | ARTISTE?,COVER
+chad-gable             | WWE: Shoooosh (Alpha Academy)                  | def rebel                    | NOM?
+bobby-roode            | Glorious Domination (Bobby Roode's Wwe Theme)  | It Lives, It Breathes        | ARTISTE?,COVER
+ricochet               | One and Only (Ricochet) [Metal Version]        | Florian Haack                | ARTISTE?,COVER
+aleister-black         | Root of All Evil (Aleister Black's WWE Theme)  | It Lives, It Breathes        | ARTISTE?,COVER
+keith-lee              | I Am (Limitless Keith Lee Theme)               | All Elite Wrestling & Mikey Rukus | ARTISTE?
+karrion-kross          | Kross the Line (Karrion Kross)                 | David Bartolome & Will Scarr | ARTISTE?
+montez-ford            | WWE: Bring the Swag (Street Profits) [feat. J-Frost] | CFO$                         | NOM?
+angelo-dawkins         | WWE: Bring the Swag (Street Profits) [feat. J-Frost] | CFO$                         | NOM?
+ilja-dragunov          | Unbesiegbar Reise                              | Lindt                        | NOM?,ARTISTE?
+hulk-hogan             | Real American                                  | Rick Derringer               | NOM?,ARTISTE?
+lita                   | LoveFuryPassionEnergy (Lita)                   | Boy Hits Car                 | ARTISTE?
+maria-kanellis         | With Legs Like That (Maria)                    | Zebrahead                    | ARTISTE?
+jillian-hall           | Sliced Bread                                   | Jillian                      | ARTISTE?
+aj-lee                 | WWE: Let's Light It Up (AJ Lee)                | Kari Kimmel                  | ARTISTE?
+lana                   | Rusev & Lana                                   | Ryan Shore                   | ARTISTE?
+emma                   | #Emmalution (Emma)                             | B.R.                         | ARTISTE?
+becky-lynch            | Celtic Invasion (Becky Lynch's WWE Theme)      | It Lives, It Breathes        | ARTISTE?,COVER
+sasha-banks            | Sky's the Limit (Sasha Banks) [Metal Version]  | Florian Haack                | ARTISTE?,COVER
+asuka                  | The Future (Asuka's WWE Theme)                 | It Lives, It Breathes        | ARTISTE?,COVER
+ember-moon             | Free the Flame (Ember Moon's WWE Theme)        | It Lives, It Breathes        | ARTISTE?,COVER
+ronda-rousey           | Bad Reputation                                 | Joan Jett                    | NOM?,ARTISTE?
+kairi-sane             | Kairi Sane                                     | Jazzy lion man               | ARTISTE?
+gregory-helms          | Gregory Helms (The Hurricane)                  | White Knight Instrumental    | ARTISTE?,COVER
+the-sandman            | Enter Sandman                                  | Motörhead                    | ARTISTE?
+shad-gaspard           | Bringin' Da Hood T U (Cryme Tyme)              | Jim Johnston                 | NOM?
+darren-young           | Making Moves (Darren Young) [Andre the Giant Memorial Battle Royal] | Sugar Tongue Slim            | ARTISTE?
+eric-young             | The Young Person's Guide to the Orchestra, Op. 34 (Variations and Fugue On a Theme of Purcell): Theme A: Allegro Maestoso e Largamente; (Full Orchestra) | New York Philharmonic & Leonard Bernstein | ARTISTE?
+lince-dorado           | Lucha Lit (Lince Dorado's Theme)               | John Kiernan                 | ARTISTE?
+dijak                  | Capital Punishment (Donovan Dijak Theme)       | Mikey Rukus                  | ARTISTE?
+erik                   | WWE: War (Viking Raiders)                      | CFO$                         | NOM?
+ivar                   | WWE: War (Viking Raiders)                      | CFO$                         | NOM?
+serena-deeb            | Return of the Veteran (Serena Deeb Theme) [feat. Josiah Williams & Hot Tag Media] | All Elite Wrestling          | ARTISTE?
+
+--- AMBIANCE ---
+mvp -> Special Op (The Shield) [ambiance]
+heath-slater -> ...To Be Loved [ambiance]
+bo-dallas -> Rise Up (Smackdown Theme Song) [ambiance]
+kalisto -> Across the Nation [ambiance]
+samoa-joe -> Special Op (The Shield) [ambiance]
+neville -> Burn It to the Ground [ambiance]
+braun-strowman -> Special Op (The Shield) [ambiance]
+elias -> Burn It to the Ground [ambiance]
+andrade -> ...To Be Loved [ambiance]
+matt-riddle -> Special Op (The Shield) [ambiance]
+tommaso-ciampa -> Special Op (The Shield) [ambiance]
+adam-cole -> Rise Up (Smackdown Theme Song) [ambiance]
+ric-flair -> Burn It to the Ground [ambiance]
+goldberg -> Special Op (The Shield) [ambiance]
+awesome-kong -> Rise Up (Smackdown Theme Song) [ambiance]
+carmella -> Across the Nation [ambiance]
+ruby-riott -> ...To Be Loved [ambiance]
+sonya-deville -> Rise Up (Smackdown Theme Song) [ambiance]
+mandy-rose -> Burn It to the Ground [ambiance]
+lacey-evans -> ...To Be Loved [ambiance]
+shayna-baszler -> Rise Up (Smackdown Theme Song) [ambiance]
+dakota-kai -> Rise Up (Smackdown Theme Song) [ambiance]
+toni-storm -> Across the Nation [ambiance]
+zelina-vega -> Special Op (The Shield) [ambiance]
+nikki-cross -> Burn It to the Ground [ambiance]
+dana-brooke -> Rise Up (Smackdown Theme Song) [ambiance]
+peyton-royce -> Rise Up (Smackdown Theme Song) [ambiance]
+billie-kay -> Across the Nation [ambiance]
+paul-london -> Across the Nation [ambiance]
+brian-kendrick -> Burn It to the Ground [ambiance]
+jamie-noble -> Across the Nation [ambiance]
+chuck-palumbo -> Burn It to the Ground [ambiance]
+mike-knox -> Burn It to the Ground [ambiance]
+kenny-dykstra -> ...To Be Loved [ambiance]
+lance-cade -> Special Op (The Shield) [ambiance]
+trevor-murdoch -> Rise Up (Smackdown Theme Song) [ambiance]
+charlie-haas -> ...To Be Loved [ambiance]
+rene-dupree -> Across the Nation [ambiance]
+funaki -> Burn It to the Ground [ambiance]
+kevin-thorn -> Special Op (The Shield) [ambiance]
+stevie-richards -> ...To Be Loved [ambiance]
+sabu -> ...To Be Loved [ambiance]
+luke-gallows -> Special Op (The Shield) [ambiance]
+karl-anderson -> Rise Up (Smackdown Theme Song) [ambiance]
+curt-hawkins -> Burn It to the Ground [ambiance]
+yoshi-tatsu -> Special Op (The Shield) [ambiance]
+tyler-breeze -> Across the Nation [ambiance]
+aiden-english -> Rise Up (Smackdown Theme Song) [ambiance]
+rhyno -> ...To Be Loved [ambiance]
+mojo-rawley -> Rise Up (Smackdown Theme Song) [ambiance]
+tucker -> Special Op (The Shield) [ambiance]
+hideo-itami -> Across the Nation [ambiance]
+roderick-strong -> Burn It to the Ground [ambiance]
+kyle-o-reilly -> ...To Be Loved [ambiance]
+ec3 -> ...To Be Loved [ambiance]
+big-cass -> Burn It to the Ground [ambiance]
+enzo-amore -> Across the Nation [ambiance]
+erick-rowan -> ...To Be Loved [ambiance]
+buddy-murphy -> Special Op (The Shield) [ambiance]
+cedric-alexander -> Burn It to the Ground [ambiance]
+mustafa-ali -> Across the Nation [ambiance]
+drew-gulak -> Special Op (The Shield) [ambiance]
+gran-metalik -> Rise Up (Smackdown Theme Song) [ambiance]
+santos-escobar -> Special Op (The Shield) [ambiance]
+wes-lee -> ...To Be Loved [ambiance]
+kristal-marshall -> Across the Nation [ambiance]
+brooke-adams -> Burn It to the Ground [ambiance]
+cameron -> Rise Up (Smackdown Theme Song) [ambiance]
+sarah-logan -> Burn It to the Ground [ambiance]
+xia-li -> ...To Be Loved [ambiance]
+shotzi -> Burn It to the Ground [ambiance]
+tegan-nox -> ...To Be Loved [ambiance]
+gigi-dolin -> Special Op (The Shield) [ambiance]
+cora-jade -> Rise Up (Smackdown Theme Song) [ambiance]
+katana-chance -> Across the Nation [ambiance]
+kayden-carter -> Burn It to the Ground [ambiance]
+alba-fyre -> ...To Be Loved [ambiance]

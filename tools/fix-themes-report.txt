@@ -1,0 +1,114 @@
+﻿FIX   randy-orton -> Voices (Randy Orton) [Rev Theory]
+FIX   triple-h -> The Game (Triple H) [Motörhead]
+FIX   kane -> Slow Chemical (Kane) [Finger Eleven]
+FIX   edge -> Metalingus [Alter Bridge]
+FIX   cm-punk -> Cult of Personality (CM Punk Theme Song) [Re-Recorded] [Living Colour]
+FIX   matt-hardy -> The Diamond Mine [Monster Magnet]
+FIX   the-rock -> WWE: Electrifying (The Rock) [Jim Johnston]
+FIX   hulk-hogan -> Real American [Rick Derringer]
+AMB   ric-flair (faux positif remplace) : etait 'Ric Flair'
+FIX   booker-t -> Can You Dig It? [Booker T & Jim Johnston]
+AMB   goldberg (faux positif remplace) : etait 'Bill Goldberg WWE'
+AMB   drew-mcintyre (faux positif remplace) : etait 'WWE Drew McIntyre (Claymore Country Theme)'
+FIX   roman-reigns -> WWE: Head of the Table (Roman Reigns) [def rebel]
+FIX   brock-lesnar -> WWE: Next Big Thing (Brock Lesnar) [Jim Johnston]
+GARDE aj-styles (cover du bon morceau) : WWE AJ Styles Orchestral Theme (Phenomenal)
+AMB   kevin-owens (faux positif remplace) : etait 'WWE Kevin Owens Theme (KO Mode)'
+GARDE sami-zayn (cover du bon morceau) : Worlds Apart (Sami Zayn's WWE Theme)
+GARDE finn-balor (cover du bon morceau) : WWE: Finn Balor Entrance Theme (Breathe in Silence)
+GARDE apollo-crews (cover du bon morceau) : Cruise Control (Apollo Crews) [Metal Version]
+GARDE bobby-roode (cover du bon morceau) : Glorious Domination (Bobby Roode's Wwe Theme)
+GARDE aleister-black (cover du bon morceau) : Root of All Evil (Aleister Black's WWE Theme)
+GARDE ricochet (cover du bon morceau) : One and Only (Ricochet) [Metal Version]
+FIX   austin-theory -> WWE: A-Town Down (Theory) [def rebel]
+FIX   gunther -> WWE: Symphony No. 9 In E Minor (2025) [Gunther] [def rebel]
+AMB   la-knight (faux positif remplace) : etait 'WWE LA Knight Entrance Theme (Right Now)'
+FIX   solo-sikoa -> WWE: Taking It All (Solo Sikoa) [feat. Stevie Stone] [def rebel]
+GARDE becky-lynch (cover du bon morceau) : Celtic Invasion (Becky Lynch's WWE Theme)
+GARDE sasha-banks (cover du bon morceau) : Sky's the Limit (Sasha Banks) [Metal Version]
+AMB   alexa-bliss (faux positif remplace) : etait 'WWE Alexa Bliss Theme (Play With Me)'
+GARDE asuka (cover du bon morceau) : The Future (Asuka's WWE Theme)
+GARDE ember-moon (cover du bon morceau) : Free the Flame (Ember Moon's WWE Theme)
+AMB   carmella (faux positif remplace) : etait 'Real American (Hulk Hogan's WWE Theme)'
+AMB   nikki-cross (faux positif remplace) : etait 'You Can Look (But You Can't Touch) (Nikki Bella) [Metal Version]'
+AMB   mvp (faux positif remplace) : etait 'Metalingus (Edge's WWE Theme)'
+AMB   samoa-joe (faux positif remplace) : etait 'Coliseum Clash (Samoa Joe Theme) [feat. Mikey Rukus]'
+GARDE keith-lee (cover du bon morceau) : I Am (Limitless Keith Lee Theme)
+AMB   tommaso-ciampa (faux positif remplace) : etait 'My Shadow Knows (Tommaso Ciampa Theme) [feat. Just Joe]'
+AMB   adam-cole (faux positif remplace) : etait 'Workin''
+GARDE ilja-dragunov (cover du bon morceau) : Unbesiegbar Reise
+AMB   elias (faux positif remplace) : etait 'Insatiable'
+AMB   andrade (faux positif remplace) : etait 'Wwe Afrika'
+FIX   ronda-rousey -> Bad Reputation [Joan Jett]
+AMB   peyton-royce (faux positif remplace) : etait 'Peyton Place Theme'
+AMB   billie-kay (faux positif remplace) : etait 'WWE: The Rising Sun (Shinsuke Nakamura)'
+AMB   brian-kendrick (faux positif remplace) : etait 'Just Sing (Trolls World Tour)'
+AMB   rhyno (faux positif remplace) : etait 'Rhyno'
+GARDE gregory-helms (cover du bon morceau) : Gregory Helms (The Hurricane)
+AMB   mojo-rawley (faux positif remplace) : etait 'Thunderstruck'
+AMB   enzo-amore (faux positif remplace) : etait 'Amore e rose'
+AMB=  big-cass (deja ambiance)
+GARDE curt-hawkins (cover du bon morceau) : Know the Rep
+AMB   luke-gallows (faux positif remplace) : etait 'Face Everything And Rise'
+AMB   karl-anderson (faux positif remplace) : etait 'This How Much'
+AMB   tyler-breeze (faux positif remplace) : etait 'Tyler Breeze'
+AMB   roderick-strong (faux positif remplace) : etait 'Alfie's Theme (From "Alfie")'
+AMB   kyle-o-reilly (faux positif remplace) : etait 'In the Trenches (Kyle O'reilly Theme)'
+AMB   santos-escobar (faux positif remplace) : etait 'Patron Del Mal Pablo Escobar's Theme 90's Hip Hop Rap Instrumental 84 Bpm'
+GARDE lince-dorado (cover du bon morceau) : Lucha Lit (Lince Dorado's Theme)
+AMB=  gran-metalik (deja ambiance)
+AMB   shotzi (faux positif remplace) : etait 'Go Hard Or Go Home'
+AMB   xia-li (faux positif remplace) : etait 'Also Sprach Zarathustra - 2001 a Space Odyssey (Main Theme)'
+AMB   sonya-deville (faux positif remplace) : etait 'On My Way to You'
+AMB   mustafa-ali (faux positif remplace) : etait 'Guitar Theme & Variations'
+AMB   cedric-alexander (faux positif remplace) : etait 'Geistervariationen, WoO 24: Theme. Leise, innig'
+AMB   buddy-murphy (faux positif remplace) : etait 'Buddy Murphy: Murphy Wa Tomodachi'
+AMB   wes-lee (faux positif remplace) : etait 'Metalingus (Edge's WWE Theme)'
+GARDE dijak (cover du bon morceau) : Capital Punishment (Donovan Dijak Theme)
+AMB   tucker (faux positif remplace) : etait 'Hey Mersh!'
+AMB=  kalisto (deja ambiance)
+AMB=  neville (deja ambiance)
+AMB=  braun-strowman (deja ambiance)
+AMB=  shayna-baszler (deja ambiance)
+AMB=  zelina-vega (deja ambiance)
+AMB=  dana-brooke (deja ambiance)
+AMB=  bo-dallas (deja ambiance)
+AMB=  hideo-itami (deja ambiance)
+AMB=  aiden-english (deja ambiance)
+AMB=  erick-rowan (deja ambiance)
+AMB=  drew-gulak (deja ambiance)
+AMB=  ruby-riott (deja ambiance)
+AMB   sarah-logan (faux positif remplace) : etait 'Serenity (Shane and Sarah's Theme)'
+AMB=  tegan-nox (deja ambiance)
+AMB=  gigi-dolin (deja ambiance)
+AMB=  cora-jade (deja ambiance)
+AMB=  katana-chance (deja ambiance)
+AMB=  kayden-carter (deja ambiance)
+AMB=  alba-fyre (deja ambiance)
+GARDE kairi-sane (cover du bon morceau) : Kairi Sane
+AMB   dakota-kai (faux positif remplace) : etait 'She's a Mystery'
+AMB   toni-storm (faux positif remplace) : etait 'Let's Light It Up (AJ Lee) [feat. Kari Kimmel]'
+AMB   mandy-rose (faux positif remplace) : etait 'Professional'
+AMB   lacey-evans (faux positif remplace) : etait 'Ball3Rs'
+AMB   awesome-kong (faux positif remplace) : etait 'This Is Kong (Awesome Kong Official Entrance Theme)'
+GARDE emma (cover du bon morceau) : #Emmalution (Emma)
+GARDE lana (cover du bon morceau) : Rusev & Lana
+GARDE heath-slater (cover du bon morceau) : Money In the Bank
+AMB   sabu (faux positif remplace) : etait 'Rise Up (Smackdown Theme Song)'
+GARDE luke-harper (cover du bon morceau) : Miserere Mei Deus and Number Station (feat. Luke Harper & Chris Code)
+AMB   matt-riddle (faux positif remplace) : etait 'Gouge Away (feat. Matt Riddle, Michael McDermott & Gina Volpe) [Cover Version]'
+FIX   jacob-fatu -> WWE: Samoan Destroyer (Jacob Fatu) [def rebel]
+GARDE karrion-kross (cover du bon morceau) : Kross the Line (Karrion Kross)
+GARDE eric-young (cover du bon morceau) : The Young Person's Guide to the Orchestra, Op. 34 (Variations and Fugue On a Theme of Purcell): Theme A: Allegro Maestoso e Largamente; (Full Orchestra)
+AMB   ec3 (faux positif remplace) : etait 'The Narrative'
+GARDE serena-deeb (cover du bon morceau) : Return of the Veteran (Serena Deeb Theme) [feat. Josiah Williams & Hot Tag Media]
+AMB   cameron (faux positif remplace) : etait 'Cameron Loves Anime, WWE, And West Midlands, United Kingdom'
+AMB   paul-london (faux positif remplace) : etait 'Moth man Entrance Theme'
+AMB   mike-knox (faux positif remplace) : etait 'Boom'
+AMB   charlie-haas (faux positif remplace) : etait 'Stroker's Theme'
+AMB   kevin-thorn (faux positif remplace) : etait 'No Regrets (feat. Jeezy & Kevin Cossom)'
+FIX   darren-young -> Making Moves (Darren Young) [Andre the Giant Memorial Battle Royal] [Sugar Tongue Slim]
+FIX   bron-breakker -> WWE: Breakk And Destroy (Bron Breakker) [def rebel]
+FIX   grayson-waller -> WWE: Eye On the Prize (Grayson Waller) [def rebel]
+FIX   trick-williams -> WWE: Locked In (Trick Williams) [def rebel]
+FIX   carmelo-hayes -> WWE: Melo Don't Miss (Carmelo Hayes) [def rebel]

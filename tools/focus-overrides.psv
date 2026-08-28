@@ -1,0 +1,14 @@
+slug|object-position
+# Corrections manuelles de cadrage. Une ligne par catcheur, ex :
+# rhea-ripley|50% 6%
+# gunther|42% 18%
+# Valeurs = CSS object-position (X Y). Y bas = on remonte vers la tete.
+# Relancer tools\build-data.ps1 apres modification.
+roxanne-perez|36% 50%
+the-miz|50% 22%
+curtis-axel|50% 14%
+samoa-joe|42% 50%
+mick-foley|45% 50%
+torrie-wilson|50% 70%
+candice-lerae|50% 15%
+zelina-vega|50% 50%

@@ -1,0 +1,114 @@
+﻿FIX   randy-orton -> Voices (Randy Orton) [Rev Theory]
+FIX   triple-h -> The Game (Triple H) [Motörhead]
+FIX   kane -> Slow Chemical (Kane) [Finger Eleven]
+FIX   edge -> Metalingus [Alter Bridge]
+FIX   cm-punk -> Cult of Personality (CM Punk Theme Song) [Re-Recorded] [Living Colour]
+FIX   matt-hardy -> The Diamond Mine [Monster Magnet]
+FIX   the-rock -> WWE: Electrifying (The Rock) [Jim Johnston]
+FIX   hulk-hogan -> Real American [Rick Derringer]
+AMB=  ric-flair (deja ambiance)
+FIX   booker-t -> Can You Dig It? [Booker T & Jim Johnston]
+AMB=  goldberg (deja ambiance)
+AMB=  drew-mcintyre (deja ambiance)
+FIX   roman-reigns -> WWE: Head of the Table (Roman Reigns) [def rebel]
+FIX   brock-lesnar -> WWE: Next Big Thing (Brock Lesnar) [Jim Johnston]
+FIX   aj-styles -> WWE: Phenomenal (AJ Styles) [CFO$]
+FIX   kevin-owens -> WWE: Fight (Kevin Owens) [CFO$]
+FIX   sami-zayn -> WWE: Worlds Apart (Sami Zayn) [CFO$]
+FIX   finn-balor -> WWE: Catch Your Breath (Finn Bálor) [CFO$]
+GARDE apollo-crews (cover du bon morceau) : Cruise Control (Apollo Crews) [Metal Version]
+FIX   bobby-roode -> WWE: Glorious Domination (Bobby Roode) [CFO$]
+GARDE aleister-black (cover du bon morceau) : Root of All Evil (Aleister Black's WWE Theme)
+GARDE ricochet (cover du bon morceau) : One and Only (Ricochet) [Metal Version]
+FIX   austin-theory -> WWE: A-Town Down (Theory) [def rebel]
+FIX   gunther -> WWE: Symphony No. 9 In E Minor (2025) [Gunther] [def rebel]
+AMB=  la-knight (deja ambiance)
+FIX   solo-sikoa -> WWE: Taking It All (Solo Sikoa) [feat. Stevie Stone] [def rebel]
+FIX   becky-lynch -> WWE: Celtic Invasion (Becky Lynch) [CFO$]
+GARDE sasha-banks (cover du bon morceau) : Sky's the Limit (Sasha Banks) [Metal Version]
+FIX   alexa-bliss -> WWE: Spiteful (Alexa Bliss) [CFO$]
+GARDE asuka (cover du bon morceau) : The Future (Asuka's WWE Theme)
+GARDE ember-moon (cover du bon morceau) : Free the Flame (Ember Moon's WWE Theme)
+AMB=  carmella (deja ambiance)
+AMB=  nikki-cross (deja ambiance)
+AMB=  mvp (deja ambiance)
+AMB=  samoa-joe (deja ambiance)
+GARDE keith-lee (cover du bon morceau) : I Am (Limitless Keith Lee Theme)
+AMB=  tommaso-ciampa (deja ambiance)
+AMB=  adam-cole (deja ambiance)
+GARDE ilja-dragunov (cover du bon morceau) : Unbesiegbar Reise
+AMB=  elias (deja ambiance)
+AMB=  andrade (deja ambiance)
+FIX   ronda-rousey -> Bad Reputation [Joan Jett]
+AMB=  peyton-royce (deja ambiance)
+AMB=  billie-kay (deja ambiance)
+AMB=  brian-kendrick (deja ambiance)
+AMB=  rhyno (deja ambiance)
+GARDE gregory-helms (cover du bon morceau) : Gregory Helms (The Hurricane)
+AMB=  mojo-rawley (deja ambiance)
+AMB=  enzo-amore (deja ambiance)
+AMB=  big-cass (deja ambiance)
+GARDE curt-hawkins (cover du bon morceau) : Know the Rep
+AMB=  luke-gallows (deja ambiance)
+AMB=  karl-anderson (deja ambiance)
+AMB=  tyler-breeze (deja ambiance)
+AMB=  roderick-strong (deja ambiance)
+AMB=  kyle-o-reilly (deja ambiance)
+AMB=  santos-escobar (deja ambiance)
+GARDE lince-dorado (cover du bon morceau) : Lucha Lit (Lince Dorado's Theme)
+AMB=  gran-metalik (deja ambiance)
+AMB=  shotzi (deja ambiance)
+AMB=  xia-li (deja ambiance)
+AMB=  sonya-deville (deja ambiance)
+AMB=  mustafa-ali (deja ambiance)
+AMB=  cedric-alexander (deja ambiance)
+AMB=  buddy-murphy (deja ambiance)
+AMB=  wes-lee (deja ambiance)
+GARDE dijak (cover du bon morceau) : Capital Punishment (Donovan Dijak Theme)
+AMB=  tucker (deja ambiance)
+AMB=  kalisto (deja ambiance)
+AMB=  neville (deja ambiance)
+AMB=  braun-strowman (deja ambiance)
+AMB=  shayna-baszler (deja ambiance)
+AMB=  zelina-vega (deja ambiance)
+AMB=  dana-brooke (deja ambiance)
+AMB=  bo-dallas (deja ambiance)
+AMB=  hideo-itami (deja ambiance)
+AMB=  aiden-english (deja ambiance)
+AMB=  erick-rowan (deja ambiance)
+AMB=  drew-gulak (deja ambiance)
+AMB=  ruby-riott (deja ambiance)
+AMB=  sarah-logan (deja ambiance)
+AMB=  tegan-nox (deja ambiance)
+AMB=  gigi-dolin (deja ambiance)
+AMB=  cora-jade (deja ambiance)
+AMB=  katana-chance (deja ambiance)
+AMB=  kayden-carter (deja ambiance)
+AMB=  alba-fyre (deja ambiance)
+GARDE kairi-sane (cover du bon morceau) : Kairi Sane
+AMB=  dakota-kai (deja ambiance)
+AMB=  toni-storm (deja ambiance)
+AMB=  mandy-rose (deja ambiance)
+AMB=  lacey-evans (deja ambiance)
+AMB=  awesome-kong (deja ambiance)
+GARDE emma (cover du bon morceau) : #Emmalution (Emma)
+GARDE lana (cover du bon morceau) : Rusev & Lana
+GARDE heath-slater (cover du bon morceau) : Money In the Bank
+AMB=  sabu (deja ambiance)
+GARDE luke-harper (cover du bon morceau) : Miserere Mei Deus and Number Station (feat. Luke Harper & Chris Code)
+AMB=  matt-riddle (deja ambiance)
+FIX   jacob-fatu -> WWE: Samoan Destroyer (Jacob Fatu) [def rebel]
+GARDE karrion-kross (cover du bon morceau) : Kross the Line (Karrion Kross)
+GARDE eric-young (cover du bon morceau) : The Young Person's Guide to the Orchestra, Op. 34 (Variations and Fugue On a Theme of Purcell): Theme A: Allegro Maestoso e Largamente; (Full Orchestra)
+AMB=  ec3 (deja ambiance)
+GARDE serena-deeb (cover du bon morceau) : Return of the Veteran (Serena Deeb Theme) [feat. Josiah Williams & Hot Tag Media]
+AMB=  cameron (deja ambiance)
+AMB=  paul-london (deja ambiance)
+AMB=  mike-knox (deja ambiance)
+AMB=  charlie-haas (deja ambiance)
+AMB=  kevin-thorn (deja ambiance)
+FIX   darren-young -> Making Moves (Darren Young) [Andre the Giant Memorial Battle Royal] [Sugar Tongue Slim]
+FIX   bron-breakker -> WWE: Breakk And Destroy (Bron Breakker) [def rebel]
+FIX   grayson-waller -> WWE: Eye On the Prize (Grayson Waller) [def rebel]
+FIX   trick-williams -> WWE: Locked In (Trick Williams) [def rebel]
+FIX   carmelo-hayes -> WWE: Melo Don't Miss (Carmelo Hayes) [def rebel]

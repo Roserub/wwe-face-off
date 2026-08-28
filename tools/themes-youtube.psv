@@ -1,0 +1,7 @@
+slug|videoId|libelle
+# Themes joues via le LECTEUR OFFICIEL YouTube (aucun telechargement).
+# Une ligne par catcheur : slug|ID de la video|libelle affiche
+# L'ID est ce qui suit v= dans l'URL : youtube.com/watch?v=Xe-JnRO89vI -> Xe-JnRO89vI
+# Relancer tools\build-yt.ps1 apres modification.
+peyton-royce|Xe-JnRO89vI|IIconic (The IIconics)
+billie-kay|Xe-JnRO89vI|IIconic (The IIconics)
