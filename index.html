@@ -64,6 +64,21 @@ img{-webkit-user-drag:none;user-select:none}
 .modeCard .t{font-family:var(--fD);font-size:1.8rem;letter-spacing:.06em;display:block;color:var(--ink)}
 .modeCard .d{font-size:.82rem;color:var(--dim);display:block;margin-top:.35rem;line-height:1.35}
 .splashHint{color:var(--dim);font-size:.8rem;letter-spacing:.12em}
+#fastToggle{margin-top:-.6rem;display:inline-flex;align-items:center;gap:.6rem;
+  font-family:var(--fC);font-weight:700;letter-spacing:.14em;font-size:.95rem;
+  padding:.55rem 1.25rem;border-radius:999px;border:1px solid var(--steel);
+  color:var(--dim);background:rgba(255,255,255,.03);transition:all .18s}
+#fastToggle:hover{border-color:var(--red);color:var(--ink)}
+#fastToggle .sw{width:2.2em;height:1.2em;border-radius:999px;background:#2a2a36;position:relative;
+  transition:background .18s;flex:none}
+#fastToggle .sw::after{content:'';position:absolute;top:.13em;left:.13em;width:.94em;height:.94em;
+  border-radius:50%;background:#6d6680;transition:left .18s,background .18s}
+#fastToggle .fd{font-size:.68rem;letter-spacing:.16em;color:#6d6680;font-weight:700;transition:color .18s}
+#fastToggle.on{border-color:var(--red);color:#ffb3bd;background:rgba(228,0,43,.09);
+  box-shadow:0 4px 22px rgba(228,0,43,.22)}
+#fastToggle.on .sw{background:var(--red)}
+#fastToggle.on .sw::after{left:calc(100% - 1.07em);background:#fff}
+#fastToggle.on .fd{color:#ff8a99}
 #loadState{font-family:var(--fC);color:var(--dim);letter-spacing:.2em;font-size:.9rem;min-height:1.2em}
 
 /* ============ TOPBAR ============ */
@@ -475,6 +490,10 @@ img{-webkit-user-drag:none;user-select:none}
       <span class="d">Nouveau classement — un duel hommes, un duel femmes en alternance</span>
     </button>
   </div>
+  <button id="fastToggle" title="1 seul gardé par écran de barrage, 1 vie pour tous">
+    <span class="sw"></span>⚡ MODE VERY FAST
+    <span class="fd">1 GARDÉ PAR ÉCRAN · 1 VIE POUR TOUS</span>
+  </button>
   <div id="loadState"></div>
   <p class="splashHint">CLIQUE SUR TON FAVORI · «&nbsp;LES DEUX&nbsp;» S'ILS MÉRITENT TOUS LES DEUX TON TOP 30</p>
 </section>
@@ -850,8 +869,8 @@ function updateHud(){
   const left = S.mode === 'alt' ? roundsLeft('m') + roundsLeft('f') : roundsLeft(g);
   $('#covLabel').textContent = left > 0 ? 'EN VIE · ≈' + left + ' MANCHES' : 'EN VIE';
   const st = stageOf(g);
-  els.precV.textContent = (g === 'x' && S.mix && S.mix.phase === 1) ? '🐐 → LE GOAT'
-    : st === 'barrage' ? 'BARRAGE → 60' : st === 'four' ? '4-WAY → 30' : '→ TOP ' + target;
+  els.precV.textContent = (fastMode ? '⚡' : '') + ((g === 'x' && S.mix && S.mix.phase === 1) ? '🐐 → LE GOAT'
+    : st === 'barrage' ? 'BARRAGE → 60' : st === 'four' ? '4-WAY → 30' : '→ TOP ' + target);
   els.precV.className = 'v p2';
   const scope = S.mode === 'x' ? ['x'] : S.mode === 'alt' ? ['m','f'] : [S.mode];
   document.getElementById('btnFinish').classList.toggle('gold', alive <= target + 5);
@@ -919,12 +938,12 @@ function roundsLeft(g){
   const target = phaseTargetOf(g);
   if (a <= target) return 0;
   if (g !== 'x' && S.phase[g] === 0){
-    if (a > 60){ n += Math.ceil((a - 60) / 6); a = 60; }          // barrages : -6 par manche
-    if (a > 30){ n += Math.ceil((a - 30) / 2); a = 30; }          // 4-way : -2 par manche
+    if (a > 60){ n += Math.ceil((a - 60) / (fastMode ? 9 : 6)); a = 60; }   // barrages
+    if (a > 30){ n += Math.ceil((a - 30) / (fastMode ? 3 : 2)); a = 30; }   // 4-way
     return n;
   }
-  if (g === 'x' && a > 30){ n += Math.ceil((a - 30) / 2); a = 30; }
-  return n + Math.max(0, a - target) * 2;                          // duels : 2 défaites par élimination
+  if (g === 'x' && a > 30){ n += Math.ceil((a - 30) / (fastMode ? 3 : 2)); a = 30; }
+  return n + Math.max(0, a - target) * (fastMode ? 1 : 2);         // défaites par élimination
 }
 
 /* « Les deux » n'élimine personne : dans l'affinage il faut trancher, donc quota par phase,
@@ -963,7 +982,7 @@ function autoAdvance(){
       S.phase[g]++;
       // les vies ne repartent pas à 2 au Top 20 : on les conserve jusqu'au Top 10
       const reset = done !== 20;
-      aliveOf(g).forEach(w => { const s = S.stats[w.slug]; if (reset) s.lives = 2; s.np = 0; });
+      aliveOf(g).forEach(w => { const s = S.stats[w.slug]; if (reset) s.lives = fastMode ? 1 : 2; s.np = 0; });
       recent[g].length = 0;
       ann.push({ top: done, div: poolLabel(g), next: PHASES[S.phase[g]], reset: reset });
     }
@@ -991,6 +1010,7 @@ function showPhaseCine(a){
   el.querySelector('.pcNext').textContent = !a.next ? 'CLASSEMENT FINAL'
     : a.next === 1 ? 'DERNIER DUEL : ON DÉSIGNE LE VAINQUEUR' : 'ON CONTINUE VERS LE TOP ' + a.next;
   el.querySelector('.pcLives').textContent = !a.next ? ''
+    : fastMode ? '⚡ MORT SUBITE · 1 VIE'
     : a.reset ? '❤ 2 VIES PAR PERSONNE' : '❤ VIES CONSERVÉES';
   el.classList.remove('on'); void el.offsetWidth; el.classList.add('on');
   setTimeout(() => el.classList.remove('on'), 2600);
@@ -1025,6 +1045,7 @@ function nextCull(g){
   if (g !== 'x') S.lastPool = g;
   const st = stageOf(g);
   cullCfg = Object.assign({ stage: st }, CULL[st]);
+  if (fastMode) cullCfg.keep = 1;          // VERY FAST : 1 seul gardé par écran
   const alive = aliveOf(g);
   // ceux qu'on vient de garder passent en réserve quelques manches : légère protection,
   // puis retour au tirage normal (les moins vus d'abord) pour rester équitable.
@@ -1156,7 +1177,7 @@ function startMix(){
     // uniquement le Top 10 de chaque division : 20 participants, que des duels
     const parts = ranking('m').slice(0,10).concat(ranking('f').slice(0,10));
     S.mix = { duels:0, phase:0, parts: parts.map(w => w.slug), st: {} };
-    parts.forEach(w => S.mix.st[w.slug] = { r: S.stats[w.slug].r, n:0, np:0, w:0, l:0, t:0, seen:1, lives:2, out:null });
+    parts.forEach(w => S.mix.st[w.slug] = { r: S.stats[w.slug].r, n:0, np:0, w:0, l:0, t:0, seen:1, lives: fastMode ? 1 : 2, out:null });
   }
   S.mode = 'x';
   syncMixUI(); syncChips();
@@ -1850,10 +1871,15 @@ function show(name){
 function syncChips(){
   document.querySelectorAll('#modeChips .chip').forEach(c => c.classList.toggle('on', c.dataset.mode === S.mode));
 }
+let fastMode = false;   // VERY FAST : 1 vie pour tous, 1 sauvetage de groupe par division
 function freshRun(mode){
   const muted = S ? S.muted : false, music = S ? !!S.music : true;
   S = defaultState();
   S.muted = muted; S.music = music; S.mode = mode;
+  if (fastMode){
+    S.skips = { m:1, f:1, x:1 };
+    Object.keys(S.stats).forEach(k => S.stats[k].lives = 1);
+  }
   facedSet = new Set();
 }
 function startMode(mode){
@@ -1897,6 +1923,11 @@ function hardReset(){
 document.addEventListener('click', e => {
   const b = e.target.closest && e.target.closest('button');
   if (b) b.blur();
+});
+$('#fastToggle').addEventListener('click', () => {
+  fastMode = !fastMode;
+  $('#fastToggle').classList.toggle('on', fastMode);
+  toast(fastMode ? '⚡ VERY FAST — 1 GARDÉ PAR ÉCRAN · 1 VIE' : 'MODE NORMAL RÉTABLI');
 });
 els.fL.addEventListener('click', () => resolve('L'));
 els.fR.addEventListener('click', () => resolve('R'));
@@ -1994,9 +2025,11 @@ $('#loadState').textContent = 'CHARGEMENT DU ROSTER…';
   tpush('BOOT:' + R.length);
 
   if (location.hash.includes('autophase')){
+    if (location.hash.includes('fast')){ fastMode = true; $('#fastToggle').classList.add('on'); }
     // vérifie l'enchaînement automatique 30 -> 20 -> 10 -> 5 puis l'arrivée sur les résultats
     startMode('m');
     pools.m().slice(32).forEach(w => { const s = S.stats[w.slug]; s.lives = 0; s.out = 0; });
+    tpush('CFG:lives' + S.stats[pools.m()[0].slug].lives + '/skips' + S.skips.m);
     nextRound();
     let n = 0, seen = '';
     (function auto(){
@@ -2086,6 +2119,7 @@ $('#loadState').textContent = 'CHARGEMENT DU ROSTER…';
       return;
     }
     // fige une manche pour capture d'écran headless
+    if (location.hash.includes('fast')){ fastMode = true; $('#fastToggle').classList.add('on'); }
     startMode('alt');
     setTimeout(() => resolve('L'), 300);
     setTimeout(() => {                       // mesures de largeur (diagnostic responsive)

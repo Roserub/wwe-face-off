@@ -2,7 +2,7 @@
 # (AAC protege) que les navigateurs refusent de lire, alors que l'URL repond 200.
 $ErrorActionPreference = 'Continue'
 [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
-$root = 'c:\Users\Corentin\Documents\lol\wwe'
+$root = Split-Path -Parent $PSScriptRoot
 $lines = Get-Content -Encoding UTF8 (Join-Path $root 'tools\themes-found.psv')
 $types = @{}; $bad = @()
 $i = 0

@@ -5,7 +5,7 @@ param([string]$Slugs = '')
 $ErrorActionPreference = 'Continue'
 [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
 Add-Type -AssemblyName System.Drawing
-$root = 'c:\Users\Corentin\Documents\lol\wwe'
+$root = Split-Path -Parent $PSScriptRoot
 $imgDir = Join-Path $root 'images'
 $ua = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36'
 $uaWiki = 'WWEFaceOffBot/2.0 (local one-shot fan project) PowerShell/5.1'

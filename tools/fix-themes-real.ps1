@@ -4,7 +4,7 @@
 param([string]$Table = 'real-themes.psv')
 $ErrorActionPreference = 'Continue'
 [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
-$root = 'c:\Users\Corentin\Documents\lol\wwe'
+$root = Split-Path -Parent $PSScriptRoot
 $psvF = Join-Path $root 'tools\themes-found.psv'
 $tblF = Join-Path $root ('tools\' + $Table)
 $ua = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) WWEFaceOff-themes/3.0'

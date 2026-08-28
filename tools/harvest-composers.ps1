@@ -3,7 +3,7 @@
 # Sortie : tools\composer-index.psv  (source|titre|artiste|preview)
 $ErrorActionPreference = 'Continue'
 [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
-$root = 'c:\Users\Corentin\Documents\lol\wwe'
+$root = Split-Path -Parent $PSScriptRoot
 $ua = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) WWEFaceOff-harvest/1.0'
 
 function Get-Json([string]$url) {

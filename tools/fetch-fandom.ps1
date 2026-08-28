@@ -3,7 +3,7 @@ $ErrorActionPreference = 'Continue'
 [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
 Add-Type -AssemblyName System.Drawing
 $ua = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36'
-$imgDir = 'c:\Users\Corentin\Documents\lol\wwe\images'
+$imgDir = (Join-Path (Split-Path -Parent $PSScriptRoot) 'images')
 $jobs = @(
   @{slug='adam-rose'; titles=@('Adam Rose','Raymond Leppan')},
   @{slug='jtg';       titles=@('JTG')}
@@ -34,4 +34,4 @@ foreach ($j in $jobs) {
     Start-Sleep -Seconds 3
   }
 }
-& powershell -NoProfile -ExecutionPolicy Bypass -File 'c:\Users\Corentin\Documents\lol\wwe\tools\build-data.ps1'
+& powershell -NoProfile -ExecutionPolicy Bypass -File (Join-Path (Split-Path -Parent $PSScriptRoot) 'tools\build-data.ps1'

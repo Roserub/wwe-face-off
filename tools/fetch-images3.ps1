@@ -3,7 +3,7 @@
 $ErrorActionPreference = 'Continue'
 [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
 Add-Type -AssemblyName System.Drawing
-$root = 'c:\Users\Corentin\Documents\lol\wwe'
+$root = Split-Path -Parent $PSScriptRoot
 $imgDir = Join-Path $root 'images'
 $tmp = Join-Path $env:TEMP 'wwe-img-tmp'
 if (-not (Test-Path $tmp)) { New-Item -ItemType Directory -Force $tmp | Out-Null }

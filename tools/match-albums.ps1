@@ -1,7 +1,7 @@
 # Croise les catcheurs sans theme avec l'index d'albums (tools\album-index.psv).
 # Regle stricte : nom complet en mot entier dans le titre, ou alias explicite.
 $ErrorActionPreference = 'Continue'
-$root = 'c:\Users\Corentin\Documents\lol\wwe'
+$root = Split-Path -Parent $PSScriptRoot
 $psvF = Join-Path $root 'tools\themes-found.psv'
 $idxF = Join-Path $root 'tools\album-index.psv'
 if (-not (Test-Path $idxF)) { Write-Host 'index absent'; exit 1 }

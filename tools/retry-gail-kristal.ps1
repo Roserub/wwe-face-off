@@ -2,7 +2,7 @@
 # via Commons puis en.wikipedia (batch), puis build-data.
 $ErrorActionPreference = 'Continue'
 [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
-$imgDir = 'c:\Users\Corentin\Documents\lol\wwe\images'
+$imgDir = (Join-Path (Split-Path -Parent $PSScriptRoot) 'images')
 $ua = 'WWEFaceOffBot/2.0 (local one-shot fan project) PowerShell/5.1'
 Write-Host 'Cooldown 900s...'
 Start-Sleep -Seconds 900
@@ -59,4 +59,4 @@ if ($left.Count) {
     }
   } catch { Write-Host "en.wiki FAIL: $($_.Exception.Message)" }
 }
-& powershell -NoProfile -ExecutionPolicy Bypass -File 'c:\Users\Corentin\Documents\lol\wwe\tools\build-data.ps1'
+& powershell -NoProfile -ExecutionPolicy Bypass -File (Join-Path (Split-Path -Parent $PSScriptRoot) 'tools\build-data.ps1'

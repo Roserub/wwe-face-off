@@ -171,7 +171,7 @@ Kairi Sane,f,The Pirate Princess,Révolution,Kairi Sane,kairi-sane.jpg,center 14
 Dakota Kai,f,The Captain of Team Kick,Révolution,Dakota Kai,dakota-kai.jpg,center 14%
 Candice LeRae,f,The Poison Pixie,Révolution,Candice LeRae,candice-lerae.jpg,50% 15%
 Toni Storm,f,Timeless,Révolution,Toni Storm,toni-storm.jpg,center 14%
-Zelina Vega,f,La Muñeca,Révolution,Zelina Vega,zelina-vega.jpg,50% 50%
+Zelina Vega,f,La Muñeca,Révolution,Zelina Vega,zelina-vega.jpg,center 50%
 Nikki Cross,f,The Twisted Sister,Révolution,Nikki Cross,nikki-cross.jpg,center 50%
 Dana Brooke,f,The Flex Appeal,Révolution,Dana Brooke,dana-brooke.jpg,center 50%
 Peyton Royce,f,The Venus Flytrap,Révolution,Cassie Lee,peyton-royce.jpg,center 8%
@@ -181,14 +181,14 @@ Bianca Belair,f,The EST of WWE,Nouvelle Garde,Bianca Belair,bianca-belair.jpg,ce
 Rhea Ripley,f,The Eradicator,Nouvelle Garde,Rhea Ripley,rhea-ripley.jpg,center 8%
 Raquel Rodriguez,f,Big Mami Cool,Nouvelle Garde,Raquel Rodriguez (wrestler),raquel-rodriguez.jpg,center 14%
 Chelsea Green,f,The Hot Mess,Nouvelle Garde,Chelsea Green,chelsea-green.jpg,center 50%
-Tiffany Stratton,f,The Center of the Universe,Nouvelle Garde,Tiffany Stratton,tiffany-stratton.jpg,center 8%
+Tiffany Stratton,f,The Center of the Universe,Nouvelle Garde,Tiffany Stratton,tiffany-stratton.jpg,50% 55%
 Jade Cargill,f,The Storm,Nouvelle Garde,Jade Cargill,jade-cargill.jpg,center 50%
 Lyra Valkyria,f,The Valkyrie,Nouvelle Garde,Lyra Valkyria,lyra-valkyria.jpg,center 14%
 Roxanne Perez,f,The Prodigy,Nouvelle Garde,Roxanne Perez,roxanne-perez.jpg,36% 50%
 Giulia,f,The Beautiful Madness,Nouvelle Garde,Giulia (wrestler),giulia.jpg,center 14%
 Stephanie Vaquer,f,La Primera,Nouvelle Garde,Stephanie Vaquer,stephanie-vaquer.webp,center 12%
 Michin,f,The HBIC,Nouvelle Garde,Mia Yim,michin.jpg,center 50%
-Jacy Jayne,f,The Gold Standard of NXT,Nouvelle Garde,Jacy Jayne,jacy-jayne.jpg,center 8%
+Jacy Jayne,f,The Gold Standard of NXT,Nouvelle Garde,Jacy Jayne,jacy-jayne.jpg,50% 55%
 Sol Ruca,f,The Sol Snatcher,Nouvelle Garde,Sol Ruca,sol-ruca.jpg,center 50%
 Gregory Helms,m,The Hurricane,Ruthless Aggression,Shane Helms,gregory-helms.jpg,center 14%
 Super Crazy,m,The Insane Luchador,Ruthless Aggression,Super Crazy,super-crazy.jpg,center 14%

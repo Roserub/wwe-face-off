@@ -2,7 +2,7 @@
 # Sortie : tools\audit-themes.txt (+ resume console)
 $ErrorActionPreference = 'Continue'
 [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
-$root = 'c:\Users\Corentin\Documents\lol\wwe'
+$root = Split-Path -Parent $PSScriptRoot
 $rows = Get-Content -Raw -Encoding UTF8 (Join-Path $root 'roster.csv') | ConvertFrom-Csv
 $psv  = Get-Content -Encoding UTF8 (Join-Path $root 'tools\themes-found.psv')
 

@@ -1,6 +1,6 @@
 # Regenere themes.js depuis tools\themes-found.psv (avec reparation mojibake).
 $ErrorActionPreference = 'Stop'
-$root = 'c:\Users\Corentin\Documents\lol\wwe'
+$root = Split-Path -Parent $PSScriptRoot
 $psvF = Join-Path $root 'tools\themes-found.psv'
 $fixPairs = @(
   @(0x00C3,0x00A9,0x00E9), @(0x00C3,0x00A8,0x00E8), @(0x00C3,0x00B6,0x00F6), @(0x00C3,0x00A1,0x00E1),

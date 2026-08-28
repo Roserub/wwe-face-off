@@ -1,7 +1,7 @@
 # Retire les faux positifs : fan-tracks / dubs qui ne sont pas le vrai theme du catcheur.
 # (silence = seul le theme de l'adversaire jouera, conformement a la regle demandee)
 $ErrorActionPreference = 'Stop'
-$root = 'c:\Users\Corentin\Documents\lol\wwe'
+$root = Split-Path -Parent $PSScriptRoot
 $psvF = Join-Path $root 'tools\themes-found.psv'
 $drop = @('ric-flair','goldberg','cameron')   # Brian Knapp / Optimus Chad dub / Luca Young : pas les vrais themes
 $lines = Get-Content -Encoding UTF8 $psvF | ForEach-Object {

@@ -2,7 +2,7 @@
 # Regle stricte : le nom du catcheur (ou le titre exact) DOIT etre dans le morceau, sinon ambiance.
 $ErrorActionPreference = 'Continue'
 [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
-$root = 'c:\Users\Corentin\Documents\lol\wwe'
+$root = Split-Path -Parent $PSScriptRoot
 $psvF = Join-Path $root 'tools\themes-found.psv'
 $ua = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) WWEFaceOff-themes/3.2'
 function Search-Itunes([string]$term) {

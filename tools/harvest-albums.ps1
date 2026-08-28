@@ -4,7 +4,7 @@
 # Sortie : tools\album-index.psv (source|titre|artiste|album|preview)
 $ErrorActionPreference = 'Continue'
 [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
-$root = 'c:\Users\Corentin\Documents\lol\wwe'
+$root = Split-Path -Parent $PSScriptRoot
 $ua = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) WWEFaceOff-albums/1.0'
 
 function Get-Json([string]$url, [int]$tries = 3) {

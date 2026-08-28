@@ -1,7 +1,7 @@
 # Cherche une meilleure photo de Kristal Marshall dans le HTML Fandom (images d'article, pas la vignette API)
 $ErrorActionPreference = 'Continue'
 [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
-$imgDir = 'c:\Users\Corentin\Documents\lol\wwe\images'
+$imgDir = (Join-Path (Split-Path -Parent $PSScriptRoot) 'images')
 $ua = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36'
 $best = $null; $bestKb = 0
 foreach ($page in @('https://prowrestling.fandom.com/wiki/Kristal_Marshall','https://prowrestling.fandom.com/wiki/Special:Search?query=Kristal+Marshall')) {
@@ -29,5 +29,5 @@ if ($best -and $bestKb -ge 45) {
   Get-ChildItem $imgDir -Filter 'kristal-marshall.*' -ErrorAction SilentlyContinue | Remove-Item -Force
   Move-Item -Force $out (Join-Path $imgDir "kristal-marshall.$ext")
   Write-Host "OK kristal-marshall <- Fandom HTML ($bestKb KB)"
-  & powershell -NoProfile -ExecutionPolicy Bypass -File 'c:\Users\Corentin\Documents\lol\wwe\tools\build-data.ps1'
+  & powershell -NoProfile -ExecutionPolicy Bypass -File (Join-Path (Split-Path -Parent $PSScriptRoot) 'tools\build-data.ps1'
 } else { Write-Host "Rien de mieux trouve (meilleur = $bestKb KB) - on garde la version actuelle" }

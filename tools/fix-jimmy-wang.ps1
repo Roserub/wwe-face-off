@@ -2,7 +2,7 @@
 $ErrorActionPreference = 'Continue'
 [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
 Add-Type -AssemblyName System.Drawing
-$imgDir = 'c:\Users\Corentin\Documents\lol\wwe\images'
+$imgDir = (Join-Path (Split-Path -Parent $PSScriptRoot) 'images')
 $ua = 'WWEFaceOffBot/2.0 (local one-shot fan project) PowerShell/5.1'
 $cur = Get-ChildItem $imgDir -Filter 'jimmy-wang-yang.*' | Select-Object -First 1
 $curPx = 0
@@ -35,5 +35,5 @@ if ($best) {
   Get-ChildItem $imgDir -Filter 'jimmy-wang-yang.*' -ErrorAction SilentlyContinue | Remove-Item -Force
   Move-Item -Force $tmp (Join-Path $imgDir "jimmy-wang-yang.$ext")
   Write-Host "OK jimmy-wang-yang remplace"
-  & powershell -NoProfile -ExecutionPolicy Bypass -File 'c:\Users\Corentin\Documents\lol\wwe\tools\build-data.ps1'
+  & powershell -NoProfile -ExecutionPolicy Bypass -File (Join-Path (Split-Path -Parent $PSScriptRoot) 'tools\build-data.ps1'
 } else { Write-Host "rien de mieux sur Commons - photo actuelle conservee" }

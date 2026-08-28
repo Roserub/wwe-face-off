@@ -3,7 +3,7 @@
 # Ce qui reste introuvable -> MISS (aucun theme) : en jeu, seul le theme de l'adversaire jouera.
 $ErrorActionPreference = 'Continue'
 [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
-$root = 'c:\Users\Corentin\Documents\lol\wwe'
+$root = Split-Path -Parent $PSScriptRoot
 $psvF = Join-Path $root 'tools\themes-found.psv'
 $ua = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) WWEFaceOff-themes/4.0'
 $coverRx = 'it lives|ansoland|geek music|florian haack|karaoke|tribute|8-bit|8 bit|white knight|suplex sound|meat sauce|vox freaks'

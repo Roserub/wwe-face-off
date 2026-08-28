@@ -1,7 +1,7 @@
 # Croise les catcheurs sans theme avec l'index des compositeurs (tools\composer-index.psv).
 # Regle : le nom de ring (ou tous ses mots significatifs) doit figurer dans le TITRE du morceau.
 $ErrorActionPreference = 'Continue'
-$root = 'c:\Users\Corentin\Documents\lol\wwe'
+$root = Split-Path -Parent $PSScriptRoot
 $psvF = Join-Path $root 'tools\themes-found.psv'
 $idxF = Join-Path $root 'tools\composer-index.psv'
 

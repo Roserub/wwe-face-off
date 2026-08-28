@@ -2,7 +2,7 @@
 # cass dans "Cassidy", chance dans "No Chance In Hell"). On repasse en frontieres de mots
 # et on annule les faux positifs de la passe precedente.
 $ErrorActionPreference = 'Continue'
-$root = 'c:\Users\Corentin\Documents\lol\wwe'
+$root = Split-Path -Parent $PSScriptRoot
 $psvF = Join-Path $root 'tools\themes-found.psv'
 $idxF = Join-Path $root 'tools\composer-index.psv'
 

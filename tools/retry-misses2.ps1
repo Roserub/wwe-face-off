@@ -2,7 +2,7 @@
 $ErrorActionPreference = 'Continue'
 [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
 $ua = 'WWEFaceOffBot/2.0 (local one-shot fan project) PowerShell/5.1'
-$imgDir = 'c:\Users\Corentin\Documents\lol\wwe\images'
+$imgDir = (Join-Path (Split-Path -Parent $PSScriptRoot) 'images')
 
 $fixes = @(
   @{slug='john-morrison';     titles=@('John Morrison (wrestler)')},
@@ -41,4 +41,4 @@ foreach ($f in $fixes) {
     Start-Sleep -Seconds 3
   }
 }
-& powershell -NoProfile -ExecutionPolicy Bypass -File 'c:\Users\Corentin\Documents\lol\wwe\tools\build-data.ps1'
+& powershell -NoProfile -ExecutionPolicy Bypass -File (Join-Path (Split-Path -Parent $PSScriptRoot) 'tools\build-data.ps1'
