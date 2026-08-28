@@ -294,4 +294,7 @@ Blake Monroe,f,The Glamour,Nouvelle Garde,Mariah May,blake-monroe.jpg,center 14%
 Tatum Paxley,f,The Psycho Ballerina,Nouvelle Garde,Tatum Paxley,tatum-paxley.jpg,center 50%
 Ivy Nile,f,The Pitbull of NXT,Nouvelle Garde,Ivy Nile,ivy-nile.jpg,center 14%
 Maxxine Dupri,f,Alpha Academy's Ace,Nouvelle Garde,Maxxine Dupri,maxxine-dupri.jpg,center 50%
+Sylvester Lefort,m,Le Magnat Français,Reality Era,Sylvester Lefort,sylvester-lefort.jpg,50% 62%
+Amale,f,French Hope,Nouvelle Garde,Amale (wrestler),amale.jpg,center 50%
+Michel Bojolé Prime,m,L'Arbitre arbitral,Icône,,michel-bojole-prime.jpg,42% 50%
 `;

@@ -228,49 +228,65 @@ img{-webkit-user-drag:none;user-select:none}
 #drawer footer .tbBtn{width:100%}
 
 /* ============ RESULTS ============ */
-#results{position:fixed;inset:0;z-index:30;background:radial-gradient(ellipse at 50% -10%,#1b1408 0%,var(--bg) 55%);overflow-y:auto;-webkit-overflow-scrolling:touch;display:none}
+#results{position:fixed;inset:0;z-index:30;overflow-y:auto;-webkit-overflow-scrolling:touch;display:none;
+  background:radial-gradient(ellipse at 50% -12%,#1a1409 0%,var(--bg) 52%)}
 #results.on{display:block}
-.resWrap{max-width:1180px;margin:0 auto;padding:2.2rem 1.5rem 4rem;text-align:center}
-.resWrap h1{font-family:var(--fD);font-size:clamp(2.6rem,6vw,4.6rem);letter-spacing:.04em;
+.resWrap{max-width:1240px;margin:0 auto;padding:2.4rem 1.6rem 4.5rem;text-align:center}
+.resWrap h1{font-family:var(--fD);font-size:clamp(2.6rem,6vw,4.8rem);letter-spacing:.04em;line-height:1;
   background:linear-gradient(178deg,#fff8e1 8%,var(--gold) 45%,#8a6410 55%,#ffe9a8 92%);
   -webkit-background-clip:text;background-clip:text;color:transparent}
-.resWrap .rsub{font-family:var(--fC);color:var(--dim);letter-spacing:.3em;font-size:.85rem;margin:.3rem 0 1.6rem}
-.resTabs{display:inline-flex;gap:.4rem;background:rgba(255,255,255,.05);border:1px solid var(--steel);border-radius:999px;padding:.25rem;margin-bottom:2.2rem}
-.podium{display:flex;align-items:flex-end;justify-content:center;gap:1.2rem;margin-bottom:2.6rem;flex-wrap:wrap}
-.podCard{position:relative;width:230px;border-radius:16px;overflow:hidden;background:var(--panel);
-  border:1px solid var(--steel);box-shadow:0 18px 50px rgba(0,0,0,.55)}
-.podCard.p1{width:290px;border-color:var(--gold);box-shadow:0 0 0 1px var(--gold),0 24px 70px rgba(245,197,66,.22)}
-.podCard.p2{border-color:#aeb4c4}.podCard.p3{border-color:#c07f47}
-.podCard img{width:100%;height:300px;object-fit:cover;object-position:center 10%;display:block}
-.podCard.p1 img{height:370px}
-.podCard .medal{position:absolute;top:.7rem;left:.7rem;font-family:var(--fD);font-size:1.5rem;width:2.3em;height:2.3em;
-  display:flex;align-items:center;justify-content:center;border-radius:50%;color:#171106;
-  background:radial-gradient(circle at 30% 25%,#fff3c4,var(--gold) 55%,var(--gold2));box-shadow:0 4px 14px rgba(0,0,0,.6)}
-.podCard.p2 .medal{background:radial-gradient(circle at 30% 25%,#fff,#c6cbd8 55%,#8f95a5)}
-.podCard.p3 .medal{background:radial-gradient(circle at 30% 25%,#ffd9b3,#c07f47 55%,#8f5a2c)}
-.podCard .pInfo{padding:.9rem .9rem 1.1rem;background:linear-gradient(180deg,rgba(255,255,255,.03),transparent)}
-.podCard .pNm{font-family:var(--fD);font-size:1.7rem;letter-spacing:.03em;line-height:1}
-.podCard.p1 .pNm{font-size:2.1rem;color:var(--gold)}
-.podCard .pNk{font-family:var(--fC);font-style:italic;color:var(--dim);font-size:.9rem;margin-top:.25rem}
-.podCard .crown{position:absolute;top:-.2rem;right:.8rem;font-size:2.2rem;filter:drop-shadow(0 4px 8px rgba(0,0,0,.7));
-  animation:crownBob 2.4s ease-in-out infinite}
-.podCard.goat{border-color:var(--gold);box-shadow:0 0 0 2px var(--gold),0 26px 80px rgba(245,197,66,.35)}
-.podCard.goat img{height:400px}
-.podCard .goatTag{position:absolute;top:1rem;left:50%;transform:translateX(-50%);z-index:3;
-  font-family:var(--fD);font-size:1.5rem;letter-spacing:.32em;padding:.25rem 1rem .12rem;border-radius:6px;
-  color:#1d1403;background:linear-gradient(180deg,#fff3c4,var(--gold) 55%,var(--gold2));
-  box-shadow:0 6px 22px rgba(0,0,0,.6)}
-@keyframes crownBob{0%,100%{transform:translateY(0) rotate(8deg)}50%{transform:translateY(-6px) rotate(4deg)}}
-.resGrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:.9rem;text-align:left}
-.gCard{position:relative;border-radius:12px;overflow:hidden;background:var(--panel);border:1px solid #23232f;
-  transition:transform .16s,border-color .16s}
-.gCard:hover{transform:translateY(-4px);border-color:var(--gold2)}
-.gCard img{width:100%;height:150px;object-fit:cover;object-position:center 10%;display:block}
-.gCard .gRk{position:absolute;top:.4rem;left:.4rem;font-family:var(--fD);font-size:.95rem;color:var(--gold);
-  background:rgba(5,5,9,.8);border:1px solid var(--gold2);border-radius:6px;padding:.1rem .45rem}
-.gCard .gNm{font-family:var(--fC);font-weight:700;font-size:.92rem;letter-spacing:.03em;padding:.5rem .6rem .6rem;
+.resWrap .rsub{font-family:var(--fC);color:var(--dim);letter-spacing:.32em;font-size:.82rem;margin:.45rem 0 1.4rem}
+.resTabs{display:inline-flex;gap:.4rem;background:rgba(255,255,255,.05);border:1px solid var(--steel);border-radius:999px;padding:.25rem;margin-bottom:2.4rem}
+
+/* podium : trois portraits 3:4 cadrés par le focus, le n°1 plus grand, alignés en bas */
+.podium{display:flex;align-items:flex-end;justify-content:center;gap:clamp(.7rem,1.6vw,1.4rem);margin-bottom:1.4rem}
+.podCard{position:relative;width:clamp(150px,22vw,250px);aspect-ratio:3/4;border-radius:14px;overflow:hidden;
+  background:var(--panel);box-shadow:0 22px 50px rgba(0,0,0,.55);
+  outline:1px solid rgba(255,255,255,.10);outline-offset:-1px}
+.podCard.p1{width:clamp(190px,28vw,320px);outline:1px solid rgba(245,197,66,.85);
+  box-shadow:0 0 0 1px rgba(245,197,66,.25),0 30px 80px rgba(0,0,0,.6),0 0 70px rgba(245,197,66,.16)}
+.podCard.p2{outline-color:rgba(200,205,220,.45)}
+.podCard.p3{outline-color:rgba(200,130,80,.45)}
+.podCard img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;transition:transform .6s ease}
+.podCard:hover img{transform:scale(1.03)}
+.podCard::after{content:'';position:absolute;inset:0;pointer-events:none;
+  background:linear-gradient(to top,rgba(4,4,8,.92) 0,rgba(4,4,8,.45) 26%,transparent 50%)}
+.podCard .rk{position:absolute;top:.55rem;left:.75rem;z-index:2;font-family:var(--fD);
+  font-size:clamp(1.6rem,3vw,2.6rem);line-height:1;color:rgba(255,255,255,.55);letter-spacing:.02em;
+  text-shadow:0 2px 10px rgba(0,0,0,.8)}
+.podCard.p1 .rk{color:var(--gold);opacity:.95}
+.podCard .pInfo{position:absolute;left:0;right:0;bottom:0;z-index:2;padding:0 .8rem .85rem;text-align:left}
+.podCard .pNm{font-family:var(--fD);font-size:clamp(1.25rem,2.2vw,2rem);letter-spacing:.03em;line-height:.98;
+  text-shadow:0 3px 14px rgba(0,0,0,.9)}
+.podCard.p1 .pNm{font-size:clamp(1.6rem,2.9vw,2.6rem);color:var(--gold)}
+.podCard .pNk{font-family:var(--fC);font-style:italic;color:#cfc6b4;font-size:clamp(.72rem,1.05vw,.92rem);
+  margin-top:.22rem;letter-spacing:.04em;text-shadow:0 2px 8px rgba(0,0,0,.9);
   white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.podCard .tag{position:absolute;top:.7rem;right:.7rem;z-index:2;font-family:var(--fC);font-weight:700;
+  font-size:.62rem;letter-spacing:.24em;padding:.28rem .55rem .24rem;border-radius:4px;
+  color:#1d1403;background:linear-gradient(180deg,#fff3c4,var(--gold) 60%,var(--gold2));
+  box-shadow:0 4px 14px rgba(0,0,0,.5)}
+.podCard.goat{outline-color:var(--gold)}
+
+/* grille 4→30 : galerie de portraits 3:4, rang en numéral, nom sur voile */
+.resGrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:.8rem;text-align:left}
+.gCard{position:relative;aspect-ratio:3/4;border-radius:11px;overflow:hidden;background:var(--panel);
+  outline:1px solid rgba(255,255,255,.07);outline-offset:-1px;transition:transform .18s,outline-color .18s}
+.gCard:hover{transform:translateY(-4px);outline-color:rgba(245,197,66,.6)}
+.gCard img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.gCard::after{content:'';position:absolute;inset:0;pointer-events:none;
+  background:linear-gradient(to top,rgba(4,4,8,.92) 0,rgba(4,4,8,.35) 30%,transparent 55%)}
+.gCard .gRk{position:absolute;top:.35rem;left:.55rem;z-index:2;font-family:var(--fD);font-size:1.45rem;line-height:1;
+  color:rgba(245,197,66,.85);text-shadow:0 2px 8px rgba(0,0,0,.85)}
+.gCard .gNm{position:absolute;left:0;right:0;bottom:0;z-index:2;padding:0 .6rem .55rem;
+  font-family:var(--fD);font-size:1.05rem;letter-spacing:.03em;line-height:1;
+  text-shadow:0 2px 10px rgba(0,0,0,.9);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .resActions{display:flex;gap:.8rem;justify-content:center;flex-wrap:wrap;margin-top:2.6rem}
+@media (max-width:620px){
+  .podium{flex-wrap:wrap}
+  .podCard{width:38vw}.podCard.p1{width:60vw;order:-1}
+  .resGrid{grid-template-columns:repeat(3,1fr);gap:.5rem}
+}
 
 /* ============ BARRAGES (battle royal / fatal 4-way) ============ */
 #cullWrap{flex:1;display:none;flex-direction:column;min-height:0;position:relative;z-index:12;padding:0 1rem 1rem}
@@ -335,24 +351,26 @@ img{-webkit-user-drag:none;user-select:none}
 #cullSkip:disabled{opacity:.3;cursor:not-allowed}
 
 /* ============ STATS DE FIN ============ */
-#statsWrap{margin:0 auto 2.4rem;max-width:980px}
-.stRow{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:.7rem;margin-bottom:.7rem}
-.stTile{background:linear-gradient(180deg,rgba(255,255,255,.045),rgba(255,255,255,.012));
-  border:1px solid #23232f;border-radius:12px;padding:.85rem .8rem;text-align:center}
-.stTile .stV{font-family:var(--fD);font-size:1.9rem;line-height:1;color:var(--gold);letter-spacing:.02em}
-.stTile .stV.sm{font-size:1.15rem}
-.stTile .stL{font-family:var(--fC);font-size:.66rem;letter-spacing:.2em;color:var(--dim);margin-top:.35rem}
-.stWide{background:linear-gradient(180deg,rgba(255,255,255,.045),rgba(255,255,255,.012));
-  border:1px solid #23232f;border-radius:12px;padding:.9rem 1rem;text-align:left}
-.stWide h4{font-family:var(--fC);font-size:.68rem;letter-spacing:.22em;color:var(--dim);font-weight:700;margin-bottom:.6rem}
-.eraBar{display:flex;height:14px;border-radius:7px;overflow:hidden;background:rgba(255,255,255,.05)}
+#statsWrap{margin:2.6rem auto 0;max-width:1000px}
+.stStrip{display:flex;justify-content:center;flex-wrap:wrap;
+  border-top:1px solid rgba(245,197,66,.18);border-bottom:1px solid rgba(245,197,66,.18);padding:.9rem 0}
+.stItem{padding:.2rem 1.6rem;border-left:1px solid rgba(255,255,255,.08);text-align:center;min-width:120px}
+.stItem:first-child{border-left:none}
+.stItem .stV{font-family:var(--fD);font-size:2.2rem;line-height:1;color:var(--gold);letter-spacing:.02em}
+.stItem .stV.sm{font-size:1.25rem;padding-top:.4rem}
+.stItem .stL{font-family:var(--fC);font-size:.64rem;letter-spacing:.24em;color:var(--dim);margin-top:.35rem;font-weight:700}
+.stMentions{display:flex;justify-content:center;flex-wrap:wrap;gap:.4rem 2.2rem;margin-top:.9rem;
+  font-family:var(--fC);font-size:.92rem;color:#b5aec2;letter-spacing:.04em}
+.stMentions b{color:var(--ink);font-weight:700}
+.stMentions i{font-style:normal;color:var(--dim);font-size:.7rem;letter-spacing:.2em;margin-right:.45rem;font-weight:700}
+.stMentions .up{color:#ff8a99}
+.eraWrap{margin-top:1.1rem}
+.eraBar{display:flex;height:6px;border-radius:3px;overflow:hidden;background:rgba(255,255,255,.06)}
 .eraBar i{display:block;height:100%}
-.eraKey{display:flex;flex-wrap:wrap;gap:.5rem .9rem;margin-top:.55rem;font-family:var(--fC);font-size:.76rem;color:var(--dim)}
-.eraKey span{display:flex;align-items:center;gap:.32rem}
-.eraKey b{width:9px;height:9px;border-radius:2px;display:inline-block}
-.upset{display:flex;align-items:center;gap:.6rem;font-family:var(--fC);font-size:.95rem;color:var(--ink)}
-.upset img{width:34px;height:34px;border-radius:7px;object-fit:cover;object-position:center 12%;background:#191922}
-.upset .arrow{color:var(--red);font-weight:700}
+.eraKey{display:flex;flex-wrap:wrap;justify-content:center;gap:.4rem 1.1rem;margin-top:.55rem;
+  font-family:var(--fC);font-size:.76rem;color:var(--dim);letter-spacing:.06em}
+.eraKey span{display:flex;align-items:center;gap:.35rem}
+.eraKey b{width:8px;height:8px;border-radius:2px;display:inline-block}
 
 /* ============ TOURNOI ============ */
 .rec .hearts{color:#ff4d5e;letter-spacing:.05em}
@@ -444,7 +462,7 @@ img{-webkit-user-drag:none;user-select:none}
 #posterOv{position:fixed;inset:0;z-index:80;display:none;flex-direction:column;align-items:center;
   background:rgba(4,4,8,.93);backdrop-filter:blur(6px);padding:1rem;overflow:auto}
 #posterOv.on{display:flex}
-#posterOv canvas{max-width:min(100%,760px);height:auto;border-radius:10px;box-shadow:0 30px 90px rgba(0,0,0,.8);
+#posterOv canvas{width:min(100%,1400px);height:auto;border-radius:10px;box-shadow:0 30px 90px rgba(0,0,0,.8);
   border:1px solid var(--steel)}
 #posterBar{display:flex;gap:.7rem;align-items:center;flex-wrap:wrap;justify-content:center;padding:.8rem 0}
 #posterHint{font-family:var(--fC);letter-spacing:.1em;font-size:.8rem;color:var(--dim);text-align:center;
@@ -614,8 +632,8 @@ img{-webkit-user-drag:none;user-select:none}
       <button class="chip resTabX" data-g="x" style="display:none">⚔ MIXTE</button>
     </div>
     <div class="podium" id="podium"></div>
-    <div id="statsWrap"></div>
     <div class="resGrid" id="resGrid"></div>
+    <div id="statsWrap"></div>
     <div class="resActions">
       <button class="tbBtn gold" id="btnPoster">🖼 AFFICHE EN IMAGE</button>
       <button class="tbBtn" id="btnCopy">📋 COPIER MES TOPS</button>
@@ -727,7 +745,7 @@ function freshStats(){
 function defaultState(){
   return { mode:'alt', duels:0, culls:0, stats:freshStats(), muted:false, music:true, lastPool:'f',
     phase:{m:0,f:0}, prompted:{}, mix:null, skips:{m:4,f:4,x:4}, skipsV:4,
-    sched:{m:0,f:0}, upset:null, both:0, outSeq:0, pf:{}, champ:{},
+    sched:{m:0,f:0}, upset:null, both:0, outSeq:0, pf:{}, champ:{}, finalAnn:{},
     bothLeft:{m:0,f:0,x:0}, bothPhase:{m:-1,f:-1,x:-1}, prot:{}, cool:{},
     dv:{ m:{d:0,c:0,b:0}, f:{d:0,c:0,b:0}, x:{d:0,c:0,b:0} } };   // compteurs par division
 }
@@ -873,7 +891,7 @@ function nextDuel(){
   duelToken++;
   showStage('duel');
   const g = currentPoolG();
-  if (!poolPlayable(g)){ stopTheme(true); finish(); return; }
+  if (!poolPlayable(g)){ finish(); return; }
   S.lastPool = g === 'x' ? S.lastPool : g;
   cur.g = g;
   let pair = (nextPairCache.pair && nextPairCache.g === g
@@ -1073,7 +1091,7 @@ function showPhaseCine(a){
   el.querySelector('.pcTop').textContent = a.custom || (a.top === 1 ? 'VAINQUEUR' : 'TOP ' + a.top);
   el.querySelector('.pcDiv').textContent = a.div;
   el.querySelector('.pcNext').textContent = a.custom ? a.next : !a.next ? 'CLASSEMENT FINAL'
-    : a.next === 1 ? 'DERNIER DUEL : ON DÉSIGNE LE VAINQUEUR' : 'ON CONTINUE VERS LE TOP ' + a.next;
+    : a.next === 1 ? "ON CONTINUE JUSQU'À LA FINALE" : 'ON CONTINUE VERS LE TOP ' + a.next;
   el.querySelector('.pcLives').textContent = (a.custom || !a.next) ? ''
     : fastMode ? '⚡ MORT SUBITE · 1 VIE'
     : a.reset ? '❤ 2 VIES PAR PERSONNE' : '❤ VIES CONSERVÉES';
@@ -1150,20 +1168,30 @@ function showChampCine(g){
   clearTimeout(pendingNext);
   pendingNext = setTimeout(() => {
     el.classList.add('out');
-    setTimeout(() => { el.classList.remove('on','out'); stopTheme(true); startRound(); }, quick ? 10 : 450);
-  }, quick ? 30 : 3000);
+    setTimeout(() => { el.classList.remove('on','out'); keepTheme = true; startRound(); }, quick ? 10 : 450);
+  }, quick ? 30 : 6000);
 }
 function startRound(){
   clearTimeout(pendingNext); pendingNext = null;
   cur.pf = false;
+  if (scopeOf().some(poolPlayable) || scopeOf().some(needsPF)) keepTheme = false;
   const pfG = scopeOf().find(needsPF);
   if (pfG){ startPetiteFinale(pfG); return; }
   const cg = scopeOf().find(needsChamp);
   if (cg){ showChampCine(cg); return; }
-  if (!scopeOf().some(poolPlayable)){ stopTheme(true); finish(); return; }
+  if (!scopeOf().some(poolPlayable)){ finish(); return; }
   plannedG = pickDivision();          // décidé une seule fois par manche
   const g = plannedG;
-  if (!poolPlayable(g)){ stopTheme(true); finish(); return; }
+  if (!poolPlayable(g)){ finish(); return; }
+  if (stageOf(g) === 'duel' && phaseTargetOf(g) === 1 && aliveOf(g).length === 2 && !S.finalAnn[g]){
+    S.finalAnn[g] = 1;                 // les deux derniers : on annonce la finale
+    stopTheme(true);
+    tpush('FINALE:' + g);
+    if (!AUTOTEST) showPhaseCine({ custom:'FINALE', kicker:'LES DEUX DERNIERS', div: poolLabel(g),
+      next: fastMode ? "UN SEUL DUEL · LE VAINQUEUR SORT D'ICI" : "LE DERNIER DEBOUT L'EMPORTE" });
+    pendingNext = setTimeout(startRound, AUTOTEST ? 30 : 2700);
+    return;
+  }
   if (stageOf(g) === 'duel'){ showStage('duel'); nextDuel(); }
   else nextCull(g);
 }
@@ -1371,23 +1399,23 @@ function renderResults(){
   $('.resWrap h1').textContent = goat ? 'TON GOAT' : resG === 'x' ? 'TON TOP 10 MIXTE' : 'TON TOP 30';
   const pod = list.slice(0,3), rest = list.slice(3);
   const order = [pod[1], pod[0], pod[2]].filter(Boolean);
+  const pos = w => w.focus || 'center 12%';
   $('#podium').innerHTML = order.map(w => {
     const rk = pod.indexOf(w) + 1;
     return `<div class="podCard p${rk}${rk===1 && goat ? ' goat' : ''}">
-      ${rk===1 ? '<span class="crown">' + (goat ? '🐐' : '👑') + '</span>' : ''}
-      ${rk===1 && goat ? '<span class="goatTag">GOAT</span>' : ''}
-      <img src="${imgSrc(w)}" alt="" onerror="this.src='${placeholder(w)}'">
-      <span class="medal">${rk}</span>
+      <img src="${imgSrc(w)}" alt="" style="object-position:${pos(w)}" onerror="this.src='${placeholder(w)}'">
+      <span class="rk">${String(rk).padStart(2,'0')}</span>
+      ${rk===1 ? '<span class="tag">' + (goat ? 'GOAT' : 'CHAMPION') + '</span>' : ''}
       <div class="pInfo"><div class="pNm">${w.name}</div><div class="pNk">${w.nickname ? '« '+w.nickname+' »' : (w.era||'')}</div></div>
     </div>`;
   }).join('');
   $('#resGrid').innerHTML = rest.map((w,i) => `
     <div class="gCard">
-      <img src="${imgSrc(w)}" loading="lazy" alt="" onerror="this.src='${placeholder(w)}'">
-      <span class="gRk">#${i+4}</span>
+      <img src="${imgSrc(w)}" loading="lazy" alt="" style="object-position:${pos(w)}" onerror="this.src='${placeholder(w)}'">
+      <span class="gRk">${String(i+4).padStart(2,'0')}</span>
       <div class="gNm">${w.name}</div>
     </div>`).join('');
-  $('#resSub').textContent = (goat ? '🐐 LE PLUS GRAND DE TOUS' : resG==='x' ? '⚔ MIXTE · TOP 10' : resG==='m' ? 'HOMMES' : 'FEMMES')
+  $('#resSub').textContent = (goat ? 'LE PLUS GRAND DE TOUS' : resG==='x' ? 'MIXTE · TOP 10' : resG==='m' ? 'HOMMES' : 'FEMMES')
     + ' · ' + S.duels + ' MANCHES · WWE 2006—2026';
   renderModeButtons();
   renderStats(list);
@@ -1438,39 +1466,27 @@ function renderStats(list){
   });
   // survivant discret : le moins bien classé encore en vie
   const survivors = list.filter(w => statsFor(g,w).out === null || statsFor(g,w).out === undefined);
-  const dark = survivors.length ? survivors[survivors.length-1] : null;
+  const dark = survivors.length > 1 ? survivors[survivors.length-1] : null;   // pas le n°1 seul en vie
   // upset
   let upHtml = '';
   if (S.upset && bySlug[S.upset.w] && bySlug[S.upset.l]){
     const W = bySlug[S.upset.w], L = bySlug[S.upset.l];
-    upHtml = `<div class="stWide" style="margin-top:.7rem">
-      <h4>PLUS GROSSE SURPRISE</h4>
-      <div class="upset">
-        <img src="${imgSrc(W)}" alt="" style="object-position:${W.focus||'center 12%'}">
-        <b>${W.name}</b> <span class="arrow">bat</span> <b>${L.name}</b>
-        <img src="${imgSrc(L)}" alt="" style="object-position:${L.focus||'center 12%'}">
-        <span style="color:var(--dim)">· écart de ${S.upset.gap} pts</span>
-      </div></div>`;
+    upHtml = `<span><i>SURPRISE</i><b>${W.name}</b> <span class="up">bat</span> <b>${L.name}</b> · ${S.upset.gap} pts</span>`;
   }
   $('#statsWrap').innerHTML = `
-    <div class="stRow">
-      <div class="stTile"><div class="stV">${dv.d}</div><div class="stL">MANCHES ${poolLabel(g)}</div></div>
-      <div class="stTile"><div class="stV">${dv.c}</div><div class="stL">BARRAGES</div></div>
-      <div class="stTile"><div class="stV">${pool.length - alive}</div><div class="stL">ÉLIMINÉS</div></div>
-      <div class="stTile"><div class="stV">${dv.b}</div><div class="stL">DOUBLES ★</div></div>
-      <div class="stTile"><div class="stV sm">${eraSorted[0] || '—'}</div><div class="stL">ÈRE DOMINANTE</div></div>
+    <div class="stStrip">
+      <div class="stItem"><div class="stV">${dv.d}</div><div class="stL">MANCHES</div></div>
+      <div class="stItem"><div class="stV">${dv.c}</div><div class="stL">BARRAGES</div></div>
+      <div class="stItem"><div class="stV">${pool.length - alive}</div><div class="stL">ÉLIMINÉS</div></div>
+      <div class="stItem"><div class="stV">${dv.b}</div><div class="stL">DOUBLES ★</div></div>
+      <div class="stItem"><div class="stV sm">${eraSorted[0] || '—'}</div><div class="stL">ÈRE DOMINANTE</div></div>
     </div>
-    <div class="stRow">
-      <div class="stTile"><div class="stV sm">${best ? best.w.name : '—'}</div><div class="stL">LE PLUS INVAINCU${best ? ' · '+best.s.w+'V-'+best.s.l+'D' : ''}</div></div>
-      <div class="stTile"><div class="stV sm">${dark ? dark.name : '—'}</div><div class="stL">SURVIVANT LE PLUS DISCRET</div></div>
-      <div class="stTile"><div class="stV sm">${list[0] ? list[0].name : '—'}</div><div class="stL">TON NUMÉRO 1</div></div>
+    <div class="stMentions">
+      ${best ? `<span><i>INVAINCU</i><b>${best.w.name}</b> · ${best.s.w}V-${best.s.l}D</span>` : ''}
+      ${dark ? `<span><i>SURVIVANT DISCRET</i><b>${dark.name}</b></span>` : ''}
+      ${upHtml}
     </div>
-    <div class="stWide">
-      <h4>RÉPARTITION PAR ÈRE DE TON TOP ${list.length}</h4>
-      <div class="eraBar">${bar}</div>
-      <div class="eraKey">${key}</div>
-    </div>
-    ${upHtml}`;
+    <div class="eraWrap"><div class="eraBar">${bar}</div><div class="eraKey">${key}</div></div>`;
 }
 function copyText(txt){
   if (navigator.clipboard && navigator.clipboard.writeText) return navigator.clipboard.writeText(txt);
@@ -1500,18 +1516,19 @@ function loadImg(src){
     im.src = src;
   });
 }
-function focusY(f){                       // 'center 14%' -> 0.14
-  const m = /(\d+(?:\.\d+)?)%\s*$/.exec(f || '');
-  return m ? Math.min(1, +m[1] / 100) : 0.14;
+function focusXY(f){                      // 'center 14%' | '36% 50%' -> [fx, fy] entre 0 et 1
+  const t = String(f || 'center 12%').trim().split(/\s+/);
+  const conv = (v, d) => v === undefined ? d : v === 'center' ? .5 : (v === 'top' || v === 'left') ? 0
+    : (v === 'bottom' || v === 'right') ? 1 : /%$/.test(v) ? Math.min(1, Math.max(0, parseFloat(v) / 100)) : d;
+  return [conv(t[0], .5), conv(t[1], .12)];
 }
 function drawCover(ctx, im, x, y, w, h, f){
   if (!im){ ctx.fillStyle = '#191922'; ctx.fillRect(x,y,w,h); return; }
-  const s = Math.max(w / im.width, h / im.height);
-  const dw = im.width * s, dh = im.height * s;
-  const dx = x + (w - dw) / 2;
-  const dy = y - (dh - h) * focusY(f);
+  const [fx, fy] = focusXY(f);
+  const sc = Math.max(w / im.width, h / im.height);
+  const dw = im.width * sc, dh = im.height * sc;
   ctx.save(); ctx.beginPath(); ctx.rect(x,y,w,h); ctx.clip();
-  ctx.drawImage(im, dx, dy, dw, dh);
+  ctx.drawImage(im, x - (dw - w) * fx, y - (dh - h) * fy, dw, dh);
   ctx.restore();
 }
 function roundRect(ctx, x, y, w, h, r){
@@ -1529,111 +1546,144 @@ async function buildPoster(){
   const n = resG === 'x' ? 10 : 30;
   const list = ranking(resG).slice(0, n);
   const imgs = await Promise.all(list.map(w => loadImg(imgSrc(w))));
+  const g = resG, dv = (S.dv && S.dv[g]) || { d:S.duels, c:S.culls, b:S.both };
+  const eras = {}; list.forEach(w => { const e = w.era || 'WWE'; eras[e] = (eras[e]||0)+1; });
+  const eraSorted = Object.keys(eras).sort((a,b) => eras[b]-eras[a]);
+  const SP = String.fromCharCode(8202);
+  const track = t => t.split('').join(SP);
 
-  const W = 1200, PAD = 44, GAP = 20;
-  const podW = 340, podH = 430;
-  const cols = 5, cellW = (W - PAD*2 - GAP*(cols-1)) / cols, cellH = 250;
+  // ---- mise en page : portraits 3:4 partout, grille exacte (9 colonnes pour 27) ----
+  const W = 1400, PAD = 56, GAP = 14;
   const rest = Math.max(0, list.length - 3);
+  const cols = rest <= 7 ? Math.max(1, rest) : 9;
   const rows = Math.ceil(rest / cols);
-  const headH = 190, podTop = headH + 20;
-  const gridTop = podTop + podH + 46;
-  const H = gridTop + rows * (cellH + GAP) + 96;
+  const cellW = (W - PAD*2 - GAP*(cols-1)) / cols, cellH = cellW * 4 / 3;
+  const bigW = 380, bigH = bigW * 4 / 3, sideW = 316, sideH = sideW * 4 / 3;
+  const podTop = 210, podBottom = podTop + bigH;
+  const stripY = podBottom + 46, stripH = 78;
+  const gridTop = stripY + stripH + 40;
+  const H = Math.round(gridTop + rows * (cellH + GAP) - GAP + 96);
 
   const cv = document.getElementById('posterCv');
   cv.width = W; cv.height = H;
   const ctx = cv.getContext('2d');
+  const F = (w, px, fam) => w + ' ' + px + 'px ' + (fam === 'c' ? '"Barlow Condensed", Arial, sans-serif' : '"Bebas Neue", Impact, sans-serif');
+  const GOLD = '#f5c542', INK = '#f2ecdf', DIM = '#9a93a6';
 
-  // fond
+  // fond : noir profond, halo doré qui s'éteint sans rupture
   const bg = ctx.createLinearGradient(0,0,0,H);
-  bg.addColorStop(0,'#161009'); bg.addColorStop(.28,'#08080d'); bg.addColorStop(1,'#08080d');
+  bg.addColorStop(0,'#17110a'); bg.addColorStop(.25,'#08080d'); bg.addColorStop(1,'#08080d');
   ctx.fillStyle = bg; ctx.fillRect(0,0,W,H);
-  const halo = ctx.createRadialGradient(W/2, 40, 20, W/2, 40, W*.62);
-  halo.addColorStop(0,'rgba(245,197,66,.17)'); halo.addColorStop(1,'rgba(245,197,66,0)');
-  ctx.fillStyle = halo; ctx.fillRect(0, 0, W, H);   // pas de coupure nette : on laisse le dégradé s'éteindre
+  const halo = ctx.createRadialGradient(W/2, 60, 20, W/2, 60, W*.6);
+  halo.addColorStop(0,'rgba(245,197,66,.16)'); halo.addColorStop(1,'rgba(245,197,66,0)');
+  ctx.fillStyle = halo; ctx.fillRect(0,0,W,H);
 
-  // titre
+  function hair(x, y, w, col){
+    const hg = ctx.createLinearGradient(x, 0, x + w, 0);
+    hg.addColorStop(0,'rgba(245,197,66,0)'); hg.addColorStop(.5, col); hg.addColorStop(1,'rgba(245,197,66,0)');
+    ctx.fillStyle = hg; ctx.fillRect(x, y, w, 1);
+  }
+
+  // en-tête
   ctx.textAlign = 'center';
-  const grad = ctx.createLinearGradient(0, 60, 0, 140);
-  grad.addColorStop(0,'#fff8e1'); grad.addColorStop(.55,'#f5c542'); grad.addColorStop(1,'#8a6410');
-  ctx.fillStyle = grad;
-  ctx.font = '700 84px "Bebas Neue", Impact, sans-serif';
-  ctx.fillText(goat ? 'TON GOAT' : resG === 'x' ? 'TON TOP 10 MIXTE' : 'TON TOP 30', W/2, 118);
-  ctx.fillStyle = '#9a93a6';
-  ctx.font = '600 22px "Barlow Condensed", Arial, sans-serif';
-  const sub = (goat ? 'LE PLUS GRAND DE TOUS' : resG==='x' ? 'HOMMES CONTRE FEMMES' : resG==='m' ? 'HOMMES' : 'FEMMES')
-    + '   ·   ' + S.duels + ' MANCHES   ·   WWE 2006—2026';
-  ctx.fillText(sub, W/2, 158);
+  ctx.fillStyle = DIM; ctx.font = F('700', 18, 'c');
+  const kicker = 'WWE FACE-OFF  ·  ' + (goat ? 'LE PLUS GRAND DE TOUS' : g==='x' ? 'MIXTE · TOP 10' : g==='m' ? 'HOMMES' : 'FEMMES')
+    + '  ·  ' + dv.d + ' MANCHES  ·  2006 — 2026';
+  ctx.fillText(track(kicker), W/2, 72);
+  const grad = ctx.createLinearGradient(0, 90, 0, 170);
+  grad.addColorStop(0,'#fff8e1'); grad.addColorStop(.55,GOLD); grad.addColorStop(1,'#8a6410');
+  ctx.fillStyle = grad; ctx.font = F('700', 92, 'd');
+  ctx.fillText(goat ? 'TON GOAT' : g === 'x' ? 'TON TOP 10 MIXTE' : 'TON TOP 30', W/2, 162);
+  hair(W/2 - 260, 184, 520, 'rgba(245,197,66,.55)');
 
-  // podium
-  const order = [1,0,2].filter(i => list[i]);
-  const podX = (W - (podW*3 + GAP*2)) / 2;
-  order.forEach((idx, slot) => {
-    const w = list[idx], rk = idx + 1;
-    const x = podX + slot * (podW + GAP);
-    const big = rk === 1;
-    const h = big ? podH : podH - 60;
-    const y = podTop + (big ? 0 : 60);
+  // ---- carte portrait (commune podium / grille) ----
+  function card(im, w, x, y, cw, ch, rk, o){
+    const big = o.big, r = o.r;
     ctx.save();
-    ctx.shadowColor = 'rgba(0,0,0,.6)'; ctx.shadowBlur = 26; ctx.shadowOffsetY = 10;
-    roundRect(ctx, x, y, podW, h, 16); ctx.fillStyle = '#101018'; ctx.fill();
+    ctx.shadowColor = 'rgba(0,0,0,.65)'; ctx.shadowBlur = big ? 40 : 18; ctx.shadowOffsetY = big ? 16 : 8;
+    roundRect(ctx, x, y, cw, ch, r); ctx.fillStyle = '#101018'; ctx.fill();
     ctx.restore();
-    ctx.save(); roundRect(ctx, x, y, podW, h, 16); ctx.clip();
-    drawCover(ctx, imgs[idx], x, y, podW, h - 76, w.focus);
-    const sh = ctx.createLinearGradient(0, y + h - 190, 0, y + h - 76);
-    sh.addColorStop(0,'rgba(0,0,0,0)'); sh.addColorStop(1,'rgba(0,0,0,.9)');
-    ctx.fillStyle = sh; ctx.fillRect(x, y + h - 190, podW, 114);
-    ctx.fillStyle = '#0d0d15'; ctx.fillRect(x, y + h - 76, podW, 76);
+    ctx.save(); roundRect(ctx, x, y, cw, ch, r); ctx.clip();
+    drawCover(ctx, im, x, y, cw, ch, w.focus);
+    const sh = ctx.createLinearGradient(0, y + ch * .5, 0, y + ch);
+    sh.addColorStop(0,'rgba(4,4,8,0)'); sh.addColorStop(.55,'rgba(4,4,8,.55)'); sh.addColorStop(1,'rgba(4,4,8,.93)');
+    ctx.fillStyle = sh; ctx.fillRect(x, y + ch * .5, cw, ch * .5);
     ctx.restore();
-    ctx.lineWidth = big ? 3 : 2;
-    ctx.strokeStyle = big ? '#f5c542' : rk === 2 ? '#aeb4c4' : '#c07f47';
-    roundRect(ctx, x, y, podW, h, 16); ctx.stroke();
-    // médaille
-    ctx.beginPath(); ctx.arc(x + 40, y + 40, 26, 0, 6.283);
-    ctx.fillStyle = big ? '#f5c542' : rk === 2 ? '#c6cbd8' : '#c07f47'; ctx.fill();
-    ctx.fillStyle = '#171106'; ctx.font = '700 30px "Bebas Neue", Impact, sans-serif';
-    ctx.fillText(String(rk), x + 40, y + 51);
-    // nom
-    ctx.fillStyle = big ? '#f5c542' : '#f2ecdf';
-    ctx.font = '700 ' + (big ? 38 : 32) + 'px "Bebas Neue", Impact, sans-serif';
-    ctx.fillText(fitText(ctx, w.name.toUpperCase(), podW - 30), x + podW/2, y + h - 34);
-    if (w.nickname){
-      ctx.fillStyle = '#9a93a6'; ctx.font = 'italic 500 18px "Barlow Condensed", Arial, sans-serif';
-      ctx.fillText(fitText(ctx, '« ' + w.nickname + ' »', podW - 30), x + podW/2, y + h - 12);
+    ctx.lineWidth = o.stroke || 1; ctx.strokeStyle = o.strokeCol || 'rgba(255,255,255,.12)';
+    roundRect(ctx, x + .5, y + .5, cw - 1, ch - 1, r); ctx.stroke();
+    // rang : numéral fin, en haut à gauche
+    ctx.textAlign = 'left';
+    ctx.save(); ctx.shadowColor = 'rgba(0,0,0,.8)'; ctx.shadowBlur = 8;
+    ctx.fillStyle = rk === 1 ? GOLD : (big ? 'rgba(255,255,255,.62)' : 'rgba(245,197,66,.85)');
+    ctx.font = F('700', o.rkPx, 'd');
+    ctx.fillText(String(rk).padStart(2,'0'), x + (big ? 16 : 9), y + (big ? 12 : 8) + o.rkPx * .82);
+    ctx.restore();
+    // nom + surnom
+    const padX = big ? 16 : 9, bottom = y + ch - (big ? 16 : 9);
+    ctx.save(); ctx.shadowColor = 'rgba(0,0,0,.9)'; ctx.shadowBlur = 12;
+    const hasNk = big && !!w.nickname;
+    if (hasNk){
+      ctx.fillStyle = '#cfc6b4'; ctx.font = F('italic 500', o.nkPx, 'c');
+      ctx.fillText(fitText(ctx, '\u00ab ' + w.nickname + ' \u00bb', cw - padX*2), x + padX, bottom);
     }
-    if (big && goat){
-      ctx.fillStyle = '#f5c542'; roundRect(ctx, x + podW/2 - 60, y + 16, 120, 34, 6); ctx.fill();
-      ctx.fillStyle = '#1d1403'; ctx.font = '700 26px "Bebas Neue", Impact, sans-serif';
-      ctx.fillText('GOAT', x + podW/2, y + 42);
+    ctx.fillStyle = rk === 1 ? GOLD : INK; ctx.font = F('700', o.nmPx, 'd');
+    ctx.fillText(fitText(ctx, w.name.toUpperCase(), cw - padX*2), x + padX, bottom - (hasNk ? o.nkPx + 8 : 0));
+    ctx.restore();
+    if (rk === 1){                       // étiquette CHAMPION / GOAT
+      const label = goat ? 'GOAT' : 'CHAMPION';
+      ctx.font = F('700', 13, 'c'); ctx.textAlign = 'right';
+      const tw = ctx.measureText(label).width + 22, tx = x + cw - 14, ty = y + 14;
+      const gg = ctx.createLinearGradient(0, ty, 0, ty + 24); gg.addColorStop(0,'#fff3c4'); gg.addColorStop(1,'#c9971d');
+      ctx.fillStyle = gg; roundRect(ctx, tx - tw, ty, tw, 24, 4); ctx.fill();
+      ctx.fillStyle = '#1d1403'; ctx.fillText(label, tx - 11, ty + 17);
+      ctx.textAlign = 'left';
     }
+  }
+
+  // ---- podium : 2 | 1 | 3, alignés en bas ----
+  const order = [1,0,2].filter(i => list[i]);
+  const pg = GAP * 1.4;
+  const totalW = sideW * 2 + bigW + pg * 2;
+  let px = (W - totalW) / 2;
+  order.forEach(idx => {
+    const w = list[idx], rk = idx + 1, big = rk === 1;
+    const cw = big ? bigW : sideW, ch = big ? bigH : sideH;
+    card(imgs[idx], w, px, podBottom - ch, cw, ch, rk, {
+      big: true, r: 16, rkPx: big ? 56 : 44, nmPx: big ? 44 : 34, nkPx: big ? 19 : 16,
+      stroke: big ? 2 : 1, strokeCol: big ? GOLD : rk === 2 ? 'rgba(200,205,220,.5)' : 'rgba(200,130,80,.5)'
+    });
+    px += cw + pg;
   });
 
-  // grille
+  // ---- bandeau de chiffres ----
+  hair(PAD, stripY, W - PAD*2, 'rgba(245,197,66,.35)');
+  hair(PAD, stripY + stripH, W - PAD*2, 'rgba(245,197,66,.35)');
+  const items = [[dv.d,'MANCHES'],[dv.c,'BARRAGES'],[poolOf(g).length - aliveOf(g).length,'\u00c9LIMIN\u00c9S'],
+                 [dv.b,'DOUBLES \u2605'],[eraSorted[0] || '\u2014','\u00c8RE DOMINANTE']];
+  const colW = (W - PAD*2) / items.length;
+  items.forEach(([v,l], i) => {
+    const cx = PAD + colW * (i + .5);
+    ctx.textAlign = 'center';
+    const small = typeof v === 'string' && v.length > 4;
+    ctx.fillStyle = GOLD; ctx.font = F('700', small ? 24 : 38, 'd');
+    ctx.fillText(String(v).toUpperCase(), cx, stripY + (small ? 44 : 48));
+    ctx.fillStyle = DIM; ctx.font = F('700', 12, 'c');
+    ctx.fillText(track(l), cx, stripY + 66);
+    if (i){ ctx.fillStyle = 'rgba(255,255,255,.1)'; ctx.fillRect(PAD + colW * i, stripY + 14, 1, stripH - 28); }
+  });
+
+  // ---- grille 3:4 ----
   list.slice(3).forEach((w, i) => {
-    const idx = i + 3;
     const cx = PAD + (i % cols) * (cellW + GAP);
     const cy = gridTop + Math.floor(i / cols) * (cellH + GAP);
-    ctx.save(); roundRect(ctx, cx, cy, cellW, cellH, 12); ctx.clip();
-    ctx.fillStyle = '#101018'; ctx.fillRect(cx, cy, cellW, cellH);
-    drawCover(ctx, imgs[idx], cx, cy, cellW, cellH - 46, w.focus);
-    ctx.fillStyle = '#0d0d15'; ctx.fillRect(cx, cy + cellH - 46, cellW, 46);
-    ctx.restore();
-    ctx.lineWidth = 1; ctx.strokeStyle = '#23232f';
-    roundRect(ctx, cx, cy, cellW, cellH, 12); ctx.stroke();
-    // rang
-    ctx.fillStyle = 'rgba(6,6,10,.85)'; roundRect(ctx, cx + 8, cy + 8, 52, 28, 6); ctx.fill();
-    ctx.strokeStyle = '#c9971d'; ctx.lineWidth = 1; roundRect(ctx, cx + 8, cy + 8, 52, 28, 6); ctx.stroke();
-    ctx.fillStyle = '#f5c542'; ctx.font = '700 22px "Bebas Neue", Impact, sans-serif';
-    ctx.textAlign = 'center'; ctx.fillText('#' + (idx + 1), cx + 34, cy + 30);
-    ctx.fillStyle = '#f2ecdf'; ctx.font = '700 21px "Barlow Condensed", Arial, sans-serif';
-    ctx.fillText(fitText(ctx, w.name.toUpperCase(), cellW - 18), cx + cellW/2, cy + cellH - 16);
+    card(imgs[i + 3], w, cx, cy, cellW, cellH, i + 4, { big: false, r: 10, rkPx: 26, nmPx: 19, nkPx: 0 });
   });
 
-  // pied
+  // ---- pied ----
   ctx.textAlign = 'center';
-  ctx.fillStyle = '#5d5768'; ctx.font = '600 19px "Barlow Condensed", Arial, sans-serif';
-  const eras = {}; list.forEach(w => { const e = w.era || 'WWE'; eras[e] = (eras[e]||0)+1; });
-  const topEra = Object.keys(eras).sort((a,b) => eras[b]-eras[a])[0] || '';
-  ctx.fillText('ÈRE DOMINANTE : ' + topEra.toUpperCase() + '   ·   ' + S.culls + ' BARRAGES   ·   WWE FACE-OFF', W/2, H - 34);
+  hair(W/2 - 200, H - 56, 400, 'rgba(245,197,66,.35)');
+  ctx.fillStyle = '#5d5768'; ctx.font = F('700', 14, 'c');
+  ctx.fillText(track('WWE FACE-OFF  \u00b7  \u00c8RE DOMINANTE : ' + (eraSorted[0] || '\u2014').toUpperCase()), W/2, H - 28);
   return cv;
 }
 async function showPoster(){
@@ -1643,8 +1693,7 @@ async function showPoster(){
   // en file:// le navigateur interdit à la page d'exporter un canvas contenant des images locales
   $('#posterHint').innerHTML = location.protocol === 'file:'
     ? 'Page ouverte en <b>fichier local</b> : le navigateur bloque le téléchargement direct. '
-      + 'Fais un <b>clic droit sur l\'affiche → Enregistrer l\'image sous…</b>, '
-      + 'ou lance <b>lancer.bat</b> une fois pour activer le bouton.'
+      + 'Fais un <b>clic droit sur l\'affiche → Enregistrer l\'image sous…</b>.'
     : 'Clique sur <b>Télécharger</b> pour enregistrer l\'affiche en PNG.';
 }
 function downloadPoster(){
@@ -2032,13 +2081,16 @@ function openDrawer(){
   renderRank(); els.drawer.classList.add('open');
 }
 function closeDrawer(){ drawerOpen = false; els.drawer.classList.remove('open'); }
+let keepTheme = false;   // vrai juste après le sacre : on laisse le thème du n°1 jouer sur le tableau
 function finish(){
-  stopTheme(true);
+  const fromChamp = keepTheme;         // on arrive du sacre : son thème continue, pas de jingle
+  if (!fromChamp) stopTheme(true);
+  keepTheme = false;
   clearTimeout(pendingNext); pendingNext = null;
   closeDrawer(); resG = S.mode === 'x' ? 'x' : S.mode === 'f' ? 'f' : 'm';
   document.querySelectorAll('#resTabs .chip').forEach(c => c.classList.toggle('on', c.dataset.g === resG));
   renderResults(); show('results');
-  if (!AUTOTEST){ confettiBurst(); sound('mile'); }
+  if (!AUTOTEST && !fromChamp){ confettiBurst(); sound('mile'); }
 }
 function hardReset(){
   if (!confirm('Tout effacer et repartir de zéro ?')) return;
@@ -2233,6 +2285,13 @@ $('#loadState').textContent = 'CHARGEMENT DU ROSTER…';
       $('#stage').style.display = 'none';
       $('#cullWrap').classList.remove('on');
       showIntroCine();
+      return;
+    }
+    if (location.hash.includes('final')){         // capture de l'annonce de finale
+      startMode('m');
+      pools.m().slice(2).forEach((w,i) => { const st = S.stats[w.slug]; st.lives = 0; st.out = 4; st.outAt = i + 1; });
+      S.phase.m = 4;
+      nextRound();
       return;
     }
     if (location.hash.includes('champ')){         // capture du sacre
