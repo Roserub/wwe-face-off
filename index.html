@@ -64,21 +64,27 @@ img{-webkit-user-drag:none;user-select:none}
 .modeCard .t{font-family:var(--fD);font-size:1.8rem;letter-spacing:.06em;display:block;color:var(--ink)}
 .modeCard .d{font-size:.82rem;color:var(--dim);display:block;margin-top:.35rem;line-height:1.35}
 .splashHint{color:var(--dim);font-size:.8rem;letter-spacing:.12em}
-#fastToggle{margin-top:-.6rem;display:inline-flex;align-items:center;gap:.6rem;
+.optToggle{display:inline-flex;align-items:center;gap:.6rem;
   font-family:var(--fC);font-weight:700;letter-spacing:.14em;font-size:.95rem;
   padding:.55rem 1.25rem;border-radius:999px;border:1px solid var(--steel);
   color:var(--dim);background:rgba(255,255,255,.03);transition:all .18s}
-#fastToggle:hover{border-color:var(--red);color:var(--ink)}
-#fastToggle .sw{width:2.2em;height:1.2em;border-radius:999px;background:#2a2a36;position:relative;
+.optToggle .sw{width:2.2em;height:1.2em;border-radius:999px;background:#2a2a36;position:relative;
   transition:background .18s;flex:none}
-#fastToggle .sw::after{content:'';position:absolute;top:.13em;left:.13em;width:.94em;height:.94em;
+.optToggle .sw::after{content:'';position:absolute;top:.13em;left:.13em;width:.94em;height:.94em;
   border-radius:50%;background:#6d6680;transition:left .18s,background .18s}
-#fastToggle .fd{font-size:.68rem;letter-spacing:.16em;color:#6d6680;font-weight:700;transition:color .18s}
+.optToggle .fd{font-size:.68rem;letter-spacing:.16em;color:#6d6680;font-weight:700;transition:color .18s}
+.optToggle.on .sw::after{left:calc(100% - 1.07em);background:#fff}
+#optWrap{display:flex;flex-direction:column;align-items:center;gap:.5rem;margin-top:-.6rem}
+#fastToggle:hover{border-color:var(--red);color:var(--ink)}
 #fastToggle.on{border-color:var(--red);color:#ffb3bd;background:rgba(228,0,43,.09);
   box-shadow:0 4px 22px rgba(228,0,43,.22)}
 #fastToggle.on .sw{background:var(--red)}
-#fastToggle.on .sw::after{left:calc(100% - 1.07em);background:#fff}
 #fastToggle.on .fd{color:#ff8a99}
+#duelToggle:hover{border-color:var(--blue);color:var(--ink)}
+#duelToggle.on{border-color:var(--blue);color:#b9d2ff;background:rgba(47,123,255,.10);
+  box-shadow:0 4px 22px rgba(47,123,255,.22)}
+#duelToggle.on .sw{background:var(--blue)}
+#duelToggle.on .fd{color:#8fbaff}
 #loadState{font-family:var(--fC);color:var(--dim);letter-spacing:.2em;font-size:.9rem;min-height:1.2em}
 
 /* ============ TOPBAR ============ */
@@ -550,12 +556,18 @@ img{-webkit-user-drag:none;user-select:none}
       <span class="d" id="cntA">— superstars</span>
     </button>
   </div>
-  <button id="fastToggle" title="1 seul gardé par écran, 1 vie pour tous, ni « les deux » ni sauvetage de groupe">
-    <span class="sw"></span>⚡ MODE VERY FAST
-    <span class="fd">1 GARDÉ PAR ÉCRAN · 1 VIE · AUCUN JOKER</span>
-  </button>
+  <div id="optWrap">
+    <button id="fastToggle" class="optToggle" title="1 seul gardé par écran, 1 vie pour tous, ni « les deux » ni sauvetage de groupe">
+      <span class="sw"></span>⚡ MODE VERY FAST
+      <span class="fd">1 GARDÉ PAR ÉCRAN · 1 VIE · AUCUN JOKER</span>
+    </button>
+    <button id="duelToggle" class="optToggle" title="Que des duels 1 contre 1, une seule vie, aucun joker">
+      <span class="sw"></span>⚔ DUEL ONLY, UNE VIE
+      <span class="fd">QUE DES DUELS · 1 VIE · AUCUN JOKER</span>
+    </button>
+  </div>
   <div id="loadState"></div>
-  <p class="splashHint">CLIQUE SUR TON FAVORI · «&nbsp;LES DEUX&nbsp;» S'ILS MÉRITENT TOUS LES DEUX TON TOP 30</p>
+  <p class="splashHint" id="splashHint">CLIQUE SUR TON FAVORI · «&nbsp;LES DEUX&nbsp;» S'ILS MÉRITENT TOUS LES DEUX TON TOP 30</p>
 </section>
 
 <!-- BATTLE -->
@@ -603,7 +615,7 @@ img{-webkit-user-drag:none;user-select:none}
       <div id="duelTag">DUEL <span id="duelNum">1</span></div>
       <div id="divTag">HOMMES</div>
       <div id="vsMark"><span class="v">V</span><span class="s">S</span></div>
-      <button class="vsBtn" id="btnBoth">★ LES DEUX (<span id="bothLeft">3</span>)<small>ILS GARDENT LEURS VIES</small></button>
+      <button class="vsBtn" id="btnBoth">★ LES DEUX<small>ILS GARDENT LEURS VIES</small></button>
       <div id="keysHint"><b>←</b> <b>→</b> choisir &nbsp;·&nbsp; <b>B</b> les deux<br><b>M</b> thème adverse &nbsp;·&nbsp; <b>C</b> classement</div>
     </div>
     <div class="fighter sideR" id="fR">
@@ -751,7 +763,7 @@ function freshStats(){
 }
 function defaultState(){
   return { mode:'alt', duels:0, culls:0, stats:freshStats(), muted:false, music:true, lastPool:'f',
-    phase:{m:0,f:0,a:0}, prompted:{}, mix:null, skips:{m:4,f:4,x:4,a:4}, skipsV:4,
+    phase:{m:0,f:0,a:0}, prompted:{}, mix:null, skips:{m:4,f:4,x:4,a:4},
     sched:{m:0,f:0}, upset:null, both:0, outSeq:0, pf:{}, champ:{}, finalAnn:{}, playedA:false,
     bothLeft:{m:0,f:0,x:0,a:0}, bothPhase:{m:-1,f:-1,x:-1,a:-1}, prot:{}, cool:{},
     dv:{ m:{d:0,c:0,b:0}, f:{d:0,c:0,b:0}, x:{d:0,c:0,b:0}, a:{d:0,c:0,b:0} } };   // compteurs par division
@@ -781,6 +793,7 @@ function unlockedMix(){ return aliveOf('m').length <= 30 && aliveOf('f').length 
 const CULL = { barrage: { size:10, keep:4 }, four: { size:4, keep:2 } };
 const COOL_ROUNDS = 3;      // manches de réserve après avoir été gardé
 function stageOf(g){
+  if (duelOnly) return 'duel';                        // DUEL ONLY : ni barrage ni fatal 4-way
   if (g !== 'x' && S.phase[g] > 0) return 'duel';     // phases d'affinage = duels
   const alive = aliveOf(g).length;
   if (g !== 'x' && alive > 60) return 'barrage';
@@ -789,7 +802,7 @@ function stageOf(g){
 }
 function pairKey(a,b){ return [a.slug,b.slug].sort().join('|'); }
 function phaseKeyOf(g){ return g + ':' + (g === 'x' ? (S.mix ? S.mix.phase : 0) : S.phase[g]); }
-// rang d'avancement : 0 barrage, 1 fatal 4-way, 2 duels, 3 terminé
+// rang d'avancement : 0 barrage, 1 fatal 4-way, 2 duels, 3 terminé (en DUEL ONLY : toujours 2 ou 3)
 function stageRank(g){
   if (!poolPlayable(g)) return 3;
   const st = stageOf(g);
@@ -801,13 +814,27 @@ function stageRoundsLeft(g){
   switch (stageOf(g)){
     case 'barrage': return Math.max(0, Math.ceil((a - 60) / 6));
     case 'four':    return Math.max(0, Math.ceil((a - 30) / 2));
-    default:        return Math.max(0, (a - phaseTargetOf(g)) * 2);
+    default:        return Math.max(0, (a - phaseTargetOf(g)) * (oneLife() ? 1 : 2));
   }
 }
-/* Répartition proportionnelle (round-robin pondéré lissé) : avec 199 hommes pour 95 femmes,
-   les hommes ont plus de barrages à jouer, donc ils passent plus souvent — environ deux
-   groupes hommes pour un groupe femmes — et les deux divisions terminent chaque étape ensemble. */
+/* Répartition proportionnelle (round-robin pondéré lissé) : la division qui a le plus de travail
+   restant passe plus souvent, si bien que les deux terminent chaque étape ensemble. Le poids est
+   le nombre de manches restantes dans l'étape ; en DUEL ONLY c'est le nombre d'éliminations. */
 let plannedG = null;
+/* Meme decision que pickDivision mais SANS toucher a S.sched : sert au prechargement.
+   Une alternance stricte m/f serait fausse des que les charges different (ex. 169 vs 65),
+   et le cache serait invalide la plupart du temps -> images/themes non prechargees. */
+function predictDivision(g){
+  if (S.mode !== 'alt') return g;
+  const pm = poolPlayable('m'), pf = poolPlayable('f');
+  if (!pm && !pf) return g;
+  if (!pm) return 'f';
+  if (!pf) return 'm';
+  const rm = stageRank('m'), rf = stageRank('f');
+  if (rm !== rf) return rm < rf ? 'm' : 'f';
+  const wm = Math.max(1, stageRoundsLeft('m')), wf = Math.max(1, stageRoundsLeft('f'));
+  return (S.sched.m + wm) >= (S.sched.f + wf) ? 'm' : 'f';
+}
 function pickDivision(){
   if (S.mode === 'x') return 'x';
   if (S.mode !== 'alt') return S.mode;
@@ -921,7 +948,7 @@ function nextDuel(){
   playTheme();
   preloadTheme(A); preloadTheme(B);
   // pré-calcule le duel suivant et précharge ses images + thèmes (sans les lancer)
-  const gN = S.mode === 'alt' ? (g === 'm' ? 'f' : 'm') : g;
+  const gN = predictDivision(g);
   if (poolPlayable(gN)){
     let up = pickPair(gN), tries = 0;
     while (up && tries++ < 3 && up.some(w => w === A || w === B)) up = pickPair(gN);
@@ -941,7 +968,7 @@ function updateHud(){
   const left = S.mode === 'alt' ? roundsLeft('m') + roundsLeft('f') : roundsLeft(g);
   $('#covLabel').textContent = left > 0 ? 'EN VIE · ≈' + left + ' MANCHES' : 'EN VIE';
   const st = stageOf(g);
-  els.precV.textContent = (fastMode ? '⚡' : '') + ((g === 'x' && S.mix && S.mix.phase === 1) ? '🐐 → LE GOAT'
+  els.precV.textContent = (fastMode ? '⚡' : duelOnly ? '⚔' : '') + ((g === 'x' && S.mix && S.mix.phase === 1) ? '🐐 → LE GOAT'
     : st === 'barrage' ? 'BARRAGE → 60' : st === 'four' ? '4-WAY → 30' : '→ TOP ' + target);
   els.precV.className = 'v p2';
   const scope = S.mode === 'x' ? ['x'] : S.mode === 'alt' ? ['m','f'] : [S.mode];
@@ -1027,13 +1054,14 @@ function roundsLeft(g){
   let a = aliveOf(g).length, n = 0;
   const target = phaseTargetOf(g);
   if (a <= target) return 0;
+  if (duelOnly) return a - target;                    // que des duels, 1 vie : 1 défaite par élimination
   if (g !== 'x' && S.phase[g] === 0){
     if (a > 60){ n += Math.ceil((a - 60) / (fastMode ? 9 : 6)); a = 60; }   // barrages
     if (a > 30){ n += Math.ceil((a - 30) / (fastMode ? 3 : 2)); a = 30; }   // 4-way
     return n;
   }
   if (g === 'x' && a > 30){ n += Math.ceil((a - 30) / (fastMode ? 3 : 2)); a = 30; }
-  return n + Math.max(0, a - target) * (fastMode ? 1 : 2);         // défaites par élimination
+  return n + Math.max(0, a - target) * (oneLife() ? 1 : 2);        // défaites par élimination
 }
 
 /* « Les deux » n'élimine personne : dans l'affinage il faut trancher, donc quota par phase,
@@ -1044,13 +1072,18 @@ function syncBoth(g){
   const ph = bothPhaseOf(g);
   if (S.bothPhase[g] !== ph){
     S.bothPhase[g] = ph;
-    S.bothLeft[g] = fastMode ? 0 : g === 'x' ? (ph === 0 ? 3 : 1) : (BOTH_Q[ph] || 0);
+    S.bothLeft[g] = oneLife() ? 0 : g === 'x' ? (ph === 0 ? 3 : 1) : (BOTH_Q[ph] || 0);
   }
   const btn = $('#btnBoth');
   const left = S.bothLeft[g] || 0;
   btn.innerHTML = '★ LES DEUX (' + left + ')<small>'
-    + (left ? 'ILS GARDENT LEURS VIES' : 'PLUS DE JOKER — IL FAUT CHOISIR') + '</small>';
+    + (left ? 'ILS GARDENT LEURS VIES'
+       : oneLife() ? 'AUCUN JOKER DANS CE MODE' : 'PLUS DE JOKER — IL FAUT CHOISIR') + '</small>';
   btn.disabled = left <= 0;
+  // l'aide clavier ne doit pas annoncer une touche sans effet
+  $('#keysHint').innerHTML = '<b>←</b> <b>→</b> choisir'
+    + (oneLife() ? '' : ' &nbsp;·&nbsp; <b>B</b> les deux')
+    + '<br><b>M</b> thème adverse &nbsp;·&nbsp; <b>C</b> classement';
 }
 
 /* ================= BARRAGES ================= */
@@ -1072,7 +1105,7 @@ function autoAdvance(){
       S.phase[g]++;
       // les vies ne repartent pas à 2 au Top 20 : on les conserve jusqu'au Top 10
       const reset = done !== 20;
-      aliveOf(g).forEach(w => { const s = S.stats[w.slug]; if (reset) s.lives = fastMode ? 1 : 2; s.np = 0; });
+      aliveOf(g).forEach(w => { const s = S.stats[w.slug]; if (reset) s.lives = oneLife() ? 1 : 2; s.np = 0; });
       recent[g].length = 0;
       ann.push({ top: done, div: poolLabel(g), next: PHASES[S.phase[g]], reset: reset });
     }
@@ -1084,9 +1117,12 @@ function showIntroCine(){
   el.classList.add('intro');
   el.querySelector('.pcKicker').textContent = '';
   el.querySelector('.pcTop').textContent = 'LA PARTIE COMMENCE';
-  el.querySelector('.pcDiv').textContent = 'CONSERVE TES FAVORIS';
-  el.querySelector('.pcNext').textContent = 'ON AFFINERA PLUS TARD';
-  el.querySelector('.pcLives').textContent = '';
+  // en 1 vie il n'y a pas d'affinage ulterieur : une defaite elimine pour de bon
+  el.querySelector('.pcDiv').textContent = duelOnly ? 'CHAQUE DUEL EST DÉFINITIF'
+    : fastMode ? 'UN SEUL SURVIVANT PAR ÉCRAN' : 'CONSERVE TES FAVORIS';
+  el.querySelector('.pcNext').textContent = oneLife() ? 'AUCUN RATTRAPAGE POSSIBLE' : 'ON AFFINERA PLUS TARD';
+  el.querySelector('.pcLives').textContent = duelOnly ? '⚔ DUEL ONLY · UNE VIE'
+    : fastMode ? '⚡ MODE VERY FAST · UNE VIE' : '';
   el.classList.remove('on'); void el.offsetWidth; el.classList.add('on');
   setTimeout(() => el.classList.remove('on','intro'), 2600);
   sound('mile');
@@ -1100,7 +1136,7 @@ function showPhaseCine(a){
   el.querySelector('.pcNext').textContent = a.custom ? a.next : !a.next ? 'CLASSEMENT FINAL'
     : a.next === 1 ? "ON CONTINUE JUSQU'À LA FINALE" : 'ON CONTINUE VERS LE TOP ' + a.next;
   el.querySelector('.pcLives').textContent = (a.custom || !a.next) ? ''
-    : fastMode ? '⚡ MORT SUBITE · 1 VIE'
+    : oneLife() ? (duelOnly ? '⚔' : '⚡') + ' MORT SUBITE · 1 VIE'
     : a.reset ? '❤ 2 VIES PAR PERSONNE' : '❤ VIES CONSERVÉES';
   el.classList.remove('on'); void el.offsetWidth; el.classList.add('on');
   setTimeout(() => el.classList.remove('on'), 2600);
@@ -1195,7 +1231,7 @@ function startRound(){
     stopTheme(true);
     tpush('FINALE:' + g);
     if (!AUTOTEST) showPhaseCine({ custom:'FINALE', kicker:'LES DEUX DERNIERS', div: poolLabel(g),
-      next: fastMode ? "UN SEUL DUEL · LE VAINQUEUR SORT D'ICI" : "LE DERNIER DEBOUT L'EMPORTE" });
+      next: oneLife() ? "UN SEUL DUEL · LE VAINQUEUR SORT D'ICI" : "LE DERNIER DEBOUT L'EMPORTE" });
     pendingNext = setTimeout(startRound, AUTOTEST ? 30 : 2700);
     return;
   }
@@ -1341,7 +1377,7 @@ function startMix(){
     // uniquement le Top 10 de chaque division : 20 participants, que des duels
     const parts = ranking('m').slice(0,10).concat(ranking('f').slice(0,10));
     S.mix = { duels:0, phase:0, parts: parts.map(w => w.slug), st: {} };
-    parts.forEach(w => S.mix.st[w.slug] = { r: S.stats[w.slug].r, n:0, np:0, w:0, l:0, t:0, seen:1, lives: fastMode ? 1 : 2, out:null });
+    parts.forEach(w => S.mix.st[w.slug] = { r: S.stats[w.slug].r, n:0, np:0, w:0, l:0, t:0, seen:1, lives: oneLife() ? 1 : 2, out:null });
   }
   S.mode = 'x';
   syncMixUI(); syncChips();
@@ -1446,7 +1482,7 @@ function renderModeButtons(){
     advBtn.onclick = () => {
       next.forEach(g => {
         S.phase[g]++;
-        aliveOf(g).forEach(w => { const s = S.stats[w.slug]; s.lives = 2; s.np = 0; });
+        aliveOf(g).forEach(w => { const s = S.stats[w.slug]; s.lives = oneLife() ? 1 : 2; s.np = 0; });
         recent[g].length = 0;
       });
       S.mode = next.length > 1 ? 'alt' : next[0];
@@ -1485,13 +1521,17 @@ function renderStats(list){
     const W = bySlug[S.upset.w], L = bySlug[S.upset.l];
     upHtml = `<span><i>SURPRISE</i><b>${W.name}</b> <span class="up">bat</span> <b>${L.name}</b> · ${S.upset.gap} pts</span>`;
   }
+  // certaines tuiles sont structurellement a zero selon le mode : on ne les affiche pas
+  const tiles = [
+    [dv.d, S.optDuel ? 'DUELS' : 'MANCHES', false],
+    [dv.c, 'BARRAGES', !!S.optDuel],
+    [pool.length - alive, 'ÉLIMINÉS', false],
+    [dv.b, 'DOUBLES ★', !!(S.optDuel || S.optFast)],
+    [eraSorted[0] || '—', 'ÈRE DOMINANTE', false],
+  ].filter(t => !t[2]);
   $('#statsWrap').innerHTML = `
     <div class="stStrip">
-      <div class="stItem"><div class="stV">${dv.d}</div><div class="stL">MANCHES</div></div>
-      <div class="stItem"><div class="stV">${dv.c}</div><div class="stL">BARRAGES</div></div>
-      <div class="stItem"><div class="stV">${pool.length - alive}</div><div class="stL">ÉLIMINÉS</div></div>
-      <div class="stItem"><div class="stV">${dv.b}</div><div class="stL">DOUBLES ★</div></div>
-      <div class="stItem"><div class="stV sm">${eraSorted[0] || '—'}</div><div class="stL">ÈRE DOMINANTE</div></div>
+      ${tiles.map(t => `<div class="stItem"><div class="stV${typeof t[0] === 'string' ? ' sm' : ''}">${t[0]}</div><div class="stL">${t[1]}</div></div>`).join('')}
     </div>
     <div class="stMentions">
       ${best ? `<span><i>INVAINCU</i><b>${best.w.name}</b> · ${best.s.w}V-${best.s.l}D</span>` : ''}
@@ -1672,8 +1712,11 @@ async function buildPoster(){
   // ---- bandeau de chiffres ----
   hair(PAD, stripY, W - PAD*2, 'rgba(245,197,66,.35)');
   hair(PAD, stripY + stripH, W - PAD*2, 'rgba(245,197,66,.35)');
-  const items = [[dv.d,'MANCHES'],[dv.c,'BARRAGES'],[poolOf(g).length - aliveOf(g).length,'\u00c9LIMIN\u00c9S'],
-                 [dv.b,'DOUBLES \u2605'],[eraSorted[0] || '\u2014','\u00c8RE DOMINANTE']];
+  const items = [[dv.d, S.optDuel ? 'DUELS' : 'MANCHES', false],
+                 [dv.c, 'BARRAGES', !!S.optDuel],
+                 [poolOf(g).length - aliveOf(g).length, '\u00c9LIMIN\u00c9S', false],
+                 [dv.b, 'DOUBLES \u2605', !!(S.optDuel || S.optFast)],
+                 [eraSorted[0] || '\u2014', '\u00c8RE DOMINANTE', false]].filter(t => !t[2]);
   const colW = (W - PAD*2) / items.length;
   items.forEach(([v,l], i) => {
     const cx = PAD + colW * (i + .5);
@@ -2063,13 +2106,16 @@ function show(name){
 function syncChips(){
   document.querySelectorAll('#modeChips .chip').forEach(c => c.classList.toggle('on', c.dataset.mode === S.mode));
 }
-let fastMode = false;   // VERY FAST : 1 vie pour tous, 1 sauvetage de groupe par division
+let fastMode = false;   // VERY FAST : 1 seul gardé par écran, 1 vie, aucun joker
+let duelOnly = false;   // DUEL ONLY : que des duels 1v1, 1 vie, aucun joker (exclusif avec fastMode)
+function oneLife(){ return fastMode || duelOnly; }
 function freshRun(mode){
   const muted = S ? S.muted : false, music = S ? !!S.music : true;
   S = defaultState();
   S.muted = muted; S.music = music; S.mode = mode;
   if (mode === 'a') S.playedA = true;
-  if (fastMode){
+  S.optFast = fastMode; S.optDuel = duelOnly;   // fige les options de CETTE partie
+  if (oneLife()){
     S.skips = { m:0, f:0, x:0, a:0 };
     Object.keys(S.stats).forEach(k => S.stats[k].lives = 1);
   }
@@ -2120,10 +2166,26 @@ document.addEventListener('click', e => {
   const b = e.target.closest && e.target.closest('button');
   if (b) b.blur();
 });
+function syncOpts(){                     // les deux options s'excluent
+  $('#fastToggle').classList.toggle('on', fastMode);
+  $('#duelToggle').classList.toggle('on', duelOnly);
+  $('#splashHint').innerHTML = duelOnly
+    ? 'QUE DES DUELS 1 CONTRE 1 · UNE DÉFAITE ET C\'EST TERMINÉ'
+    : fastMode
+      ? '1 SEUL GARDÉ PAR ÉCRAN · UNE DÉFAITE ET C\'EST TERMINÉ'
+      : 'CLIQUE SUR TON FAVORI · «&nbsp;LES DEUX&nbsp;» S\'ILS MÉRITENT TOUS LES DEUX TON TOP 30';
+}
 $('#fastToggle').addEventListener('click', () => {
   fastMode = !fastMode;
-  $('#fastToggle').classList.toggle('on', fastMode);
+  if (fastMode) duelOnly = false;
+  syncOpts();
   toast(fastMode ? '⚡ VERY FAST — 1 GARDÉ · 1 VIE · AUCUN JOKER' : 'MODE NORMAL RÉTABLI');
+});
+$('#duelToggle').addEventListener('click', () => {
+  duelOnly = !duelOnly;
+  if (duelOnly) fastMode = false;
+  syncOpts();
+  toast(duelOnly ? '⚔ DUEL ONLY — QUE DES DUELS · 1 VIE · AUCUN JOKER' : 'MODE NORMAL RÉTABLI');
 });
 els.fL.addEventListener('click', () => resolve('L'));
 els.fR.addEventListener('click', () => resolve('R'));
@@ -2224,6 +2286,7 @@ $('#loadState').textContent = 'CHARGEMENT DU ROSTER…';
   if (location.hash.includes('automix')){
     // parcours complet en mode MIXTE (hommes + femmes ensemble)
     if (location.hash.includes('fast')){ fastMode = true; $('#fastToggle').classList.add('on'); }
+    if (location.hash.includes('duelonly')){ duelOnly = true; fastMode = false; syncOpts(); }
     startMode('a');
     pools.a().slice(32).forEach(w => { const st = S.stats[w.slug]; st.lives = 0; st.out = 0; });
     tpush('MIXCFG:pool' + pools.a().length + '/skips' + S.skips.a + '/lives' + S.stats[pools.a()[0].slug].lives);
@@ -2249,6 +2312,7 @@ $('#loadState').textContent = 'CHARGEMENT DU ROSTER…';
   }
   if (location.hash.includes('autophase')){
     if (location.hash.includes('fast')){ fastMode = true; $('#fastToggle').classList.add('on'); }
+    if (location.hash.includes('duelonly')){ duelOnly = true; fastMode = false; syncOpts(); }
     // vérifie l'enchaînement automatique 30 -> 20 -> 10 -> 5 puis l'arrivée sur les résultats
     startMode('m');
     pools.m().slice(32).forEach(w => { const s = S.stats[w.slug]; s.lives = 0; s.out = 0; });
@@ -2310,6 +2374,9 @@ $('#loadState').textContent = 'CHARGEMENT DU ROSTER…';
     return;
   }
   if (AUTOSHOT && !AUTOTEST){
+    // options d'abord : les sous-branches de capture sortent avant la fin du bloc
+    if (location.hash.includes('fast')){ fastMode = true; duelOnly = false; syncOpts(); }
+    if (location.hash.includes('duelonly')){ duelOnly = true; fastMode = false; syncOpts(); }
     // #autoshot=<slug> : affiche un duel avec ce catcheur (contrôle du cadrage)
     const pin = /autoshot=([a-z0-9-]+)/.exec(location.hash);
     if (pin && bySlug[pin[1]]){
@@ -2364,7 +2431,6 @@ $('#loadState').textContent = 'CHARGEMENT DU ROSTER…';
       return;
     }
     // fige une manche pour capture d'écran headless
-    if (location.hash.includes('fast')){ fastMode = true; $('#fastToggle').classList.add('on'); }
     startMode('alt');
     setTimeout(() => resolve('L'), 300);
     setTimeout(() => {                       // mesures de largeur (diagnostic responsive)
@@ -2376,6 +2442,7 @@ $('#loadState').textContent = 'CHARGEMENT DU ROSTER…';
   }
   if (AUTOTEST){
     // séquence automatique : mode alterné, 40 duels aléatoires, résultats
+    if (location.hash.includes('duelonly')){ duelOnly = true; fastMode = false; syncOpts(); }
     startMode('alt');
     let step = 0;
     const kinds = ['L','R','both','L','R','R','L','both'];
