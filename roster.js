@@ -71,7 +71,7 @@ Kalisto,m,The King of Flight,Reality Era,Kalisto,kalisto.jpg,center 50%
 Brock Lesnar,m,The Beast Incarnate,Ruthless Aggression,Brock Lesnar,brock-lesnar.jpg,center 14%
 AJ Styles,m,The Phenomenal One,New Era,AJ Styles,aj-styles.jpg,center 50%
 Shinsuke Nakamura,m,The King of Strong Style,New Era,Shinsuke Nakamura,shinsuke-nakamura.jpg,center 8%
-Samoa Joe,m,The Samoan Submission Machine,New Era,Samoa Joe,samoa-joe.jpg,42% 50%
+Samoa Joe,m,The Samoan Submission Machine,New Era,Samoa Joe,samoa-joe.jpg,55% 50%
 Kevin Owens,m,The Prizefighter,New Era,Kevin Owens,kevin-owens.jpg,center 50%
 Sami Zayn,m,The Underdog from the Underground,New Era,Sami Zayn,sami-zayn.jpg,center 14%
 Finn Balor,m,The Demon King,New Era,Finn Bálor,finn-balor.jpg,center 14%
