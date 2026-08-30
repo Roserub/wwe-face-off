@@ -872,15 +872,33 @@ function pickPair(g){
   const grpA = sorted.filter(w => st(w).np <= minNp + 1);
   const A = grpA[Math.floor(Math.random()*grpA.length)];
   const others = cands.filter(w => w !== A);
-  let bracket = others.filter(w => st(w).lives === st(A).lives);   // winners vs winners, losers vs losers
-  if (!bracket.length) bracket = others;
-  let B = null, win = 260;
-  while (!B && win <= 4200){
-    const opts = bracket.filter(w => Math.abs(st(w).r - st(A).r) <= win && !facedSet.has(pairKey(A,w)));
-    if (opts.length) B = opts[Math.floor(Math.random()*opts.length)];
-    win *= 2;
+  // priorité de l'adversaire : 1) les moins vus (np) — on épuise les 0/1 passage avant
+  // de resservir les habitués, sinon les nouveaux tombaient sans cesse sur les mêmes
+  // têtes déjà vues 4-5 fois ; 2) même nombre de vies (winners vs winners) ; 3) Elo
+  // proche. Les vies ne sont plus qu'une préférence : les respecter avant le np
+  // laissait des écarts de 3 passages quand tous les invaincus avaient déjà joué.
+  const minNpB = Math.min(...others.map(w => st(w).np));
+  const tierNp = others.filter(w => st(w).np <= minNpB + 1);
+  const sameLives = tierNp.filter(w => st(w).lives === st(A).lives);
+  // ordre des replis : plutot une revanche entre peu-vus qu'un habitue ressorti —
+  // quand tous les peu-vus ont deja affronte A, on autorise le rematch AVANT d'aller
+  // piocher chez les np eleves (c'etait le trou qui laissait passer des ecarts de 3).
+  const essais = [];
+  if (sameLives.length) essais.push([sameLives, true]);
+  if (tierNp.length > sameLives.length) essais.push([tierNp, true]);
+  essais.push([tierNp, false], [others, true]);
+  let B = null;
+  for (const [vivier, sansRematch] of essais){
+    let win = 260;
+    while (!B && win <= 4200){
+      const opts = vivier.filter(w => Math.abs(st(w).r - st(A).r) <= win
+        && (!sansRematch || !facedSet.has(pairKey(A,w))));
+      if (opts.length) B = opts[Math.floor(Math.random()*opts.length)];
+      win *= 2;
+    }
+    if (B) break;
   }
-  if (!B) B = bracket[Math.floor(Math.random()*bracket.length)] || others[Math.floor(Math.random()*others.length)];
+  if (!B) B = others[Math.floor(Math.random()*others.length)];
   return Math.random() < .5 ? [A,B] : [B,A];
 }
 
@@ -2291,12 +2309,13 @@ $('#loadState').textContent = 'CHARGEMENT DU ROSTER…';
     pools.a().slice(32).forEach(w => { const st = S.stats[w.slug]; st.lives = 0; st.out = 0; });
     tpush('MIXCFG:pool' + pools.a().length + '/skips' + S.skips.a + '/lives' + S.stats[pools.a()[0].slug].lives);
     nextRound();
-    let n = 0, seen = '';
+    let n = 0, seen = '', npg = 0, npgL = 0;
     (function auto(){
       if (n++ > 3000){ tpush('MIXLOOP:' + aliveOf('a').length); return; }
       if (seen !== 'p' + S.phase.a){ seen = 'p' + S.phase.a; tpush('PH' + S.phase.a + ':' + aliveOf('a').length); }
       if (els.results.classList.contains('on')){
         const top3 = ranking('a').slice(0,3);
+        tpush('NPGAP:' + npg + '/large:' + npgL);
         tpush('FIN:alive' + aliveOf('a').length + '|duels' + S.duels
           + '|R3:' + top3.map(w => w.slug + '(' + w.gender + ')').join(','));
         document.title = 'TDONE|' + TLOG.join(';').slice(-980);
@@ -2305,7 +2324,14 @@ $('#loadState').textContent = 'CHARGEMENT DU ROSTER…';
       if ($('#cullWrap').classList.contains('on')){
         for (let i = 0; i < cullCfg.keep; i++) cullToggle(i);
         cullValidate();
-      } else resolve(n % 2 ? 'L' : 'R');
+      } else {
+        if (cur.L && cur.R && !locked){
+          const gp = Math.abs(statsFor(cur.g, cur.L).np - statsFor(cur.g, cur.R).np);
+          npg = Math.max(npg, gp);
+          if (aliveOf('a').length >= 8 && !cur.pf) npgL = Math.max(npgL, gp);
+        }
+        resolve(n % 2 ? 'L' : 'R');
+      }
       setTimeout(auto, 60);
     })();
     return;
@@ -2318,11 +2344,12 @@ $('#loadState').textContent = 'CHARGEMENT DU ROSTER…';
     pools.m().slice(32).forEach(w => { const s = S.stats[w.slug]; s.lives = 0; s.out = 0; });
     tpush('CFG:lives' + S.stats[pools.m()[0].slug].lives + '/skips' + S.skips.m);
     nextRound();
-    let n = 0, seen = '';
+    let n = 0, seen = '', npg = 0, npgL = 0;
     (function auto(){
       if (n++ > 3000){ tpush('PHLOOP:' + aliveOf('m').length + '/' + S.phase.m); return; }
       if (seen !== 'p' + S.phase.m){ seen = 'p' + S.phase.m; tpush('PH' + S.phase.m + ':' + aliveOf('m').length); }
       if (els.results.classList.contains('on')){
+        tpush('NPGAP:' + npg + '/large:' + npgL);
         tpush('FIN:phase' + S.phase.m + '|alive' + aliveOf('m').length + '|duels' + S.duels + '|R3:' + ranking('m').slice(0,3).map(w=>w.slug).join(','));
         document.title = 'TDONE|' + TLOG.join(';').slice(-980);
         return;
@@ -2330,7 +2357,14 @@ $('#loadState').textContent = 'CHARGEMENT DU ROSTER…';
       if ($('#cullWrap').classList.contains('on')){
         for (let i = 0; i < cullCfg.keep; i++) cullToggle(i);
         cullValidate();
-      } else resolve(n % 3 === 0 ? 'both' : (n % 2 ? 'L' : 'R'));   // sollicite quota + mise à l'abri
+      } else {
+        if (cur.L && cur.R && !locked){
+          const gp = Math.abs(statsFor(cur.g, cur.L).np - statsFor(cur.g, cur.R).np);
+          npg = Math.max(npg, gp);
+          if (aliveOf('m').length >= 8 && !cur.pf) npgL = Math.max(npgL, gp);
+        }
+        resolve(n % 3 === 0 ? 'both' : (n % 2 ? 'L' : 'R'));   // sollicite quota + mise à l'abri
+      }
       setTimeout(auto, 60);
     })();
     return;

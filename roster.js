@@ -297,4 +297,28 @@ Maxxine Dupri,f,Alpha Academy's Ace,Nouvelle Garde,Maxxine Dupri,maxxine-dupri.j
 Sylvester Lefort,m,Le Magnat Français,Reality Era,Sylvester Lefort,sylvester-lefort.jpg,50% 0%
 Amale,f,French Hope,Nouvelle Garde,Amale (wrestler),amale.jpg,center 50%
 Michel Bojolé Prime,m,L'Arbitre arbitral,Icône,,michel-bojole-prime.jpg,42% 50%
+Vince McMahon,m,The Chairman,Icône,Vince McMahon,vince-mcmahon.jpg,center 14%
+Logan Paul,m,The Maverick,Renaissance,Logan Paul,logan-paul.jpg,center 50%
+Sin Cara,m,The Lucha Dragon,Reality Era,Cinta de Oro,sin-cara.jpg,center 50%
+Damien Sandow,m,The Intellectual Savior,Reality Era,Aron Stevens,damien-sandow.png,center 50%
+Tama Tonga,m,The Bad Boy,Renaissance,Tama Tonga,tama-tonga.jpg,center 50%
+Tonga Loa,m,Guerrilla of Destiny,Renaissance,Tanga Loa,tonga-loa.jpg,64% 50%
+Velveteen Dream,m,The Dream,New Era,Velveteen Dream,velveteen-dream.jpg,center 14%
+Bret Hart,m,The Hitman,Icône,Bret Hart,bret-hart.jpg,center 14%
+Kevin Nash,m,Big Sexy,Icône,Kevin Nash,kevin-nash.jpg,center 14%
+Cain Velasquez,m,Le Champion UFC,New Era,Cain Velasquez,cain-velasquez.webp,center 12%
+Paul Heyman,m,The Wise Man,Icône,Paul Heyman,paul-heyman.jpg,center 50%
+Stephanie McMahon,f,The Billion Dollar Princess,Révolution,Stephanie McMahon,stephanie-mcmahon.png,center 50%
+Vickie Guerrero,f,Excuse Me!,Divas Era,Vickie Guerrero,vickie-guerrero.jpg,center 50%
+Teddy Long,m,Holla Holla Playa,PG Era,Theodore Long,teddy-long.jpg,center 50%
+John Laurinaitis,m,Big Johnny,PG Era,John Laurinaitis,john-laurinaitis.png,center 50%
+Michael Cole,m,The Voice of the WWE,PG Era,Michael Cole (wrestling),michael-cole.png,center 50%
+Jerry Lawler,m,The King,Icône,Jerry Lawler,jerry-lawler.jpg,center 50%
+Jim Ross,m,Good Ol' JR,Icône,Jim Ross,jim-ross.jpg,center 14%
+Corey Graves,m,The Savior of Misbehavior,New Era,Corey Graves,corey-graves.jpg,center 50%
+Pat McAfee,m,Le Punteur de la NFL,Renaissance,Pat McAfee,pat-mcafee.jpg,center 50%
+Lilian Garcia,f,La Voix du Ring,Divas Era,Lilian Garcia,lilian-garcia.png,center 50%
+Samantha Irvin,f,L'Annonceuse de Raw,Nouvelle Garde,Samantha Irvin,samantha-irvin.jpg,center 50%
+Renee Paquette,f,Premiere au Commentaire,Révolution,Renee Paquette,renee-paquette.png,center 50%
+Bad Bunny,m,El Conejo Malo,Renaissance,Bad Bunny,bad-bunny.jpg,center 50%
 `;

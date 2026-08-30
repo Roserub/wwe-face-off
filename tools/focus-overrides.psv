@@ -15,3 +15,6 @@ jacy-jayne|50% 55%
 tiffany-stratton|50% 55%
 sylvester-lefort|50% 0%
 michel-bojole-prime|42% 50%
+# photo d'evenement WWE.com (3756x2112) : un second personnage occupe la gauche du cadre.
+# L'image etant large, c'est X qui recadre ; 64% isole Tonga Loa sans ramener le voisin de droite.
+tonga-loa|64% 50%

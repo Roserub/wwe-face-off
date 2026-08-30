@@ -1,0 +1,28 @@
+# Vague 3 : sources d'images. Format slug|slugs WWE.com (virgule, vide si aucun)|titres Fandom/Wikipedia (virgule)
+# Le nom de ring passe en premier dans la 3e colonne : Fandom indexe par nom de ring,
+# Wikipedia parfois par nom civil ou nom actuel (Sandow -> Aron Stevens, Hunico -> Cinta de Oro).
+slug|wwe|wiki
+vince-mcmahon|mr-mcmahon,vince-mcmahon|Vince McMahon,Mr. McMahon
+logan-paul|logan-paul|Logan Paul
+sin-cara|sin-cara|Sin Cara,Cinta de Oro
+damien-sandow|damien-sandow|Damien Sandow,Aron Stevens
+tama-tonga|tama-tonga|Tama Tonga
+tonga-loa|tonga-loa,tanga-loa|Tonga Loa,Tanga Loa
+velveteen-dream|velveteen-dream|Velveteen Dream
+bret-hart|bret-hart|Bret Hart
+kevin-nash|kevin-nash|Kevin Nash
+cain-velasquez|cain-velasquez|Cain Velasquez
+paul-heyman|paul-heyman|Paul Heyman
+stephanie-mcmahon|stephanie-mcmahon|Stephanie McMahon
+vickie-guerrero|vickie-guerrero,vickieguerrero|Vickie Guerrero
+teddy-long|teddy-long,theodore-long|Teddy Long,Theodore Long
+john-laurinaitis|john-laurinaitis|John Laurinaitis
+michael-cole|michael-cole|Michael Cole,Michael Cole (wrestling)
+jerry-lawler|jerry-lawler|Jerry Lawler
+jim-ross|jim-ross|Jim Ross
+corey-graves|corey-graves|Corey Graves
+pat-mcafee|pat-mcafee|Pat McAfee
+lilian-garcia|lilian-garcia|Lilian Garcia
+samantha-irvin|samantha-irvin|Samantha Irvin
+renee-paquette|renee-young,renee-paquette|Renee Young,Renee Paquette
+bad-bunny|bad-bunny|Bad Bunny
