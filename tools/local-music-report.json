@@ -1,0 +1,776 @@
+{
+  "heath-slater": {
+    "u": "audio/heath-slater.mp3",
+    "t": "One Man Band",
+    "source": "https://s-heath-slater.mp3.pm/",
+    "sourceTitle": "One Man Band",
+    "sourceArtist": "Heath Slater",
+    "sha256": "d80547a44c735f28cc959fa2dade05a3b012b914c471c4634158e2b0280ca760",
+    "bytes": 481114
+  },
+  "luke-harper": {
+    "u": "audio/luke-harper.mp3",
+    "t": "Swamp Gas",
+    "source": "https://s-luke-harper.mp3.pm/",
+    "sourceTitle": "WWE: Swamp Gas (Luke Harper and Eric Rowan)",
+    "sourceArtist": "Jim Johnston",
+    "sha256": "67011692d1ac13509f4c0bb894e2f0a5b2c879e2c9015c96081447503b82c871",
+    "bytes": 481114
+  },
+  "bo-dallas": {
+    "u": "audio/bo-dallas.mp3",
+    "t": "Shoot for the Stars",
+    "source": "https://s-bo-dallas.mp3.pm/",
+    "sourceTitle": "Shoot For The Stars (Bo Dallas Theme)",
+    "sourceArtist": "CFO$",
+    "sha256": "541abd352a8d0015355d4eaf182be8898952df2a734084846592fd5e44edac2a",
+    "bytes": 481114
+  },
+  "samoa-joe": {
+    "u": "audio/samoa-joe.mp3",
+    "t": "Destroyer",
+    "source": "https://s-samoa-joe.mp3.pm/",
+    "sourceTitle": "CFO$: Destroyer (Samoa Joe)",
+    "sourceArtist": "AWN Music",
+    "sha256": "c4f02a1d5754507488e8d9f05a2fdd0b1d5e39b6f415a134345a2438dba0d382",
+    "bytes": 481114
+  },
+  "neville": {
+    "u": "audio/neville.mp3",
+    "t": "Break Orbit",
+    "source": "https://s-break-orbit.mp3.pm/",
+    "sourceTitle": "Break Orbit [V2]",
+    "sourceArtist": "CFOS",
+    "sha256": "2e42319548879bdd14f1b6cafb86412ae512a75184f8191df9701734f8255a19",
+    "bytes": 481114
+  },
+  "braun-strowman": {
+    "u": "audio/braun-strowman.mp3",
+    "t": "Monster",
+    "source": "https://s-braun-strowman.mp3.pm/",
+    "sourceTitle": "Braun Strowman",
+    "sourceArtist": "WWE",
+    "sha256": "a895596c1d8843b6e672f0a885f46f4380bdc1d559d51a9e7d58ec1d018aeb67",
+    "bytes": 481114
+  },
+  "elias": {
+    "u": "audio/elias.mp3",
+    "t": "Drift",
+    "source": "https://s-elias-samson.mp3.pm/",
+    "sourceTitle": "Drift (Elias Samson Theme)",
+    "sourceArtist": "CFO$",
+    "sha256": "d64ea7aac199c2c5448b44caf2d96cfbf3f12a902fa87072f9992166e3758c13",
+    "bytes": 481114
+  },
+  "andrade": {
+    "u": "audio/andrade.mp3",
+    "t": "Making a Difference",
+    "source": "https://s-andrade-cien-almas.mp3.pm/",
+    "sourceTitle": "Making a Difference (Andrade “Cien\" Almas)",
+    "sourceArtist": "CFO$",
+    "sha256": "a229179b4ac86e63210afe8380059e39e1d2ad4b7f753d1fc5ead4508a0cf5ef",
+    "bytes": 481114
+  },
+  "matt-riddle": {
+    "u": "audio/matt-riddle.mp3",
+    "t": "Hey Bro",
+    "source": "https://s-matt-riddle.mp3.pm/",
+    "sourceTitle": "Hey Bro (Matt Riddle)",
+    "sourceArtist": "CFO$ ft. WWE",
+    "sha256": "e798748f19af8fb0062c345874b33f9fc547b5817baf4960cfb8f3871490c07d",
+    "bytes": 481114
+  },
+  "keith-lee": {
+    "u": "audio/keith-lee.mp3",
+    "t": "Limitless",
+    "source": "https://s-keith-lee.mp3.pm/",
+    "sourceTitle": "Limitless Entrance Themeназвания",
+    "sourceArtist": "Keith Lee",
+    "sha256": "b0bf97e6796dfe428699c3c220912ff165f78317a88cb69ee4ad1e27d7163f8f",
+    "bytes": 481114
+  },
+  "tommaso-ciampa": {
+    "u": "audio/tommaso-ciampa.mp3",
+    "t": "No One Will Survive",
+    "source": "https://s-tommaso-ciampa.mp3.pm/",
+    "sourceTitle": "No One Will Survive (Tommaso Ciampa theme)",
+    "sourceArtist": "CFO$",
+    "sha256": "1228f96e27a8f5aa3f2073750ba42488ef4b3b897e0c79affd1276ff83469582",
+    "bytes": 481114
+  },
+  "adam-cole": {
+    "u": "audio/adam-cole.mp3",
+    "t": "All About Tha (Boom!)",
+    "source": "https://s-adam-cole.mp3.pm/",
+    "sourceTitle": "All About Tha (Boom!) [Adam Cole Theme]",
+    "sourceArtist": "All Elite Wrestling",
+    "sha256": "0211c168ff18e9adea1d262c258beaebca10971dd54743513b91e6308db68701",
+    "bytes": 481114
+  },
+  "ilja-dragunov": {
+    "u": "audio/ilja-dragunov.mp3",
+    "t": "Death Waltz",
+    "source": "https://s-ilja-dragunov.mp3.pm/",
+    "sourceTitle": "WWE: Death Waltz (2025 Mix) [Ilja Dragunov]",
+    "sourceArtist": "WWE/def rebel",
+    "sha256": "e0a38c80d78c46b8028dd81c99ed29a7b192aec980e83c52a998402e5a7ce41a",
+    "bytes": 481114
+  },
+  "ric-flair": {
+    "u": "audio/ric-flair.mp3",
+    "t": "Ric Flair",
+    "source": "https://s-ric-flair.mp3.pm/",
+    "sourceTitle": "Ric Flair",
+    "sourceArtist": "WWF",
+    "sha256": "1844d45d0f0514c251e4675d97c767247c7574d1c4d14cd78a94e4e5830ee47f",
+    "bytes": 481114
+  },
+  "goldberg": {
+    "u": "audio/goldberg.mp3",
+    "t": "Invasion",
+    "source": "https://s-goldberg-invasion.mp3.pm/",
+    "sourceTitle": "WWE Goldberg (Invasion)",
+    "sourceArtist": "Christian Poulet and Jean-Yves Rigo",
+    "sha256": "3f7c86e5d51be5c4607ec3f12fe79072231a8617bd14e0425535fe5f661cce68",
+    "bytes": 481114
+  },
+  "carmella": {
+    "u": "audio/carmella.mp3",
+    "t": "Fabulous",
+    "source": "https://s-carmella.mp3.pm/",
+    "sourceTitle": "F-A-B-U-L-O-U-S (Carmella Theme)",
+    "sourceArtist": "CFO$",
+    "sha256": "7ac963cc1c196924c84a854ac04bec9bb58ab05a2e7bacda9aeeb309891f4ef4",
+    "bytes": 481114
+  },
+  "ruby-riott": {
+    "u": "audio/ruby-riott.mp3",
+    "t": "We Riot",
+    "source": "https://s-ruby-riott.mp3.pm/",
+    "sourceTitle": "CFO$ - \"We Riot\"",
+    "sourceArtist": "|AWF™| Ruby Riott",
+    "sha256": "6e84f20850e96e5073c5d69e5a796a4527a8d5d8927e0c942f244a2d608ec962",
+    "bytes": 481114
+  },
+  "sonya-deville": {
+    "u": "audio/sonya-deville.mp3",
+    "t": "Square Up",
+    "source": "https://s-sonya-deville.mp3.pm/",
+    "sourceTitle": "Square Up (Sonya Deville Theme)",
+    "sourceArtist": "CFO$",
+    "sha256": "2b25317c6d759422f705d6519b15d4eb6172fed2570e41f8dac232c787e4e0c6",
+    "bytes": 481114
+  },
+  "mandy-rose": {
+    "u": "audio/mandy-rose.mp3",
+    "t": "I've Arrived",
+    "source": "https://s-mandy-rose.mp3.pm/",
+    "sourceTitle": "I've Arrived (Mandy Rose)",
+    "sourceArtist": "def rebel",
+    "sha256": "ef9acef4d57c18f060ba7837f63b6a089f132ce42bac6a07e7a70a29831beafc",
+    "bytes": 481114
+  },
+  "lacey-evans": {
+    "u": "audio/lacey-evans.mp3",
+    "t": "Like a Lady",
+    "source": "https://s-lacey-evans.mp3.pm/",
+    "sourceTitle": "Like a Lady (Lacey Evans Theme)",
+    "sourceArtist": "WWE, CFO$",
+    "sha256": "c8eb3b19f5a35046bcdadcb293b551b4211038db18eac87aacfd1bd09e4baf23",
+    "bytes": 481114
+  },
+  "shayna-baszler": {
+    "u": "audio/shayna-baszler.mp3",
+    "t": "Loyalty Is Everything",
+    "source": "https://s-shayna-baszler.mp3.pm/",
+    "sourceTitle": "Loyalty is Everything (Shayna Baszler)",
+    "sourceArtist": "CFO$",
+    "sha256": "e4d0405beeb300ee680cd183aa7b8a17f65eb79cda5ff0fb37ab519212e9ae44",
+    "bytes": 481114
+  },
+  "kairi-sane": {
+    "u": "audio/kairi-sane.mp3",
+    "t": "The Next Voyage",
+    "source": "https://s-kairi-sane.mp3.pm/",
+    "sourceTitle": "The Next Voyage (Kairi Sane)",
+    "sourceArtist": "CFO$",
+    "sha256": "eab008943f67ec2cf44466ac9f44c16f518d5e6f1d211812edc9d8dcfb8af7f1",
+    "bytes": 481114
+  },
+  "dakota-kai": {
+    "u": "audio/dakota-kai.mp3",
+    "t": "Kombat",
+    "source": "https://s-dakota-kai.mp3.pm/",
+    "sourceTitle": "WWE: Kombat (Dakota Kai)",
+    "sourceArtist": "def rebel",
+    "sha256": "feb9d00a115904f6247e5b4eee3cce9defeb0092d553f3b3c09fce2ff3e6cd8b",
+    "bytes": 481114
+  },
+  "toni-storm": {
+    "u": "audio/toni-storm.mp3",
+    "t": "Take Cover",
+    "source": "https://s-toni-storm.mp3.pm/",
+    "sourceTitle": "WWE: Take Cover (Toni Storm)",
+    "sourceArtist": "CFO$",
+    "sha256": "60a5f6cce726024e763fa8cf98939cd2ef165ecf58e9e9a94757fb9dcb895a0d",
+    "bytes": 481114
+  },
+  "zelina-vega": {
+    "u": "audio/zelina-vega.mp3",
+    "t": "The Doll (La Muñeca)",
+    "source": "https://s-zelina-vega.mp3.pm/",
+    "sourceTitle": "The Doll (La Muñeca) [Zelina Vega]",
+    "sourceArtist": "def rebel",
+    "sha256": "303c6aeef40a41d49834e22c8d625667166f0ac77c2531260c7610db6a06103d",
+    "bytes": 481114
+  },
+  "nikki-cross": {
+    "u": "audio/nikki-cross.mp3",
+    "t": "Glasgow Cross",
+    "source": "https://s-nikki-cross.mp3.pm/",
+    "sourceTitle": "Glasgow Cross (Nikki Cross Theme)",
+    "sourceArtist": "CFO$",
+    "sha256": "3a7f93317b82619abc207aab9eaaea116faf34e4c8b93d447f96d76fecf6efcd",
+    "bytes": 481114
+  },
+  "dana-brooke": {
+    "u": "audio/dana-brooke.mp3",
+    "t": "See You",
+    "source": "https://s-dana-brooke.mp3.pm/",
+    "sourceTitle": "WWE: See You (Dana Brooke)",
+    "sourceArtist": "def rebel",
+    "sha256": "54d2396e1f5aa6507c3bcd404b82937580678b16f8c0a6ddc76a4a61a874ced2",
+    "bytes": 481114
+  },
+  "peyton-royce": {
+    "u": "audio/peyton-royce.mp3",
+    "t": "Sultry (XO)",
+    "source": "https://s-peyton-royce.mp3.pm/",
+    "sourceTitle": "CFO$: Sultry (XO) [Peyton Royce]",
+    "sourceArtist": "AWN Music",
+    "sha256": "77ea86a690ecc8f19e66e1f274fa6745f2f0fe85fa0b4093e6498ac9b209cda0",
+    "bytes": 481114
+  },
+  "billie-kay": {
+    "u": "audio/billie-kay.mp3",
+    "t": "Femme Fatale",
+    "source": "https://s-billie-kay.mp3.pm/",
+    "sourceTitle": "WWE: Femme Fatale (Billie Kay)",
+    "sourceArtist": "CFO$",
+    "sha256": "5b1808e71f991cd7a42142961350330c51614c922a29427d024179f14d2b7ee6",
+    "bytes": 481114
+  },
+  "paul-london": {
+    "u": "audio/paul-london.mp3",
+    "t": "Rocker",
+    "source": "https://s-paul-london.mp3.pm/",
+    "sourceTitle": "\"Rocker\"",
+    "sourceArtist": "Paul London",
+    "sha256": "587425e4f581a5e69f695478f2d9a1b7ea2a411f80440dc54c4095febd9634e3",
+    "bytes": 481114
+  },
+  "brian-kendrick": {
+    "u": "audio/brian-kendrick.mp3",
+    "t": "Man with a Plan",
+    "source": "https://s-brian-kendrick.mp3.pm/",
+    "sourceTitle": "Brian Kendrick",
+    "sourceArtist": "WWE",
+    "sha256": "475c0372cc9b94e4815e7251878dafb4779953ab5f6bb7da507428609ff6a35e",
+    "bytes": 481114
+  },
+  "jamie-noble": {
+    "u": "audio/jamie-noble.mp3",
+    "t": "2 Z' Top",
+    "source": "https://s-jamie-noble.mp3.pm/",
+    "sourceTitle": "WWE - Jamie Noble 3 (2 Z' Top Remix)",
+    "sourceArtist": "WWE",
+    "sha256": "e2597bd1a546331ba88e1db68fc67133638f5bc96b94c83787fe3cec90ee1e50",
+    "bytes": 481114
+  },
+  "chuck-palumbo": {
+    "u": "audio/chuck-palumbo.mp3",
+    "t": "You Will Remember Me",
+    "source": "https://s-chuck-palumbo.mp3.pm/",
+    "sourceTitle": "You Will Remember Me (Chuck Palumbo Theme)",
+    "sourceArtist": "Jimi Bell",
+    "sha256": "502fa7db8422713b578408e5bc6166db841b076cd35d7e82a00ed23f267be385",
+    "bytes": 481114
+  },
+  "mike-knox": {
+    "u": "audio/mike-knox.mp3",
+    "t": "Mike Knox",
+    "source": "https://s-mike-knox.mp3.pm/",
+    "sourceTitle": "Mike Knox",
+    "sourceArtist": "WWE",
+    "sha256": "5566b996c5bb8896259e6f250cd765d227fa128f4483b5b49ffbfe6316c02826",
+    "bytes": 481114
+  },
+  "kenny-dykstra": {
+    "u": "audio/kenny-dykstra.mp3",
+    "t": "Kenny Dykstra",
+    "source": "https://s-kenny-dykstra.mp3.pm/",
+    "sourceTitle": "WWE - Kenny Dykstra",
+    "sourceArtist": "WWE",
+    "sha256": "10684cab932ae40748ddd7a82c78f8ba01ed908d860ebeee94611238bb27e352",
+    "bytes": 481114
+  },
+  "lance-cade": {
+    "u": "audio/lance-cade.mp3",
+    "t": "Cade & Murdoch",
+    "source": "https://s-lance-cade.mp3.pm/",
+    "sourceTitle": "Trevor Murdoch & Lance Cade",
+    "sourceArtist": "WWE",
+    "sha256": "97d6a07c34d9db23088ebd6f418d94d2263b99d0be1538e3d38de8a23a812e2d",
+    "bytes": 481114
+  },
+  "trevor-murdoch": {
+    "u": "audio/trevor-murdoch.mp3",
+    "t": "Cade & Murdoch",
+    "source": "https://s-trevor-murdoch.mp3.pm/",
+    "sourceTitle": "Trevor Murdoch & Lance Cade",
+    "sourceArtist": "WWE",
+    "sha256": "97d6a07c34d9db23088ebd6f418d94d2263b99d0be1538e3d38de8a23a812e2d",
+    "bytes": 481114
+  },
+  "rene-dupree": {
+    "u": "audio/rene-dupree.mp3",
+    "t": "René Duprée",
+    "source": "https://s-rene-dupree.mp3.pm/",
+    "sourceTitle": "Rene Dupree",
+    "sourceArtist": "WWE",
+    "sha256": "ba09fc04fd6b2f7de23eedb195355ef930cc45ac8dea4049c392db7bbbed972e",
+    "bytes": 481114
+  },
+  "funaki": {
+    "u": "audio/funaki.mp3",
+    "t": "Kung Fu San",
+    "source": "https://s-kung-fu-naki.mp3.pm/",
+    "sourceTitle": "Kung Fu San (Kung Fu Naki)",
+    "sourceArtist": "WWE",
+    "sha256": "4b855134d3490da9672b95a2a00cdcb6935874a0e43761e4b7dbe49537150496",
+    "bytes": 481114
+  },
+  "kevin-thorn": {
+    "u": "audio/kevin-thorn.mp3",
+    "t": "Mi Destrojero",
+    "source": "https://s-kevin-thorn.mp3.pm/",
+    "sourceTitle": "Mi Destrojero (Kevin Thorn & Ariel 2006 — 2007 Theme)",
+    "sourceArtist": "Jim Johnston",
+    "sha256": "f6c095ffd6def471e8667f6b5fc8ecddb71ee6a36ebb041dc8715abc9e28537b",
+    "bytes": 481114
+  },
+  "stevie-richards": {
+    "u": "audio/stevie-richards.mp3",
+    "t": "Paging Dr. Stevie",
+    "source": "https://s-stevie-richards.mp3.pm/",
+    "sourceTitle": "Dr. Stevie(Stevie Richards) (Paging Dr. Stevie by Dale Oliver)",
+    "sourceArtist": "TNA",
+    "sha256": "0b554734bfb9d5ea36523e85feee45caddc9ce49aee9c75bf9a5e18767a234a0",
+    "bytes": 481114
+  },
+  "sabu": {
+    "u": "audio/sabu.mp3",
+    "t": "Huka Blues",
+    "source": "https://s-sabu-huka-blues.mp3.pm/",
+    "sourceTitle": "Huka Blues",
+    "sourceArtist": "Sabu",
+    "sha256": "58c0f4541c6bbb66d70e6e816cde98d5f393aaf05145689cc660b53a2c5d6b9d",
+    "bytes": 481114
+  },
+  "luke-gallows": {
+    "u": "audio/luke-gallows.mp3",
+    "t": "Omen in the Sky",
+    "source": "https://s-luke-gallows.mp3.pm/",
+    "sourceTitle": "CFO$ - Omen In the Sky",
+    "sourceArtist": "Karl Anderson & Luke Gallows",
+    "sha256": "a19f6a86ecf1216762537a52903dea8d5a0bffcd00b6f5a6cc688cf09c721ae7",
+    "bytes": 481114
+  },
+  "karl-anderson": {
+    "u": "audio/karl-anderson.mp3",
+    "t": "Omen in the Sky",
+    "source": "https://s-karl-anderson.mp3.pm/",
+    "sourceTitle": "CFO$ - Omen In the Sky",
+    "sourceArtist": "Karl Anderson & Luke Gallows",
+    "sha256": "a19f6a86ecf1216762537a52903dea8d5a0bffcd00b6f5a6cc688cf09c721ae7",
+    "bytes": 481114
+  },
+  "yoshi-tatsu": {
+    "u": "audio/yoshi-tatsu.mp3",
+    "t": "J-Pop Drop",
+    "source": "https://s-yoshi-tatsu.mp3.pm/",
+    "sourceTitle": "Jpop Drop",
+    "sourceArtist": "WWE Yoshi Tatsu",
+    "sha256": "6fd5dcf2723efc50013f28aa78a647e8418be414dbf1f1769bd30100406ae56d",
+    "bytes": 481114
+  },
+  "tyler-breeze": {
+    "u": "audio/tyler-breeze.mp3",
+    "t": "#MMMGorgeous",
+    "source": "https://s-tyler-breeze.mp3.pm/",
+    "sourceTitle": "Wwe Nxt: #Mmmgorgeous (feat. Tyler Breeze)",
+    "sourceArtist": "CFO$",
+    "sha256": "10f436332bce60afd232229fdbf68da40d39a94b40856bb122be1d57467d0fd7",
+    "bytes": 481114
+  },
+  "aiden-english": {
+    "u": "audio/aiden-english.mp3",
+    "t": "Bel Canto",
+    "source": "https://s-aiden-english.mp3.pm/",
+    "sourceTitle": "CFO$ - \"Bel Canto\"",
+    "sourceArtist": "|AWF™| Aiden English",
+    "sha256": "d2c954602d4cd9e1a1fd4d4072f2e26bb325755220f9e03315aed9f52ba04b35",
+    "bytes": 481114
+  },
+  "mojo-rawley": {
+    "u": "audio/mojo-rawley.mp3",
+    "t": "Killer Instinct",
+    "source": "https://s-mojo-rawley.mp3.pm/",
+    "sourceTitle": "CFO$ - \"Killer Instinct\"",
+    "sourceArtist": "|AWF™|Mojo Rawley",
+    "sha256": "661c1a700e8eff9e8d93750f0274e63d2f63f3713808024739c9a18bdb71e773",
+    "bytes": 481114
+  },
+  "hideo-itami": {
+    "u": "audio/hideo-itami.mp3",
+    "t": "Tokiwakita",
+    "source": "https://s-hideo-itami.mp3.pm/",
+    "sourceTitle": "Official Entrance WWE Theme (2014)",
+    "sourceArtist": "Hideo Itami",
+    "sha256": "2e466cd2885da9be25ae51159407a8e41235665cc034923cf607aad592ae18e5",
+    "bytes": 481114
+  },
+  "roderick-strong": {
+    "u": "audio/roderick-strong.mp3",
+    "t": "Next Level",
+    "source": "https://s-roderick-strong.mp3.pm/",
+    "sourceTitle": "Next Level (Roderick Strong)",
+    "sourceArtist": "CFO$",
+    "sha256": "3cf0690c7307f9c29086316e6e9601fcb548f100fdd79a042b5b8b9b54f6e638",
+    "bytes": 481114
+  },
+  "kyle-o-reilly": {
+    "u": "audio/kyle-o-reilly.mp3",
+    "t": "Undisputed",
+    "source": "https://s-kyle-o-reilly.mp3.pm/",
+    "sourceTitle": "The Undisputed Era ( Adam Cole, Bobby Fish, Kyle O'Reilly and Roderick Strong)",
+    "sourceArtist": "WWE",
+    "sha256": "d49f6ca1a1b3a2baf08b358742cc315ac53f809a8fe5f0e2c2431e59a5e39c0c",
+    "bytes": 481114
+  },
+  "ec3": {
+    "u": "audio/ec3.mp3",
+    "t": "Top One Percent",
+    "source": "https://s-top-one-percent.mp3.pm/",
+    "sourceTitle": "CFO$ - \"Top ONE Percent\"",
+    "sourceArtist": "|AWF™| EC3",
+    "sha256": "064d712d5eddd051479748bbf0f1ee3ae3dd56816afecc0c076737f840d6f7da",
+    "bytes": 481114
+  },
+  "eric-young": {
+    "u": "audio/eric-young.mp3",
+    "t": "Vintage",
+    "source": "https://s-eric-young.mp3.pm/",
+    "sourceTitle": "Vintage (Eric Young)",
+    "sourceArtist": "Dale Oliver",
+    "sha256": "95a99300e9b7bcf365e39211daf13e4b7d342665266e597165468734e3cb31f9",
+    "bytes": 481114
+  },
+  "big-cass": {
+    "u": "audio/big-cass.mp3",
+    "t": "SAWFT Is a Sin",
+    "source": "https://s-big-cass.mp3.pm/",
+    "sourceTitle": "SAWFT is a Sin (Enzo Amore and Big Cass Theme)",
+    "sourceArtist": "CFO$",
+    "sha256": "c6b121734524a5b3335dbb90c267fff447f52c0645cebc6dbd86294525f55282",
+    "bytes": 481114
+  },
+  "enzo-amore": {
+    "u": "audio/enzo-amore.mp3",
+    "t": "SAWFT Is a Sin",
+    "source": "https://s-enzo-amore.mp3.pm/",
+    "sourceTitle": "CFO$ - SAWFT Is A Sin",
+    "sourceArtist": "(WWE+HD) Enzo Amore & Colin Cassady",
+    "sha256": "c6b121734524a5b3335dbb90c267fff447f52c0645cebc6dbd86294525f55282",
+    "bytes": 481114
+  },
+  "erick-rowan": {
+    "u": "audio/erick-rowan.mp3",
+    "t": "Erick Rowan",
+    "source": "https://s-erick-rowan.mp3.pm/",
+    "sourceTitle": "Erick Rowan",
+    "sourceArtist": "WWE",
+    "sha256": "d28db3faf3b9a31eb9b0a89084f39cb16a9536f06fa7729060d75b9b9d1e1804",
+    "bytes": 481114
+  },
+  "buddy-murphy": {
+    "u": "audio/buddy-murphy.mp3",
+    "t": "Opposite Ends of the World",
+    "source": "https://s-buddy-murphy.mp3.pm/",
+    "sourceTitle": "Opposite Ends",
+    "sourceArtist": "CFO$ WWE Buddy Murphy",
+    "sha256": "5600c3745efa4aa0f3522feb701c674a0da4684d4ddfdc9288968de4e57134c7",
+    "bytes": 481114
+  },
+  "cedric-alexander": {
+    "u": "audio/cedric-alexander.mp3",
+    "t": "Won't Let Go",
+    "source": "https://s-cedric-alexander.mp3.pm/",
+    "sourceTitle": "Won't Let Go (Cedric Alexander)",
+    "sourceArtist": "CFO$",
+    "sha256": "3f93dd921283a87da321ca0b6374ab73a832e3f6b5baa5532d3c58704c2e2246",
+    "bytes": 481114
+  },
+  "drew-gulak": {
+    "u": "audio/drew-gulak.mp3",
+    "t": "For the Better",
+    "source": "https://s-drew-gulak.mp3.pm/",
+    "sourceTitle": "For the Better (Drew Gulak)",
+    "sourceArtist": "CFO$",
+    "sha256": "aa14a3f2fb51adae6fec4540e30c8394b556fef5a08f88cca4f54ce296f6180b",
+    "bytes": 481114
+  },
+  "santos-escobar": {
+    "u": "audio/santos-escobar.mp3",
+    "t": "Soul March",
+    "source": "https://s-santos-escobar.mp3.pm/",
+    "sourceTitle": "Santos Escobar Music Theme",
+    "sourceArtist": "Soul March",
+    "sha256": "e2b72ddbc1b2b97aef6878a7718d10b5ef14e6373ee3f3ca374a5ed57ec3e83c",
+    "bytes": 481114
+  },
+  "wes-lee": {
+    "u": "audio/wes-lee.mp3",
+    "t": "Assemble",
+    "source": "https://s-wes-lee-assemble.mp3.pm/",
+    "sourceTitle": "Wes Lee - Assemble (Entrance Theme)",
+    "sourceArtist": "WWEMusic",
+    "sha256": "b116c17af480a9c7bd216744a36e70d23b56775a6e9f3e999fc2b4a938eafd3b",
+    "bytes": 481114
+  },
+  "kristal-marshall": {
+    "u": "audio/kristal-marshall.mp3",
+    "t": "Kristal Marshall",
+    "source": "https://s-kristal-marshall.mp3.pm/",
+    "sourceTitle": "Kristal Marshal",
+    "sourceArtist": "former WWE Diva Theme",
+    "sha256": "1189f02f90885ea26e6ff84aa40722918ca9494770d72a40397012fcdb88b5ff",
+    "bytes": 481114
+  },
+  "brooke-adams": {
+    "u": "audio/brooke-adams.mp3",
+    "t": "Don't Stop",
+    "source": "https://s-brooke-adams.mp3.pm/",
+    "sourceTitle": "Don't Stop (Brooke Adams & Candice Michelle Theme)",
+    "sourceArtist": "Jim Johnston",
+    "sha256": "642bbb339572e7ff902f79cf1c64486f1b339bb705b4c133b857de7c0c373b88",
+    "bytes": 481114
+  },
+  "serena-deeb": {
+    "u": "audio/serena-deeb.mp3",
+    "t": "The Professor",
+    "source": "https://s-serena-deeb.mp3.pm/",
+    "sourceTitle": "The Professor (Serena Deeb Theme)",
+    "sourceArtist": "All Elite Wrestling, Brinson, Cutright",
+    "sha256": "11915081ac44c82a4e10dd325e256072ceb7093ecbcb654bb81ec866c29a3c51",
+    "bytes": 481114
+  },
+  "sarah-logan": {
+    "u": "audio/sarah-logan.mp3",
+    "t": "Backwoods Man",
+    "source": "https://s-sarah-logan.mp3.pm/",
+    "sourceTitle": "Backwoods Man (Sarah Logan MYC Theme)",
+    "sourceArtist": "Extreme Music",
+    "sha256": "0cf605eaa82b30e86e007667efdc7c0358b3d3138ed642503dbceab0237ea974",
+    "bytes": 481114
+  },
+  "xia-li": {
+    "u": "audio/xia-li.mp3",
+    "t": "Fighting Spirit",
+    "source": "https://s-xia-li.mp3.pm/",
+    "sourceTitle": "WWE: Fighting Spirit (Xia Li)",
+    "sourceArtist": "def rebel",
+    "sha256": "ab849e826f258f24bb71d52df2b3819672680d20605521c272df898bbc44c689",
+    "bytes": 481114
+  },
+  "shotzi": {
+    "u": "audio/shotzi.mp3",
+    "t": "I Am a Psycho",
+    "source": "https://s-shotzi.mp3.pm/",
+    "sourceTitle": "WWE: I Am a Psycho (Shotzi)",
+    "sourceArtist": "def rebel",
+    "sha256": "65384eb78e1acab27ecb72bb83b63014b998600b1076cca82b8ec0cf9a037550",
+    "bytes": 481114
+  },
+  "tegan-nox": {
+    "u": "audio/tegan-nox.mp3",
+    "t": "Blue Marvel",
+    "source": "https://s-tegan-nox.mp3.pm/",
+    "sourceTitle": "WWE: Blue Marvel (Tegan Nox)",
+    "sourceArtist": "def rebel",
+    "sha256": "dbffaa06e5bdf1d86e54d1d29b740161d71d7576e158b563f09571337467606b",
+    "bytes": 481114
+  },
+  "gigi-dolin": {
+    "u": "audio/gigi-dolin.mp3",
+    "t": "Watch Me Now",
+    "source": "https://s-gigi-dolin.mp3.pm/",
+    "sourceTitle": "Watch Me Now (Gigi Dolin)",
+    "sourceArtist": "def rebel",
+    "sha256": "c97490bbf3a7c1d0915b9cab08b789d9707acf66287b2604f7d6cb8401ce6db7",
+    "bytes": 481114
+  },
+  "cora-jade": {
+    "u": "audio/cora-jade.mp3",
+    "t": "Generation of Jade",
+    "source": "https://s-cora-jade.mp3.pm/",
+    "sourceTitle": "Generation of Jade (Cora Jade)",
+    "sourceArtist": "WWE, def rebel",
+    "sha256": "891becc2395c3c91397f9bbffb31ef19d2cb51e0fb1b14da2978c8be3d18aea5",
+    "bytes": 481114
+  },
+  "katana-chance": {
+    "u": "audio/katana-chance.mp3",
+    "t": "Party All the Time",
+    "source": "https://s-katana-chance.mp3.pm/",
+    "sourceTitle": "WWE: Party All the Time (Katana Chance & Kayden Carter)",
+    "sourceArtist": "def rebel",
+    "sha256": "976f239d6dadb58f5d6e226e94940033b9b3a630b623eebd53f23c4464948dfc",
+    "bytes": 481114
+  },
+  "kayden-carter": {
+    "u": "audio/kayden-carter.mp3",
+    "t": "Party All the Time",
+    "source": "https://s-kayden-carter.mp3.pm/",
+    "sourceTitle": "WWE: Party All the Time (Katana Chance & Kayden Carter)",
+    "sourceArtist": "def rebel",
+    "sha256": "976f239d6dadb58f5d6e226e94940033b9b3a630b623eebd53f23c4464948dfc",
+    "bytes": 481114
+  },
+  "alba-fyre": {
+    "u": "audio/alba-fyre.mp3",
+    "t": "Dare Devil",
+    "source": "https://s-alba-fyre.mp3.pm/",
+    "sourceTitle": "WWE: Dare Devil (Alba Fyre)",
+    "sourceArtist": "def rebel",
+    "sha256": "50807bf0db223998de863808b786c6232ab5beedac6d8732bc334d63403e205e",
+    "bytes": 481114
+  },
+  "sylvester-lefort": {
+    "u": "audio/sylvester-lefort.mp3",
+    "t": "France Rules",
+    "source": "https://s-sylvester-lefort.mp3.pm/",
+    "sourceTitle": "Sylvester Lefort (France Rules)",
+    "sourceArtist": "WWE NXT",
+    "sha256": "c20cd9be42c6d873da4bda69f60325c7e1e8d7d389a9b6eb7b5c2d24bdb9905a",
+    "bytes": 481114
+  },
+  "tonga-loa": {
+    "u": "audio/tonga-loa.mp3",
+    "t": "G.O.D. (Firing Squad)",
+    "source": "https://s-guerrillas-of-destiny.mp3.pm/",
+    "sourceTitle": "No Name Tim feat. Kashis Keyz - \"G.O.D. (Firing Squad)\"",
+    "sourceArtist": "|AWF™| Guerrillas of Destiny",
+    "sha256": "70f508de36ed64ebedf9b921c0b7ce758a8e924fd8dc60706d4b2af05a0145d2",
+    "bytes": 481114
+  },
+  "velveteen-dream": {
+    "u": "audio/velveteen-dream.mp3",
+    "t": "Velveteen",
+    "source": "https://s-velveteen-dream.mp3.pm/",
+    "sourceTitle": "WWE: Velveteen (Velveteen Dream)",
+    "sourceArtist": "CFO$",
+    "sha256": "6415e08f25a491004db75e3aed34ad10c94674c3c671cb756f33a2c3b76a8bcc",
+    "bytes": 481114
+  },
+  "cain-velasquez": {
+    "u": "audio/cain-velasquez.mp3",
+    "t": "Combatiente",
+    "source": "https://s-cain-velasquez.mp3.pm/",
+    "sourceTitle": "Cain Velasquez (Combatiente)",
+    "sourceArtist": "WWE",
+    "sha256": "90ab0742d824894a8b329ce11549f5b6ff06cb87797c5e78456b2cde93eda4ff",
+    "bytes": 481114
+  },
+  "paul-heyman": {
+    "u": "audio/paul-heyman.mp3",
+    "t": "Paul Heyman",
+    "source": "https://s-paul-heyman.mp3.pm/",
+    "sourceTitle": "Paul Heyman",
+    "sourceArtist": "WWF",
+    "sha256": "399e89f30bc91062c3c125244dc24c47a23455043a7a5db681199ff1b5a3a7ed",
+    "bytes": 481114
+  },
+  "vickie-guerrero": {
+    "u": "audio/vickie-guerrero.mp3",
+    "t": "Excuse Me",
+    "source": "https://s-vickie-guerrero-excuse-me.mp3.pm/",
+    "sourceTitle": "Excuse Me",
+    "sourceArtist": "[#My1] Vickie Guerrero",
+    "sha256": "0d87ff418b74489f81ba1dd8a19b7cf3d275a52a23b8b2f033bf6129a4453082",
+    "bytes": 481114
+  },
+  "john-laurinaitis": {
+    "u": "audio/john-laurinaitis.mp3",
+    "t": "John Laurinaitis",
+    "source": "https://s-john-laurinaitis.mp3.pm/",
+    "sourceTitle": "John Laurinaitis",
+    "sourceArtist": "WWE Wrestler's Theme",
+    "sha256": "a4e2b73fb3371fafec6831372f8c8f4af9a228d4e7d07d0fdb58a70a57455440",
+    "bytes": 481114
+  },
+  "jim-ross": {
+    "u": "audio/jim-ross.mp3",
+    "t": "Boomer Sooner",
+    "source": "https://s-jim-ross.mp3.pm/",
+    "sourceTitle": "WWE - Jim Ross (Boomer Sooner)",
+    "sourceArtist": "WWE",
+    "sha256": "6e74062d6525db2ded4a6b17d20f964b4aab361d843eac35b803a4730e6e2c25",
+    "bytes": 481114
+  },
+  "corey-graves": {
+    "u": "audio/corey-graves.mp3",
+    "t": "Dead and Gone",
+    "source": "https://s-corey-graves.mp3.pm/",
+    "sourceTitle": "Dead and Gone (Corey Graves Theme)",
+    "sourceArtist": "Extreme",
+    "sha256": "810a4474f658f42f7d831faceafa9fb1fd6caceb1ea56991d2226e8271f7dbf4",
+    "bytes": 481114
+  },
+  "lilian-garcia": {
+    "u": "audio/lilian-garcia.mp3",
+    "t": "You Just Don't Know Me at All",
+    "source": "https://s-lilian-garcia.mp3.pm/",
+    "sourceTitle": "You Just Don't Know Me At All (Lilian Garcia 2005 Theme)",
+    "sourceArtist": "Lilian Garcia",
+    "sha256": "18c81ed194dd90a65a2a1dcb1d4f65866b8c47a843fb232dca974cb3437095f6",
+    "bytes": 481114
+  },
+  "bad-bunny": {
+    "u": "audio/bad-bunny.mp3",
+    "t": "Chambea",
+    "source": "https://s-bad-bunny-chambea.mp3.pm/",
+    "sourceTitle": "Chambea",
+    "sourceArtist": "Bad Bunny (Chambea)",
+    "sha256": "61c090e3dc288364f9c6ae0cebe96447272fd274e7deb38d14681656f8c04879",
+    "bytes": 481114
+  },
+  "liv-morgan": {
+    "u": "audio/liv-morgan.mp3",
+    "t": "Trouble",
+    "source": "https://s-liv-morgan-trouble.mp3.pm/",
+    "sourceTitle": "Trouble (Entrance Theme)",
+    "sourceArtist": "Liv Morgan",
+    "sha256": "1a44f461ab2283b7da89eb8d2ff30de2f3f6c0ed6363d0109703ac8d2e66f44f",
+    "bytes": 481114
+  },
+  "mustafa-ali": {
+    "u": "audio/mustafa-ali.mp3",
+    "t": "Go Hard",
+    "source": "https://s-mustafa-ali.mp3.pm/",
+    "sourceTitle": "WWE: Go Hard (Mustafa Ali) [feat. Maino]",
+    "sourceArtist": "CFO$",
+    "sha256": "5c9e79d851dea031730a3fb7e72476192c33fc9805d0442a2de370d3ab852ca9",
+    "bytes": 481114
+  }
+}

@@ -18,3 +18,5 @@ michel-bojole-prime|42% 50%
 # photo d'evenement WWE.com (3756x2112) : un second personnage occupe la gauche du cadre.
 # L'image etant large, c'est X qui recadre ; 64% isole Tonga Loa sans ramener le voisin de droite.
 tonga-loa|64% 50%
+# grille barrage (ratio ~0.6, tres serree) : center 50% laissait un vide net a droite du sujet
+lola-vice|65% 50%

@@ -1,7 +1,92 @@
-slug|videoId|libelle
+﻿slug|videoId|libelle
 # Themes joues via le LECTEUR OFFICIEL YouTube (aucun telechargement).
 # Une ligne par catcheur : slug|ID de la video|libelle affiche
 # L'ID est ce qui suit v= dans l'URL : youtube.com/watch?v=Xe-JnRO89vI -> Xe-JnRO89vI
 # Relancer tools\build-yt.ps1 apres modification.
 peyton-royce|Xe-JnRO89vI|IIconic (The IIconics)
 billie-kay|Xe-JnRO89vI|IIconic (The IIconics)
+brooke-adams|dMP5bNAijV0|I Tease, You Touch (Brooke Tessmacher, TNA)
+liv-morgan|6M4eyuSzYGk|Trouble (montage entree officiel WWEMusic)
+heath-slater|oBHs-onhDZs|Heath Slater's 2011 Titantron Entrance Video feat. "One Man Band" Theme [HD]
+luke-harper|kgeGypFlPuU|Luke Harper Entrance Video
+bo-dallas|tKiR5eDeCX4|Bo Dallas Entrance Video
+samoa-joe|oWQqCgSOIKY|WWE:" Destroyer" (Samoa Joe Theme Song 2017)
+neville|Vcpnl2kuPGQ|Neville Entrance Video
+braun-strowman|HfTj-pkAq3A|2018: Braun Strowman 2nd WWE Theme Song "I Am Stronger"
+elias|bHfhTvqhXsU|WWE: "Drift" ► Elias Samson Theme Song
+andrade|NkNKUOrtNRQ|Andrade "Cien" Almas' 2017 Titantron Entrance Video feat. "Making a Difference" Theme [HD]
+matt-riddle|zn0Kduo5E1A|Matt Riddle Entrance Video
+keith-lee|b7J1W-ql0dg|Keith Lee Entrance Video
+tommaso-ciampa|U0kZSDgWvnc|Ciampa – No One Will Survive (Entrance Theme)
+adam-cole|o3ayAysmd2U|The Undisputed Era's 2019 Titantron Entrance Video feat. "Undisputed" Theme [HD]
+ilja-dragunov|tvA3OZP582Q|Ilja Dragunov - Death Waltz (Entrance Theme)
+ric-flair|vCvnBx7R2sI|Ric Flair 1991 - "Early Sprach" WWE Entrance Theme
+goldberg|wPcyW3eKL20|Wwe Goldberg Theme Song ' Invasion '
+carmella|kMrhGBSLJDs|Carmella - Fabulous (Entrance Theme)
+ruby-riott|WJPUqAepDUg|Ruby Riot's 2017 Titantron Entrance Video feat. "We Riot" Theme [HD]
+sonya-deville|8iNvCI7KNr0|Sonya Deville Entrance Video
+mandy-rose|cKvxG-KT_4A|Mandy Rose Entrance Video
+lacey-evans|vRfhdYUoq8c|Lacey Evans - “Like a Lady” (Entrance Theme)
+shayna-baszler|rCmRrhOe104|Shayna Baszler Entrance Video
+kairi-sane|NwB2hyv7wwc|Kairi Sane Entrance Video
+dakota-kai|lfkLS8pSNJk|Dakota Kai - High Ground [NXT Edit] (Official 2nd NXT Theme)
+toni-storm|3g_5pbBGihY|Toni Storm - Lightning Thunder (Entrance Theme)
+zelina-vega|927CzFe43rk|Zelina Vega - The Doll (La Muñeca) [Entrance Theme]
+nikki-cross|Rwn-XQB0WmY|Nikki Cross - “Glasgow Cross” (Entrance Theme)
+dana-brooke|CcAroKDTV14|Dana Brooke entrance video
+paul-london|lJlBhjEXVkM|WWE:Paul London Theme "Rocker" Official
+brian-kendrick|w0FWa0_7li8|Brian Kendrick Entrance Video
+jamie-noble|CGuNvHNVACU|Jamie Noble's 2004 Titantron Entrance Video feat. "Trailer Park" Theme
+chuck-palumbo|1FZ9OuKp-64|WWE: Chuck Palumbo Theme "You Will Remember Me" Download
+mike-knox|KSl3zfUKa0g|Mike Knox's 2009 Titantron Entrance Video feat. "Death Grip" Theme [HD]
+kenny-dykstra|t2ZB39xdhPY|Kenny Dykstra's 2006 Titantron Entrance Video feat. "Pure Control (A)" Theme [HD]
+lance-cade|OR6pESNhqsQ|Lance Cade's 2008 Titantron Entrance Video feat. "Soaring Eagle" Theme [HD]
+trevor-murdoch|Z3YI3Nems-U|Lance Cade & Trevor Murdoch's 2005 Titantron Entrance Video feat. "Southern Proud" Theme [HD]
+rene-dupree|oNt_3Wrk7K4|René Duprée's 2004 Titantron Entrance Video feat. "Final Force" Theme
+funaki|PCkOtqu6-lo|Funaki's 2nd Titantron Entrance Video [HD]
+kevin-thorn|ZX8Xq5NybDk|Kevin Thorn Theme- FULL VERSION
+stevie-richards|nvhX9k_m1as|WWE UNRELEASED: Stevie Richards “You’ll See” Theme Song~Jim Johnston
+sabu|vTfHwrFuEYY|Sabu's 2006 Titantron Entrance Video feat. "Huka Blues" Theme [HD]
+luke-gallows|DSNKGcqf2YY|WWE: "Omen In the Sky" ► Luke Gallows & Karl Anderson Theme Song
+karl-anderson|DSNKGcqf2YY|WWE: "Omen In the Sky" ► Luke Gallows & Karl Anderson Theme Song
+yoshi-tatsu|lgRsAIe2M0g|Yoshi Tatsu entrance video
+tyler-breeze|Dvc4EOjRweU|WWE: "#MMMGORGEOUS" ► Tyler Breeze 3rd Theme Song
+aiden-english|n4L3jkf40tk|Aiden English 2017 - "Bel Canto" WWE Entrance Theme
+mojo-rawley|1sqsjyMHEpk|WWE Mojo Rawley Theme “Groundbreaking” (HD - HQ)
+roderick-strong|USmuZFEFi4g|Roderick Strong's 2017 Titantron Entrance Video feat. "Next Level" Theme [HD]
+kyle-o-reilly|T4xowk56Q7E|KYLE O'REILLY-AXE & SMASH WWE THEME SONG
+ec3|ckZvswlf-SI|WWE EC3 Theme “Top ONE Percent” (HD - HQ)
+eric-young|SEjCAiN3N70|Eric Young Entrance Video
+big-cass|Q26q3f16KRI|Enzo and Big Cass entrance video
+enzo-amore|Q26q3f16KRI|Enzo and Big Cass entrance video
+erick-rowan|d_lSm-JFac0|Erick Rowan Entrance Video
+buddy-murphy|bFEVlhyPBAo|Buddy Murphy Entrance Video
+cedric-alexander|8YIvictwSQo|Out of Time
+mustafa-ali|YOsbrLmt8oQ|Mustafa Ali Entrance Video
+drew-gulak|DJjHUPDaZys|Drew Gulak 2016 - "Totally Drew" WWE Entrance Theme
+santos-escobar|9NyHR5GZBOQ|Santos Escobar - Soul March (Entrance Theme)
+wes-lee|qNICzwi6idk|Wes Lee - Assemble (Entrance Theme)
+kristal-marshall|y8w902H_FkI|WWE:Kristal Marshall 2nd Theme Song "Feelin' Me" (Lyrics)
+serena-deeb|XhH-kEOnSiM|The Professor (Serena Deeb Theme) (feat. Cutright, Brinson & Mikey Rukus)
+sarah-logan|oNf-pHE53eA|Sarah Logan - “Blood Wolf” (Entrance Theme)
+xia-li|GNryInfEM1s|Xia Li - "Fighting Spirit" (Entrance Theme)
+shotzi|_XpmNgfO9Ok|Shotzi - I Am A Psycho (Entrance Theme)
+tegan-nox|qumnrFG9wmw|Tegan Nox - Blue Marvel (Entrance Theme)
+gigi-dolin|-3QQnmcr1z8|Gigi Dolin - "Watch Me Now" (Entrance Theme)
+cora-jade|uGoYysYAEUU|Cora Jade- Generation Of Jade (Entrance Theme)
+katana-chance|CqTt1hIATyU|Katana Chance & Kayden Carter - Party All The Time (Entrance Theme)
+kayden-carter|CqTt1hIATyU|Katana Chance & Kayden Carter - Party All The Time (Entrance Theme)
+alba-fyre|s4F3AjZDgZQ|WWE: Alba Fyre Entrance Video · "Dare Devil"
+sylvester-lefort|nVhz7hVH4Yc|Sylvester Lefort – France Rules (France Règles) [Entrance Theme]
+amale|kHnjRtbIUUY|NXT UK: Amale Entrance Video · "Whatever It Takes"
+tonga-loa|5X-FMMAhsws|Tonga Loa Titantron 2024-2025 HD
+velveteen-dream|pONMVifEz5U|Velveteen Dream Entrance Video
+cain-velasquez|OBeWjbArrGw|WWE Cain Velasquez - “Combatiente” (Official Theme Song)
+paul-heyman|Ol_PMROOh0g|Paul Heyman 2003 - "Mental" WWE Entrance Theme
+vickie-guerrero|dnT3OZrqhts|Vickie Guerrero's WWE '12 Titantron Entrance Video feat. "15 Minutes of Game" Theme [HD]
+john-laurinaitis|Z0a8Q4t_Gfk|2012: WWE John Laurinaitis 1st & New Titantron (HD)
+jim-ross|WknAjB_uAKQ|Jim Ross Entrance Video
+corey-graves|YUJTFB7df2E|(2013): 2nd Corey Graves WWE Theme Song "Dead & Gone" (WWE Edit) [High Quality + Download] ᴴᴰ
+lilian-garcia|pDr1tTP3pI8|Lilian Garcia -  Quiero Vivir THEME SONG
+bad-bunny|gpIBmED4oss|BAD BUNNY - CHAMBEA (Video Oficial)
+hideo-itami|GHTKEa7w1t0|Tokiwakita (Time Has Come) - Hideo Itami

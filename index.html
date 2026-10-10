@@ -2,7 +2,7 @@
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
 <title>WWE Top 30</title>
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='0' y2='1'%3E%3Cstop offset='0' stop-color='%23fff3c4'/%3E%3Cstop offset='.5' stop-color='%23f5c542'/%3E%3Cstop offset='1' stop-color='%238a6410'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='14' fill='%2308080d'/%3E%3Crect x='6' y='6' width='52' height='52' rx='10' fill='none' stroke='%23f5c542' stroke-opacity='.35' stroke-width='2'/%3E%3Cpath d='M14 50 30 14' stroke='%23e4002b' stroke-width='3' stroke-linecap='round' opacity='.75'/%3E%3Cpath d='M34 50 50 14' stroke='%232f7bff' stroke-width='3' stroke-linecap='round' opacity='.75'/%3E%3Ctext x='32' y='45' text-anchor='middle' font-family='Arial Black,Arial' font-weight='900' font-size='28' font-style='italic' fill='url(%23g)'%3EVS%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -142,6 +142,7 @@ img{-webkit-user-drag:none;user-select:none}
   margin-top:.35rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;min-height:1em}
 .plate .theme:not(:empty){animation:themeIn .6s ease both}
 @keyframes themeIn{from{opacity:0;transform:translateY(8px)}to{opacity:.9;transform:none}}
+.tbBtn.icon.on{border-color:var(--gold);color:var(--gold);background:rgba(212,175,55,.12)}
 .tbBtn.icon.off{opacity:.35}
 .tbBtn.icon.off::after{content:'✕';position:relative;margin-left:.15em;font-size:.7em;color:var(--red)}
 .pick{position:absolute;top:14%;z-index:5;font-family:var(--fD);font-size:1.15rem;letter-spacing:.3em;
@@ -275,8 +276,10 @@ img{-webkit-user-drag:none;user-select:none}
 .podCard.goat{outline-color:var(--gold)}
 
 /* grille 4→30 : galerie de portraits 3:4, rang en numéral, nom sur voile */
-.resGrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:.8rem;text-align:left}
-.gCard{position:relative;aspect-ratio:3/4;border-radius:11px;overflow:hidden;background:var(--panel);
+/* flex plutôt que grid : une dernière rangée incomplète (27 = 3×9 mais pas 4×7) se centre
+   au lieu de laisser un trou vide à droite, quel que soit le nombre total d'entrées */
+.resGrid{display:flex;flex-wrap:wrap;justify-content:center;gap:.8rem;text-align:left}
+.gCard{position:relative;flex:1 1 150px;max-width:190px;aspect-ratio:3/4;border-radius:11px;overflow:hidden;background:var(--panel);
   outline:1px solid rgba(255,255,255,.07);outline-offset:-1px;transition:transform .18s,outline-color .18s}
 .gCard:hover{transform:translateY(-4px);outline-color:rgba(245,197,66,.6)}
 .gCard img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
@@ -291,7 +294,8 @@ img{-webkit-user-drag:none;user-select:none}
 @media (max-width:620px){
   .podium{flex-wrap:wrap}
   .podCard{width:38vw}.podCard.p1{width:60vw;order:-1}
-  .resGrid{grid-template-columns:repeat(3,1fr);gap:.5rem}
+  .resGrid{gap:.5rem}
+  .gCard{flex-basis:27vw;max-width:33vw}
 }
 
 /* ============ BARRAGES (battle royal / fatal 4-way) ============ */
@@ -519,6 +523,20 @@ img{-webkit-user-drag:none;user-select:none}
   #hud .hudBox.hideS{display:none}
   .fighter .ph{object-position:center 8%}
 }
+/* tablettes (iPad paysage 1024-1194 px) : la barre du haut mesurait ~1220 px, le bouton plein écran
+   sortait de l'écran (body overflow:hidden) et Safari dézoomait pour tout faire tenir. On la compacte
+   et, si les puces MIXTE / H VS F s'ajoutent, elle passe à la ligne au lieu de déborder. */
+@media (min-width:821px) and (max-width:1280px){
+  html,body{max-width:100vw;overflow:hidden}
+  #topbar{flex-wrap:wrap;row-gap:.35rem;gap:.6rem;padding:.5rem .8rem}
+  #topbar .logo{font-size:1.3rem}
+  .chips{gap:.2rem}
+  .chip{padding:.3rem .65rem;font-size:.84rem}
+  #hud{gap:.7rem;min-width:0}
+  #covWrap{min-width:110px}
+  .tbBtn{padding:.45rem .7rem;font-size:.85rem}
+  .tbBtn.icon{padding:.45rem .55rem}
+}
 .no-anim *,.no-anim *::before,.no-anim *::after{animation:none!important;transition:none!important}
 </style>
 </head>
@@ -590,6 +608,7 @@ img{-webkit-user-drag:none;user-select:none}
       <button class="tbBtn icon" id="btnMute" title="Effets sonores">🔊</button>
       <button class="tbBtn icon" id="btnMusic" title="Thèmes d'entrée (extraits officiels iTunes 30s)">🎵</button>
       <button class="tbBtn icon" id="btnSwap" title="Jouer le thème de l'adversaire (M)">⇄</button>
+      <button class="tbBtn icon" id="btnFull" title="Plein écran (F11)">⛶</button>
     </div>
   </div>
   <div id="cullWrap">
@@ -694,7 +713,7 @@ img{-webkit-user-drag:none;user-select:none}
   <div class="pcLives">2 VIES PAR PERSONNE</div>
 </div></div>
 
-<div id="ytHost" style="position:fixed;left:-9999px;top:0;width:320px;height:180px;pointer-events:none"></div>
+
 
 <div id="milestone"><span></span></div>
 <div id="flashLayer"></div>
@@ -702,7 +721,8 @@ img{-webkit-user-drag:none;user-select:none}
 
 <script src="roster.js"></script>
 <script src="themes.js"></script>
-<script src="themes-yt.js"></script>
+<script src="themes-local.js"></script>
+<script src="entrance-music.js"></script>
 <script>
 'use strict';
 /* ================= AUTOTEST HARNESS (inerte hors #autotest) ================= */
@@ -1921,185 +1941,8 @@ function emitSound(ctx, kind){
   else if (kind === 'mile'){ thump(100,.6,1); ding(523,.05,.7); ding(659,.18,.7); ding(784,.31,.9); ding(1046,.45,1.2); noise(.5,.25,2400); }
 }
 
-/* ============ THÈMES D'ENTRÉE (extraits officiels iTunes 30s) ============ */
-let themeAudio = null, themeRamp = null, themeCands = [], themeIdx = 0, duelToken = 0;
-function themeOf(w){
-  if (!w) return null;
-  return (window.THEMES_YT && window.THEMES_YT[w.slug]) || (window.THEMES && window.THEMES[w.slug]) || null;
-}
-/* ---- lecteur officiel YouTube (aucun téléchargement : on pilote leur iframe) ---- */
-let ytPlayer = null, ytReady = false, ytLoading = false, ytFade = null, ytPending = null;
-function ytLoad(){
-  if (ytReady || ytLoading) return;
-  ytLoading = true;
-  window.onYouTubeIframeAPIReady = () => {
-    ytPlayer = new YT.Player('ytHost', {
-      height: '180', width: '320',
-      playerVars: { controls:0, disablekb:1, modestbranding:1, rel:0, playsinline:1 },
-      events: {
-        onReady: () => { ytReady = true; if (ytPending){ const f = ytPending; ytPending = null; f(); } },
-        onError: () => { if (ytOnFail) ytOnFail(); }
-      }
-    });
-  };
-  const sc = document.createElement('script');
-  sc.src = 'https://www.youtube.com/iframe_api';
-  sc.onerror = () => { ytLoading = false; if (ytOnFail) ytOnFail(); };
-  document.head.appendChild(sc);
-}
-let ytOnFail = null;
-function ytStop(fast){
-  clearInterval(ytFade); ytFade = null;
-  if (!ytPlayer || !ytReady) return;
-  let v = 45;
-  try { v = ytPlayer.getVolume(); } catch(e){ return; }
-  const step = fast ? 14 : 6;
-  ytFade = setInterval(() => {
-    v -= step;
-    try { if (v <= 2){ clearInterval(ytFade); ytPlayer.stopVideo(); } else ytPlayer.setVolume(v); }
-    catch(e){ clearInterval(ytFade); }
-  }, 55);
-}
-function ytPlay(id, onEnd, onFail){
-  ytOnFail = onFail;
-  const go = () => {
-    try {
-      clearInterval(ytFade);
-      ytPlayer.setVolume(0);
-      ytPlayer.loadVideoById(id);
-      ytPlayer.playVideo();
-      let v = 0;
-      ytFade = setInterval(() => {
-        v = Math.min(45, v + 5);
-        try { ytPlayer.setVolume(v); } catch(e){ clearInterval(ytFade); }
-        if (v >= 45) clearInterval(ytFade);
-      }, 70);
-      clearTimeout(ytPlayer.__end);
-      ytPlayer.__end = setTimeout(() => { if (onEnd) onEnd(); }, 30000);   // 30 s comme les extraits
-    } catch(e){ if (onFail) onFail(); }
-  };
-  if (ytReady) go(); else { ytPending = go; ytLoad(); }
-}
-function clearThemeTags(){ document.querySelectorAll('.theme').forEach(t => t.textContent = ''); }
-// cache d'éléments Audio préchargés (preload sans lecture) — réutilisés entre duels
-const audioCache = new Map();
-let audioTok = 0;
-function preloadTheme(w){
-  const th = themeOf(w);
-  if (!th || audioCache.has(w.slug)) return;
-  const a = new Audio();
-  a.preload = 'auto';
-  a.src = th.u;
-  audioCache.set(w.slug, a);
-  if (audioCache.size > 24){
-    const k = audioCache.keys().next().value;
-    const old = audioCache.get(k);
-    if (old !== themeAudio){ audioCache.delete(k); old.src = ''; }
-  }
-}
-function fadeOut(a, step){
-  const tok = a.__tok;
-  const iv = setInterval(() => {
-    if (a.__tok !== tok){ clearInterval(iv); return; }
-    a.volume = Math.max(0, a.volume - step);
-    if (a.volume <= .01){ clearInterval(iv); a.pause(); }
-  }, 55);
-}
-function stopTheme(fast){
-  clearInterval(themeRamp); themeRamp = null;
-  ytStop(fast);
-  if (!themeAudio) return;
-  const a = themeAudio; themeAudio = null;
-  fadeOut(a, fast ? .14 : .05);
-}
-function chainNext(a){
-  // fin de preview : fondu doux, puis thème de l'autre catcheur si toujours aucun choix
-  // (si un seul des deux a un thème, on ne relance pas : silence jusqu'au duel suivant)
-  const tok = duelToken;
-  if (themeCands.length < 2){
-    if (themeAudio === a) themeAudio = null;
-    const solo = setInterval(() => {
-      a.volume = Math.max(0, a.volume - .06);
-      if (a.volume <= .01){ clearInterval(solo); a.pause(); }
-    }, 60);
-    return;
-  }
-  fadeOut(a, .06);
-  if (themeAudio === a) themeAudio = null;
-  setTimeout(() => {
-    if (tok === duelToken && !locked && S && S.music && els.battle.classList.contains('on')) startThemeAt(themeIdx + 1);
-  }, 700);
-}
-const badThemes = new Set();   // extraits que le navigateur refuse de lire (mémorisé pour la session)
-function startThemeAt(i, tried){
-  if (!S || !S.music || AUTOTEST || AUTOSHOT || !themeCands.length) return;
-  tried = tried || 0;
-  if (tried >= themeCands.length) return;             // aucun des deux ne se lit : silence
-  stopTheme(true);   // jamais deux thèmes superposés
-  themeIdx = ((i % themeCands.length) + themeCands.length) % themeCands.length;
-  const pick = themeCands[themeIdx];
-  const th = themeOf(pick[0]);
-  if (!th || badThemes.has(pick[0].slug)){ startThemeAt(themeIdx + 1, tried + 1); return; }
-  if (th.yt){                       // lecteur officiel YouTube
-    const tok = ++audioTok;
-    themeAudio = null;
-    ytPlay(th.yt,
-      () => { if (tok === audioTok && !locked && themeCands.length > 1) startThemeAt(themeIdx + 1); },
-      () => {
-        if (tok !== audioTok) return;
-        badThemes.add(pick[0].slug); clearThemeTags();
-        startThemeAt(themeIdx + 1, tried + 1);
-      });
-    clearThemeTags();
-    const ytTag = pick[1] && pick[1].querySelector('.theme');
-    if (ytTag) ytTag.textContent = '♪ ' + th.t;
-    return;
-  }
-  let a = audioCache.get(pick[0].slug);
-  if (!a){ a = new Audio(); a.preload = 'auto'; a.src = th.u; audioCache.set(pick[0].slug, a); }
-  a.__tok = ++audioTok;
-  a.__chained = false;
-  a.volume = 0;
-  try { if (a.currentTime > 0) a.currentTime = 0; } catch(e){}
-  themeAudio = a;
-  a.ontimeupdate = () => {
-    if (themeAudio !== a || a.__chained) return;
-    if (a.duration && a.duration - a.currentTime < 1.4){ a.__chained = true; chainNext(a); }
-  };
-  a.onended = () => {
-    if (themeAudio !== a || a.__chained) return;
-    a.__chained = true; chainNext(a);
-  };
-  // lecture impossible (extrait illisible, réseau) : on bascule sur le thème de l'autre catcheur
-  const fail = () => {
-    if (themeAudio !== a) return;
-    badThemes.add(pick[0].slug);
-    audioCache.delete(pick[0].slug);
-    themeAudio = null;
-    clearThemeTags();
-    startThemeAt(themeIdx + 1, tried + 1);
-  };
-  a.onerror = fail;
-  a.onstalled = null;
-  a.play().then(() => {
-    if (themeAudio !== a) return;
-    clearThemeTags();
-    const tag = pick[1] && pick[1].querySelector('.theme');
-    if (tag) tag.textContent = '♪ ' + th.t;
-    clearInterval(themeRamp);
-    themeRamp = setInterval(() => {
-      if (themeAudio !== a){ clearInterval(themeRamp); return; }
-      a.volume = Math.min(.45, a.volume + .045);
-      if (a.volume >= .45) clearInterval(themeRamp);
-    }, 70);
-  }).catch(fail);
-}
-function playTheme(){
-  stopTheme(true); clearThemeTags();
-  themeCands = [[cur.L, els.fL], [cur.R, els.fR]].filter(c => themeOf(c[0]));
-  if (!themeCands.length) return;
-  startThemeAt(Math.floor(Math.random()*themeCands.length));
-}
+/* ============ THÈMES D'ENTRÉE ET SECOURS AUDIO ============ */
+// Lecture et secours : entrance-music.js
 
 /* ================= PRELOAD ================= */
 function preloadAll(){
@@ -2238,8 +2081,29 @@ $('#btnMusic').addEventListener('click', e => {
   S.music = !S.music;
   e.currentTarget.classList.toggle('off', !S.music);
   if (!S.music){ stopTheme(true); clearThemeTags(); }
-  else if (els.battle.classList.contains('on')) playTheme();
+  else if (els.battle.classList.contains('on')){
+    if (themeCands.length) startThemeAt(themeIdx);
+    else if (cur) playTheme();
+  }
 });
+// Safari / Chrome iPad : API préfixée webkit sur les iPadOS anciens ; absente sur iPhone (bouton masqué)
+const fsEl  = () => document.fullscreenElement || document.webkitFullscreenElement || null;
+const fsReq = document.documentElement.requestFullscreen || document.documentElement.webkitRequestFullscreen;
+const fsExit = document.exitFullscreen || document.webkitExitFullscreen;
+if (!fsReq) $('#btnFull').style.display = 'none';
+function syncFullBtn(){
+  const on = !!fsEl();
+  const b = $('#btnFull');
+  b.classList.toggle('on', on);
+  b.title = on ? 'Quitter le plein écran (Échap)' : 'Plein écran (F11)';
+}
+$('#btnFull').addEventListener('click', () => {
+  const go = (fn, el) => { try { const r = fn.call(el); if (r && r.catch) r.catch(()=>{}); } catch(e){} };
+  if (fsEl()) { if (fsExit) go(fsExit, document); }
+  else if (fsReq) go(fsReq, document.documentElement);
+});
+document.addEventListener('fullscreenchange', syncFullBtn);
+document.addEventListener('webkitfullscreenchange', syncFullBtn);
 document.querySelectorAll('#modeChips .chip').forEach(c => c.addEventListener('click', () => {
   if (c.dataset.mode === 'x' && !S.mix) return;
   S.mode = c.dataset.mode; syncChips(); nextRound();
